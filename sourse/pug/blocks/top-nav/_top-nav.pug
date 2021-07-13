@@ -1,28 +1,95 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
+	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
+			+e.logo(href="/")
+				img(loading="lazy" src="img/svg/logo.svg" alt="")
 			+mnu()
+			+b.location
+				+icon('location')
+				span null
+			+e.address.mb-4 ул.Складочная д.1, стр.9
+			+topNavSearch('mb-4')
+			+e.tel(href="#") 8 (800) 775-82-72
+			+e.order-call(href="#") Заказать звонок
+			+topNavItems()
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
+		+e.container.container
+			+e.row.row.align-items-center
+				+e.logo-col.col-auto
+					+e.logo(href="/")
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col-auto.d-none.d-sm-block
+					+e.catalog-btn(type="button")
+						+e.c-img
+							img(loading="lazy" src='img/svg/catalog.svg' alt="")
+						span Каталог
+				.col
+					+topNavSearch('d-none d-xl-block')
+				+e.tell-col.col-auto.d-none.d-lg-block
+					+e.tel(href="#") 8 (800) 775-82-72
+					+e.order-call(href="#") Заказать звонок
+				+e.items-col.col-auto.d-none.d-md-block
+					+topNavItems()
+				+e.log-col.col-auto
+					+e.log(href="#") Войти
+				//-
+				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
+				//-.col.d-none.d-lg-block
 					+mnu()
 					
 	// end top-nav
+mixin topNavSearch(addClasses)
+	+b.search(class=addClasses)
+		+input('', 'text')
+		+e.s-btn(type="button")
+			img(loading="lazy" src="img/svg/zoom.svg" alt="")
+
+mixin topNavItem(iconName)
+	.col-auto
+		+e.item(href="#")
+			img(loading="lazy" src=`img/svg/${iconName}.svg` alt="")
+			//-+icon()
+
+mixin brands()
+	+b.brands--js
+		+e.container.container
+			+e.row.row
+				+e.slider-col.col-md
+					+e.slider-wrap
+						.swiper-container.breands-slider-js
+							.swiper-wrapper
+								+breandsSlide('Falmec')
+								+breandsSlide('Franke')
+								+breandsSlide('Faber')
+								+breandsSlide('Neff')
+								+breandsSlide('Emar')
+								+breandsSlide('Toshiba')
+								+breandsSlide('Dr.Gans')
+								+breandsSlide('Omoikiri')
+								+breandsSlide('Oulin')
+								+breandsSlide('Florentina')
+								+breandsSlide('Blanco')
+								+breandsSlide('Midea')
+				+e.arrow-col.col-auto.d-none.d-md-flex
+					+arrow2()
+				.col-auto.d-none.d-md-block
+					+e.all-link(href='#') все бренды
+
+mixin breandsSlide(txt)
+	.swiper-slide
+		+e.link(href="#")=txt
+
+mixin topNavItems()
+	+b.topNavItems
+		+e.row.row
+			+topNavItem('bars')
+			+topNavItem('like')
+			+topNavItem('cart')

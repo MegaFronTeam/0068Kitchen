@@ -1,2 +1,57 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer
+    +e.bg
+      img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+    .container
+      +e.row.row
+        .col-lg-4
+          +e.sub-row.row.gy-xl-0
+            .col.col-lg-12
+              +e.tells
+                +e.tell(href="tel:+78007758272") +7 (800) 775-82-72
+                +e.tell(href="tel:+74957758272") +7 (495) 775-82-72
+              +e.callback-btn(href="#") Заказать звонок
+              +e.mail-cont
+                +e.mail(href="mailto:shop@kitchenmania.ru") shop@kitchenmania.ru
+            .col-auto.col-lg-12
+              +e.soc-row.row
+                +socItem()
+                +socItem()
+              +e.white Узнавайте о новинках, акциях и выгодных предложениях первыми
+              +e.FORM.mail-form
+                +input('Электронная почта', 'email')
+                +e.btn(type="submit")
+                  +icon('arrow-r')
+        .col-sm-4.col-lg.col-xxl-3
+          +e.menu-title Интернет-магазин
+          +b.UL.menu
+            li: a(href='#') Доставка и оплата
+            li: a(href='#') Акции
+            li: a(href='#') Рассрочка и кредит
+            li: a(href='#') Обмен и возврат
+            li: a(href='#') Гарантия
+            li: a(href='#') Статьи
+            li: a(href='#') Карта сайта
+        .col-sm-4.col-lg.col-xxl-2
+          +e.menu-title О компании
+          +b.UL.menu
+            li: a(href='#') О нас
+            li: a(href='#') Вакансии
+            li: a(href='#') Сотрудничество
+            li: a(href='#') Контакты
+            li: a(href='#') Вход для партнеров
+        .col-sm-4.col-lg.col-xxl-3
+          +e.menu-title Каталог
+          +b.UL.menu
+            li: a(href='#') Встраиваемая техника
+            li: a(href='#') Крупная бытовая техника
+            li: a(href='#') Мелкая кухонная техника
+            li: a(href='#') Сантехника для кухни
+      +e.bot
+        +e.all-right © 2020 Китченмания — официальный интернет-магазин бытовой техники. Все права защищены.
+        +e.polcy-link(href='#') Политика конфиденциальности
+
+mixin socItem(iconName)
+  .col-auto
+    +e.item(href='#')
+      //-iconName

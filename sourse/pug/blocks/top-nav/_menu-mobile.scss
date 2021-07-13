@@ -1,6 +1,5 @@
 
 $h: em(2);
-
 .toggle-menu-mobile {
 	display: block;
 	height: $h* 12;
@@ -95,14 +94,14 @@ $h: em(2);
 	will-change: transform;
 
 	&__inner {
-		padding: rem(20) 0;
+		padding: rem(20) 15px;
+		background-color: $gray-900;
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
 		@include mt(.3s);
 		transition-delay: .4s;
-		opacity: var(--opacity);
 	}
 
 	&.active { 
@@ -139,21 +138,72 @@ $h: em(2);
 		}
 	}
 
-	ul {
-		position: relative;
+	&__logo{
+		display: block;
+		width: rem(173);
+		margin: 0 0 rem(30);
+
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	//menu
+	ul{
+		margin: 0 0 rem(30);
+		list-style: none;
+
+		li{
+			margin-bottom: rem(20);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		a{
+			display: block;
+			text-decoration: none;
+			font-size: rem(17px);
+			line-height: (25/17);
+
+			color: $gray-550;
+			&:hover{
+				color: $white;
+			}
+		}
 	}
 
-	li {
+	//
+	.location{
+		margin-bottom: rem(10);
+	}
+	&__address{
+		font-size: rem(17);
+		line-height: (25/17);
+		color: $gray-650;
+		margin-bottom: rem(5);
+	}
+
+	&__tel{
 		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
+		text-decoration: none;
 
-		a {
-			// font-size: 16px;
+		font-size: rem(19);
+		line-height: (30/19);
 
-			padding: 10px;
-			display: block;
-
+		color: $primary;
+		&:hover{
+			color: $white;
 		}
+	}
+	&__order-call{
+		display: block;
+		font-size: rem(17);
+		line-height: (25/17);
+
+		color: $white;
+		text-decoration: none;
+		margin-bottom: rem(30);
 	}
 }

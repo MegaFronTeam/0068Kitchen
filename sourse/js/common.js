@@ -111,7 +111,7 @@ const JSCCommon = {
 		}, { passive: true });
 
 		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+			if (window.matchMedia("(min-width: 1200px)").matches) this.closeMenu();
 		}, { passive: true });
 	},
 	// /mobileMenu
@@ -334,6 +334,40 @@ function eventHandler() {
 
 	});
 	// modal window
+
+	//luckyone Js
+	//.breands-slider-js
+	//.,
+	// 	.swiper-next
+
+	let brandsPrev = document.querySelector('.brands--js .swiper-prev');
+	let brandsNext = document.querySelector('.brands--js .swiper-next');
+	let brandsSlider = new Swiper('.breands-slider-js', {
+		slidesPerView: 'auto',
+		breakpoints:{
+			0:{
+				spaceBetween: 25,
+			},
+			768:{
+				spaceBetween: 25,
+			},
+			1200:{
+				spaceBetween: 50,
+			},
+		},
+
+		loop: true,
+		navigation: {
+			nextEl: brandsNext,
+			prevEl: brandsPrev,
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+	//end luckyone Js
 
 };
 if (document.readyState !== 'loading') {

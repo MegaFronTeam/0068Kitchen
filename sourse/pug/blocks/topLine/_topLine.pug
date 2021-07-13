@@ -1,9 +1,16 @@
 mixin topLine()
 	// start topLine
-	+b.SECTION.topLine.section#topLine&attributes(attributes)
+	+b.topLine.d-none.d-xl-block#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.row.row.align-items-center
+				+e.location-col.col.col-xl-auto
+					+b.location
+						+icon('location')
+						span null
+				.col.d-none.d-xl-block
+					+mnu()
+				.col-auto
+					+e.address ул.Складочная д.1, стр.9
+				.col-auto.d-none.d-xxl-block
+					+e.tell(href='tel:88007758272') 8 (800) 775-82-72 (По России)
 	// end topLine

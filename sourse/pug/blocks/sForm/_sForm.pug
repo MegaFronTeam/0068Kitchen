@@ -2,8 +2,27 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+e.box
+				+e.bg
+					img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+				+b.section-title
+					h2 Хотите связаться с нами и что-то предложить?
+					p Заполните форму обратной связи, напишите ваше мнение. Мы ответим вам на указанную почту
+				+form-wrap()
+					+e.row.row
+						+e.left-col.col-lg-auto
+							+input('Ваше имя', 'text')
+							+input('Ваша электронная почта', 'email')
+						.col-lg
+							+input('Ваш комментарий','textarea')
+						.col-12.m-0
+						+e.left-col.col-lg-auto
+							+e.btn(type="submit") написать нам
+						.col-lg
+							+e.policy
+								+e.p-txt
+									| Мы безопасно храним данные и никому их не передаём, вот
+									|
+									a(href="#") условия.
+
 	// end sForm
