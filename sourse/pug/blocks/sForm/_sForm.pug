@@ -24,5 +24,28 @@ mixin sForm()
 									| Мы безопасно храним данные и никому их не передаём, вот
 									|
 									a(href="#") условия.
-
 	// end sForm
+
+mixin sFormAlt()
+	// start sForm
+	+b.SECTION.sForm--alt.section#sForm&attributes(attributes)
+		.container
+			+e.box--alt
+				+e.bg
+					img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+				+b.section-title
+					h2 Хотите сотрудничать с нами?
+					p Заполните форму обратной связи, мы перезвоним вам и поговорим о сотрудничестве
+				+form-wrap()
+					+e.row--alt.row
+						+e.inp-col.col-md-6.col-lg-auto
+							+input('Ваше имя', 'text')
+						+e.inp-col.col-md-6.col-lg-auto
+							+input('Ваш телефон', 'tel')
+						.col-lg
+							+e.btn(type="submit") написать нам
+					+e.policy--mh0
+						+e.p-txt
+							| Мы безопасно храним данные и никому их не передаём, вот
+							|
+							a(href="#") условия.

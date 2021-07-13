@@ -4,6 +4,9 @@
 	--sPB: #{rem(101)};
 	--sTPB: #{rem(39)};
 
+	&--alt{
+		//??
+	}
 	&__box{
 		position: relative;
 		z-index: 1;
@@ -19,6 +22,13 @@
 		}
 		@include media-breakpoint-up(xl){
 			padding: 55px 70px 89px;
+		}
+
+		//
+		&--alt{
+			@include media-breakpoint-up(xl){
+				padding: 55px 70px 74px;
+			}
 		}
 	}
 	&__bg{
@@ -54,12 +64,26 @@
 				--bs-gutter-x: #{rem(30)};
 				--bs-gutter-y: #{rem(30)};
 			}
+
+			//
+			&--alt{
+				padding-bottom: rem(26);
+			}
 		}
 		&__left-col{
 			@include media-breakpoint-up(lg){
 				width: calc(#{rem(408)} + var(--bs-gutter-x)) !important;
 			}
 		}
+		//alt
+		&__inp-col{
+			@include media-breakpoint-up(lg){
+				width: 35% !important;
+			}
+		}
+
+		//
+
 		&__input-wrap{
 			margin-bottom: var(--bs-gutter-y);
 			&:last-child{
@@ -86,6 +110,12 @@
 			@include media-breakpoint-up(lg){
 				min-height: rem(53);
 			}
+			&--mh0{
+				@include media-breakpoint-up(lg){
+					min-height: 0;
+				}
+			}
+
 			display: flex;
 			align-items: center;
 			&:before{

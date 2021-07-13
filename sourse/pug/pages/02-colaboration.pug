@@ -7,10 +7,11 @@ include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sHello/_sHello.pug
 include ../blocks/sIcons/_sIcons.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sColaboration/_sColaboration.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= '01.png'
+	- let  bg= '02.png'
 
 block title
 	- let  title= 'title'
@@ -21,11 +22,10 @@ block pagecontent
 		+topLine()
 		+top-nav()
 		+brands()
-	+sAbout()
-	+sHello()
-	+sIcons()
-	+sForm()
+	+b.page-head
+		.container
+			+breadcrumb('Главная', 'Сотрудничество')
+			h1 Сотрудничество
+	+sColaboration()
+	+sFormAlt()
 	+footer()
-
-
-
