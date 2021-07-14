@@ -60,32 +60,8 @@
 		line-height: (26/16);
 		margin-bottom: 1px;
 	}
-	&__a-links{
+	.a-links{
 		padding-bottom: rem(25);
-	}
-	&__a-link{
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-
-		font-size: rem(14);
-		line-height: (26/14);
-		margin-bottom: rem(3);
-		color: $primary;
-
-		&:after{
-			content: '';
-			flex-shrink: 0;
-			margin-left: rem(13);
-
-			width: rem(30);
-			height: rem(16);
-
-			background-image: url(../img/svg/long-arrow-r.svg);
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
-		}
 	}
 	&__tells{
 		padding-bottom: rem(25);
@@ -153,3 +129,30 @@
 	&__{}
 	&__{}
 } // end.sContacts
+
+.a-links{
+	&__link{
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+
+		font-size: rem(14);
+		line-height: (26/14);
+		margin-bottom: rem(3);
+		color: $primary;
+
+		&:after{
+			content: '';
+			flex-shrink: 0;
+			margin-left: rem(13);
+
+			width: rem(30);
+			height: rem(16);
+
+			background-image: url(../img/svg/long-arrow-r.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+}

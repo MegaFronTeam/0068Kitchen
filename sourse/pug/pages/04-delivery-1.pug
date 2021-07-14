@@ -8,10 +8,12 @@ include ../blocks/sHello/_sHello.pug
 include ../blocks/sIcons/_sIcons.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sColaboration/_sColaboration.pug
+include ../blocks/sContacts/_sContacts.pug
+include ../blocks/sDelivery/_sDelivery.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= '02.png'
+	- let  bg= '04-1.png'
 
 block title
 	- let  title= 'title'
@@ -24,11 +26,7 @@ block pagecontent
 		+brands()
 	+b.page-head
 		.container
-			+breadcrumb('Главная', 'Сотрудничество')
-			h1 Сотрудничество
-	+sColaboration()
-	+sFormAlt({
-		title: 'Хотите сотрудничать с нами?',
-		descr: 'Заполните форму обратной связи, мы перезвоним вам и поговорим о сотрудничестве',
-	})
+			+breadcrumb('Главная', 'Доставка и оплата')
+			h1 Доставка и оплата
+	+sDelivery()
 	+footer()
