@@ -339,6 +339,77 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	//
+	$('img.img-svg-js').each(function () {
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function (data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = $(data).find('svg'); // Add replaced image's classes to the new SVG
+
+			if (typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass + ' replaced-svg');
+			} // Remove any invalid XML tags as per http://validator.w3.org
+
+
+			$svg = $svg.removeAttr('xmlns:a'); // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+
+			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
+			} // Replace image with new SVG
+
+
+			$img.replaceWith($svg);
+		}, 'xml');
+	});
+
+	//
+	let paymentSlider = new Swiper('.payment-slider-js', {
+		spaceBetween: 25,
+		slidesPerView: 'auto',
+
+		loop: true,
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+	//
+	function makeDDGroup(ArrSelectors){
+		for (let parentSelect of ArrSelectors){
+			let parent = document.querySelector(parentSelect);
+			if (parent){
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
+				$(ChildHeads).click(function (){
+					let clickedHead = this;
+
+					$(ChildHeads).each(function (){
+						if (this === clickedHead){
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+								$(this).toggleClass('active');
+							});
+						}
+						else{
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function (){
+								$(this).removeClass('active');
+							});
+						}
+					});
+
+				});
+			}
+		}
+	}
+	makeDDGroup([
+		'.payment-dd-items-js',
+	]);
+
 	//end luckyone Js
 
 };

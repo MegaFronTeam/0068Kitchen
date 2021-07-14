@@ -580,3 +580,27 @@ iframe {
 	padding-top: rem(45);
 	padding-bottom: rem(20);
 }
+
+//
+.swiper-pagination{
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	.swiper-pagination-bullet{
+		@include mt();
+		margin: rem(4);
+		width: rem(14);
+		height: rem(14);
+		opacity: 1;
+
+		background-color: transparent;
+		border: 1px solid $gray-590;
+		&-active{
+			background-color: $primary;
+			border: 1px solid $primary;
+		}
+	}
+}
