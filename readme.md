@@ -8,3 +8,6 @@
    
 1. <https://luckyone1221.github.io/0068Kitchen/public/06-actions.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/07-credit.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/08-exchange.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/09-warranty.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/010-articals.html>
