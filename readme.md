@@ -5,3 +5,6 @@
 1. <https://luckyone1221.github.io/0068Kitchen/public/02-colaboration.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/03-contacts.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/04-delivery-1.html>
+   
+1. <https://luckyone1221.github.io/0068Kitchen/public/06-actions.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/07-credit.html>

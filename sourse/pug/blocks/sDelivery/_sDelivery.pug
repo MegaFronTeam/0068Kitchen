@@ -74,24 +74,27 @@ mixin payment()
 					+paymentDDItem(1, 'Оплата картой', 'active')
 					+paymentDDItem(2, 'Оплата при получении')
 					+paymentDDItem(3, 'Безналичный расчет')
-			+e.slider-col.col-md-auto
-				.swiper-container.payment-slider-js
-					.swiper-wrapper
-						-for(var i = 0; i < 3; i++)
-							.swiper-slide
-								+e.item
-									+e.bg
-										img(loading="lazy" src="img/@2x/payment-slider-1.jpg" alt="")
-									+e.s-content
-										+e.s-title Покупай в кредит!
-										+e.s-descr В нашем магазине можно приобрести товары в рассрочку или кредит без первоначального взноса и переплат через Почта Банк.
-										+e.s-btn(href='#') узнать подробнее
-					.swiper-pagination
+			+paymentSliderCol()
 		+e.form-cont
 			+sFormAlt({
 				title: 'Есть вопросы по поводу оплаты?',
 				descr: 'Заполните форму обратной связи, мы перезвоним вам и ответим на все ваши вопросы',
 			})
+
+mixin paymentSliderCol()
+	+b.slider-col.col-md-auto
+		.swiper-container.payment-slider-js
+			.swiper-wrapper
+				-for (var i = 0; i < 3; i++)
+					.swiper-slide
+						+e.item
+							+e.bg
+								img(loading="lazy" src="img/@2x/payment-slider-1.jpg" alt="")
+							+e.s-content
+								+e.s-title Покупай в кредит!
+								+e.s-descr В нашем магазине можно приобрести товары в рассрочку или кредит без первоначального взноса и переплат через Почта Банк.
+								+e.s-btn(href='#') узнать подробнее
+			.swiper-pagination
 
 mixin paymentDDItem(imgNum, title, activeClasses='')
 	+e.dd-item(class=activeClasses)
