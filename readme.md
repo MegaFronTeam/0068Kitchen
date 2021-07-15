@@ -11,3 +11,6 @@
 1. <https://luckyone1221.github.io/0068Kitchen/public/08-exchange.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/09-warranty.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/010-articals.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/011-article.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/012-map.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/013-vacancy.html>

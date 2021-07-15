@@ -14,11 +14,23 @@
 			padding-bottom: rem(70);
 		}
 	}
-	&__item{
-		display: flex;
-		flex-direction: column;
-		min-height: 100%;
+	//
+	&__pugin-cont{
+		border-top: 1px solid rgba($black, .1);
+
+		padding-top: rem(30);
+		@include media-breakpoint-up(xl){
+			padding-top: rem(50);
+		}
 	}
+	&__{}
+} // end.sArticals
+
+.sArticalsitem{
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
 	&__img{
 		@extend .accept-ratio-frame;
 		padding-top: (327/433) * 100%;
@@ -62,15 +74,6 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		display: block;
+		margin-top: auto;
 	}
-	//
-	&__pugin-cont{
-		border-top: 1px solid rgba($black, .1);
-
-		padding-top: rem(30);
-		@include media-breakpoint-up(xl){
-			padding-top: rem(50);
-		}
-	}
-	&__{}
-} // end.sArticals
+}

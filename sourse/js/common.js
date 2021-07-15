@@ -410,6 +410,27 @@ function eventHandler() {
 		'.payment-dd-items-js',
 	]);
 
+	//
+	let sUseFullPrev = document.querySelector('.sUseFull--js .swiper-prev');
+	let sUseFullNext = document.querySelector('.sUseFull--js .swiper-next');
+	let sUseFullSlider = new Swiper('.sUseFull-slider-js', {
+		slidesPerView: 'auto',
+		breakpoints:{
+			0:{
+				spaceBetween: 20,
+			},
+			1200:{
+				spaceBetween: 30,
+			},
+		},
+
+		loop: true,
+		navigation: {
+			nextEl: sUseFullNext,
+			prevEl: sUseFullPrev,
+		},
+	});
+
 	//end luckyone Js
 
 };

@@ -22,10 +22,13 @@ mixin sArticals(data)
 
 mixin sArticalsItem(imgNum, title)
 	.col-sm-6.col-lg-4
-		+e.item
-			+e.img(href="#")
-				img(loading="lazy" src=`img/@2x/sArticals-${imgNum}.jpg` alt="")
-				+e.date 12 февраля 2021
-			+e.title(href="#")=title
-			+e.descr Бензиновый мотобур относится к узкоспециализированным инструментам. Он применяется для бурения почвы и льда. Само по себе устройство не ново, но тем не менее на современном рынке
-			+e.read-more(href="#") Читать подробнее
+		+sArticalsItemSingle(imgNum, title)
+
+mixin sArticalsItemSingle(imgNum, title)
+	+b.sArticalsitem
+		+e.img(href="#")
+			img(loading="lazy" src=`img/@2x/sArticals-${imgNum}.jpg` alt="")
+			+e.date 12 февраля 2021
+		+e.title(href="#")=title
+		+e.descr Бензиновый мотобур относится к узкоспециализированным инструментам. Он применяется для бурения почвы и льда. Само по себе устройство не ново, но тем не менее на современном рынке
+		+e.read-more(href="#") Читать подробнее
