@@ -14,3 +14,4 @@
 1. <https://luckyone1221.github.io/0068Kitchen/public/011-article.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/012-map.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/013-vacancy.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/014-prod-card.html>

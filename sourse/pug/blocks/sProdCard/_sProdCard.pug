@@ -1,0 +1,117 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard(class=data.addClasses).section#sProdCard&attributes(attributes)
+		.container
+			if data.bgPage
+				+e.bg
+					img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+					+e.t-cont.container
+						+e.t-white
+			+breadcrumb('Главная', 'Каталог', 'Холодильник Toshiba GR-RT565RS(N)')
+			+e.top-box
+				+b.section-title
+					h1 Холодильник Toshiba GR-RT565RS(N)
+				+e.tags-row.row
+					+sProdCardTag('t-messages', '0 отзывов')
+					+sProdCardTag('t-heart', 'В избранное')
+					+sProdCardTag('t-compare', 'Сравнить')
+					+sProdCardTag('t-share', 'Поделиться')
+				+e.t-row.row
+					+e.slider-col.col-xl-auto
+						+e.slider-wrap
+							.swiper-container.sProdCard-slider-js
+								.swiper-wrapper
+									+sProdCardSlide(1)
+									+sProdCardSlide(2)
+									+sProdCardSlide(3)
+									+sProdCardSlide(4)
+						+e.thumb-wrap
+							.swiper-container.sProdCard-thumb-js
+								.swiper-wrapper
+									+sProdCardThumb(1)
+									+sProdCardThumb(2)
+									+sProdCardThumb(3)
+									+sProdCardThumb(4)
+					+e.char-col.col-xl-auto.col-md-5
+						+e.chars
+							+sProdCardChar('Артикул:', '10209256')
+							+sProdCardChar('Цвет:', 'нерж.сталь')
+							+sProdCardChar('Гарантийный срок:', '24 мес')
+							+sProdCardChar('Тип управления:', 'механическое')
+							+sProdCardChar('Страна-производитель:', 'Турция')
+							+sProdCardChar('Цвет фурнитуры:', 'эффект нержавеющей стали')
+							+sProdCardChar('Глубина (см):', '51')
+							+sProdCardChar('Энергопотребление:', '250 кВт')
+							+sProdCardChar('Высота, см:', '235')
+							+sProdCardChar('Мин. температура:', '-25 С')
+							+sProdCardChar('Макс. температура:', '+10 С')
+						+e.more-chars(href="#") больше характеристик
+						+e.brand-img
+							img(loading="lazy" src="img/@2x/brand-img.png" alt="")
+					+e.gray-col.col-xl.col-md-7
+						+e.gray-box
+							+e.price 69 990 руб.
+							+e.bonus-row.row.align-items-center
+								.col-auto
+									+e.b-val +299.5
+								.col-auto
+									+e.b-txt бонусов
+								.col-auto
+									+e.tooltit
+										img(loading="lazy" src="img/svg/q-sign.svg" alt="")
+							+e.btns-row.row
+								.col-6
+									+e.btn--orange(href="#") В корзину
+								.col-6
+									+e.btn--gray(href="#") Купить в 1 клик
+							+e.dicount(href="#") Оформить рассрочку
+						+e.pills
+							+sProdCardPill(1, 'Доставка:', 'бесплатно')
+							+sProdCardPill(2, 'Самовывоз:', 'сегодня, бесплатно')
+			+e.mid-box
+				if data.bgPage
+					+e.bg--mid
+						img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+						+e.t-cont.container
+							+e.t-white
+				+middleContent()
+	// end sProdCard
+
+mixin middleContent()
+	+b.m-content
+		+e.descr-title Описание
+
+
+
+
+mixin sProdCardPill(imgNum, key, val)
+	+e.pill
+		+e.p-row.row.align-items-center
+			.col-auto
+				+e.p-icon
+					img(loading="lazy" src=`img/svg/sProdCard-pill-${imgNum}.svg` alt="")
+			.col
+				+e.SPAN.p-key=key
+				+e.SPAN.p-val=val
+
+
+mixin sProdCardChar(key, val)
+	+e.char
+		+e.SPAN.key=key
+		+e.SPAN.val=val
+
+mixin sProdCardTag(tagName, txt)
+	.col-auto
+		+e.tag(href="#")
+			+e.icon
+				img(loading="lazy" src=`img/svg/${tagName}.svg` alt="")
+			span=txt
+
+mixin sProdCardSlide(imgNum)
+	.swiper-slide
+		+e.s-img(href=`img/@2x/sProdCard-slide-${imgNum}.png` data-fancybox='sProdCardSlide')
+			img(loading="lazy" src=`img/@2x/sProdCard-slide-${imgNum}.png` alt="")
+
+mixin sProdCardThumb(imgNum)
+	.swiper-slide
+		img(loading="lazy" src=`img/@2x/sProdCard-slide-${imgNum}.png` alt="")

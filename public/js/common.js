@@ -433,6 +433,17 @@ function eventHandler() {
 			nextEl: sUseFullNext,
 			prevEl: sUseFullPrev
 		}
+	}); //
+
+	let prodCardThumb = new Swiper('.sProdCard-thumb-js', {
+		slidesPerView: 'auto'
+	});
+	let prodCardSlider = new Swiper('.sProdCard-slider-js', {
+		spaceBetween: 30,
+		thumbs: {
+			swiper: prodCardThumb
+		},
+		loop: true
 	}); //end luckyone Js
 }
 
