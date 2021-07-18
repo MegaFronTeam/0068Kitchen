@@ -20,6 +20,7 @@ include ../blocks/sUseFull/_sUseFull.pug
 include ../blocks/sMap/_sMap.pug
 include ../blocks/sVacancy/_sVacancy.pug
 include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sFamiliar/_sFamiliar.pug
 
 block variables
 	- let  mainPage= null 
@@ -37,5 +38,12 @@ block pagecontent
 	+sProdCard({
 		addClasses: 'bg-page',
 		bgPage: true,
+	})
+	+sFamiliar({
+		title: 'Похожие товары',
+	})
+	+sFormAlt({
+		title: 'Заинтересовал определенный товар?',
+		descr: 'Свяжись с нами, заполнив форму. Мы перезвоним тебе и все обсудим!',
 	})
 	+footer()

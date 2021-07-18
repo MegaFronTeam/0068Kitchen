@@ -35,6 +35,8 @@ $utilities: ("opacity": (
 // scss-docs-start gray-color-variables
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
+$gray-110: #ECECEC;
+$gray-120: #F3F3F3;
 $gray-200: #e9ecef !default;
 $gray-280: #E8E8E8;
 $gray-290: #EEEEEE;
@@ -46,6 +48,7 @@ $gray-520: #BABABA;
 $gray-520: #ECECEC;
 $gray-530: #9B9B9B;
 $gray-550: #9C9C9C;
+$gray-560: #C3C3C3;
 $gray-580: #858585;
 $gray-585: #969595;
 $gray-590: #A9A9A9;
@@ -53,9 +56,12 @@ $gray-600: #6c757d !default;
 $gray-650: #747474;
 $gray-670: #717171;
 $gray-700: #495057 !default;
+$gray-720: #575757;
 $gray-800: #343a40 !default;
+$gray-830: #444444;
 $gray-900: #262626 !default;
 $gray-910: #2C2C2C;
+$gray-920: #2a2a2a;
 $black: #000 !default;
 // scss-docs-end gray-color-variables
 

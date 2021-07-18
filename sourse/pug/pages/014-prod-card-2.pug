@@ -24,7 +24,7 @@ include ../blocks/sFamiliar/_sFamiliar.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= '014-1.png'
+	- let  bg= '014-2.png'
 
 block title
 	- let  title= '014-prod-card'
@@ -36,10 +36,12 @@ block pagecontent
 		+top-nav()
 		+brands()
 	+sProdCard({
-		addClasses: 'bg-page',
-		bgPage: true,
+		addClasses: '',
+		bgPage: false,
 	})
-	+sFamiliar()
+	+sFamiliar({
+		title: 'Похожие товары',
+	})
 	+sFormAlt({
 		title: 'Заинтересовал определенный товар?',
 		descr: 'Свяжись с нами, заполнив форму. Мы перезвоним тебе и все обсудим!',

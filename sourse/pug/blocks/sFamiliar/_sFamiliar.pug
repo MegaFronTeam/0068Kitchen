@@ -1,0 +1,50 @@
+mixin sFamiliar(data)
+	// start sFamiliar
+	+b.SECTION.sFamiliar--js.section(class=`${data.addClasses || ''}`)#sFamiliar&attributes(attributes)
+		if data.bg
+			+e.bg
+				img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+		.container
+			+e.row.row.align-items-center.align-items-xxl-start
+				.col
+					+b.section-title
+						h2=data.title
+				+e.arrow-col.col-auto
+					+arrow2()
+			+e.slider-wrap
+				.swiper-container.sFamiliar-slider-js
+					.swiper-wrapper
+						-for(var i =0; i < 4; i++)
+							+sFamiliarSlide(1)
+							+sFamiliarSlide(2)
+							+sFamiliarSlide(3)
+
+	// end sFamiliar
+
+mixin sFamiliarSlide(imgNum)
+	.swiper-slide
+		+e.item
+			+e.i-row.row.align-items-center
+				.col-auto
+					+e.img(href="#")
+						img(loading="lazy" src=`img/@2x/sFamiliar-${imgNum}.png` alt="")
+				.col
+					+e.title(href="#")
+						span Холодильник Toshiba
+						br
+						span GR-RT565RS(N)
+					+e.chars
+						+sFamiliarSlideChar('Артикул:', '770080')
+						+sFamiliarSlideChar('Производитель:', 'Toshiba')
+						+sFamiliarSlideChar('Цвет:', 'золотистый')
+					+e.foot-row.row.align-items-center
+						.col
+							+e.price 69 990 руб.
+						.col-auto
+							+e.add-btn(href="#")
+								+icon('plus')
+
+mixin sFamiliarSlideChar(key,val)
+	+e.char
+		+e.SPAN.key=key
+		+e.SPAN.val=val

@@ -11,7 +11,7 @@ mixin sProdCard(data)
 			+e.top-box
 				+b.section-title
 					h1 Холодильник Toshiba GR-RT565RS(N)
-				+e.tags-row.row
+				+b.tags-row.row
 					+sProdCardTag('t-messages', '0 отзывов')
 					+sProdCardTag('t-heart', 'В избранное')
 					+sProdCardTag('t-compare', 'Сравнить')
@@ -32,42 +32,11 @@ mixin sProdCard(data)
 									+sProdCardThumb(2)
 									+sProdCardThumb(3)
 									+sProdCardThumb(4)
+					//
 					+e.char-col.col-xl-auto.col-md-5
-						+e.chars
-							+sProdCardChar('Артикул:', '10209256')
-							+sProdCardChar('Цвет:', 'нерж.сталь')
-							+sProdCardChar('Гарантийный срок:', '24 мес')
-							+sProdCardChar('Тип управления:', 'механическое')
-							+sProdCardChar('Страна-производитель:', 'Турция')
-							+sProdCardChar('Цвет фурнитуры:', 'эффект нержавеющей стали')
-							+sProdCardChar('Глубина (см):', '51')
-							+sProdCardChar('Энергопотребление:', '250 кВт')
-							+sProdCardChar('Высота, см:', '235')
-							+sProdCardChar('Мин. температура:', '-25 С')
-							+sProdCardChar('Макс. температура:', '+10 С')
-						+e.more-chars(href="#") больше характеристик
-						+e.brand-img
-							img(loading="lazy" src="img/@2x/brand-img.png" alt="")
-					+e.gray-col.col-xl.col-md-7
-						+e.gray-box
-							+e.price 69 990 руб.
-							+e.bonus-row.row.align-items-center
-								.col-auto
-									+e.b-val +299.5
-								.col-auto
-									+e.b-txt бонусов
-								.col-auto
-									+e.tooltit
-										img(loading="lazy" src="img/svg/q-sign.svg" alt="")
-							+e.btns-row.row
-								.col-6
-									+e.btn--orange(href="#") В корзину
-								.col-6
-									+e.btn--gray(href="#") Купить в 1 клик
-							+e.dicount(href="#") Оформить рассрочку
-						+e.pills
-							+sProdCardPill(1, 'Доставка:', 'бесплатно')
-							+sProdCardPill(2, 'Самовывоз:', 'сегодня, бесплатно')
+						+sProdCardCharCol()
+					+e.buy-col.col-xl.col-md-7
+						+sProdCardBuyCol()
 			+e.mid-box
 				if data.bgPage
 					+e.bg--mid
@@ -77,11 +46,135 @@ mixin sProdCard(data)
 				+middleContent()
 	// end sProdCard
 
+mixin sProdCardBuyCol()
+	+b.prodCard-buy
+		+e.box
+			+e.price 69 990 руб.
+			+e.bonus-row.row.align-items-center
+				.col-auto
+					+e.b-val +299.5
+				.col-auto
+					+e.b-txt бонусов
+				.col-auto
+					+e.tooltit
+						img(loading="lazy" src="img/svg/q-sign-orange.svg" alt="")
+			+e.btns-row.row
+				.col-6
+					+e.btn--orange(href="#") В корзину
+				.col-6
+					+e.btn--gray(href="#") Купить в 1 клик
+			+e.dicount(href="#") Оформить рассрочку
+		+e.pills
+			+sProdCardPill(1, 'Доставка:', 'бесплатно')
+			+sProdCardPill(2, 'Самовывоз:', 'сегодня, бесплатно')
+
+mixin sProdCardCharCol()
+	+b.prodCard-chars
+		+e.box
+			+sProdCardChar('Артикул:', '10209256')
+			+sProdCardChar('Цвет:', 'нерж.сталь')
+			+sProdCardChar('Гарантийный срок:', '24 мес')
+			+sProdCardChar('Тип управления:', 'механическое')
+			+sProdCardChar('Страна-производитель:', 'Турция')
+			+sProdCardChar('Цвет фурнитуры:', 'эффект нержавеющей стали')
+			+sProdCardChar('Глубина (см):', '51')
+			+sProdCardChar('Энергопотребление:', '250 кВт')
+			+sProdCardChar('Высота, см:', '235')
+			+sProdCardChar('Мин. температура:', '-25 С')
+			+sProdCardChar('Макс. температура:', '+10 С')
+		+e.more(href="#") больше характеристик
+		+e.img
+			img(loading="lazy" src="img/@2x/brand-img.png" alt="")
+
 mixin middleContent()
 	+b.m-content
-		+e.descr-title Описание
+		+e.H2.descr-title Описание
+		+e.d-row.row
+			+e.txt-col.col-md
+				p Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно). Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно).
+				p Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно).Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно).Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно).Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно).
+				p Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно). Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно).
+			+e.img-col.col-md-auto
+				+e.d-img
+					img(loading="lazy" src="img/@2x/m-content-img.jpg" alt="")
+		+sProdCardTabs()
 
+mixin sProdCardTabs(fBtnTxt='Характеристики')
+	+b.pc-tabs.tabs
+		+e.caption-slider
+			.swiper-container.pc-tabs-slider-js
+				.swiper-wrapper
+					.swiper-slide
+						+e.tabs-btn.tabs__btn.active=fBtnTxt
+					.swiper-slide
+						+e.tabs-btn.tabs__btn Отзывы
+					.swiper-slide
+						+e.tabs-btn.tabs__btn Доставка и оплата
+		.tabs__wrap
+			.tabs__content.active
+				+e.char-table
+					+middleContentTableItem('Габариты и вес')
+						+middleContentTableRow('Глубина встраивания (см)','49')
+						+middleContentTableRow('Ширина встраивания (см)','28')
+					+middleContentTableItem('Мощность варочных зон', 'big')
+						+middleContentTableRow('Задняя (кВт)','3')
+						+middleContentTableRow('Передняя (кВт)','1')
+					+middleContentTableItem('Мощность и энергопотребление', 'big')
+						+middleContentTableRow('Тип газа','природный/LPG (бутан, пропан)')
+					//-
+					+middleContentTableItem('Общие характеристики')
+						+middleContentTableRow('Артикул','10209256')
+						+middleContentTableRow('Габариты, ВхШхГ (см)','4x30x51')
+						+middleContentTableRow('Газ-контроль','есть')
+						+middleContentTableRow('Гарантийный срок','24 мес')
+						+middleContentTableRow('Глубина (см)','51')
+						+middleContentTableRow('Дополнительная информация','Горелки с декоративным откосом, Планка 40204391 для комбинирования с другими модульными панелями из нержавеющей стали (приобретается отдельно)')
+						//
+						+middleContentTableRow('Защита от детей','нет')
+						+middleContentTableRow('Количество газовых конфорок','2')
+						+middleContentTableRow('Конфорка WOK','нет')
+						+middleContentTableRow('Материал','нерж. сталь')
+						+middleContentTableRow('Материал решетки','эмалированная')
+						+middleContentTableRow('Производитель','Teka')
+						+middleContentTableRow('Размеры ниши для встраивания (Ш х Г), см','28x49')
+						+middleContentTableRow('Страна-производитель','Турция')
+						+middleContentTableRow('Тип варочной панели','газовая')
+						+middleContentTableRow('Тип управления','механическое')
+						+middleContentTableRow('Цвет','нерж.сталь')
+						+middleContentTableRow('Цвет рамки','нержавеющая сталь')
+						+middleContentTableRow('Цвет фурнитуры','эффект нержавеющей стали')
+						+middleContentTableRow('Ширина (см)','30')
+						+middleContentTableRow('Электроподжиг','нет')
+					+middleContentTableItem('Общие характеристики тека irs 631 white')
+						+middleContentTableRow('Габариты (ВхШхГ)','4x30x51')
+						+middleContentTableRow('Способ подключения','газовая')
+					+middleContentTableItem('Основные', 'big')
+						+middleContentTableRow('System.ActivePrevStage','Есть')
+					+middleContentTableItem('Основные характеристики')
+						+middleContentTableRow('Высота (см)','4.0000')
+					+middleContentTableItem('Технические характеристики')
+						+middleContentTableRow('Общая потребляемая мощность (кВт)','4')
+						+middleContentTableRow('Приспособлена для LPG (сжиженный нефтяной газ)','да')
+						+middleContentTableRow('Регулировка мощности','бесступенчатая')
+					+middleContentTableItem('Управление', 'big')
+						+middleContentTableRow('Отсрочка запуска','нет')
+						+middleContentTableRow('Расположение элементов управления','спереди')
+					+middleContentTableItem('Установка')
+						+middleContentTableRow('Размеры выреза, см:','28x49')
+			.tabs__content 2
+			.tabs__content 3
 
+mixin middleContentTableItem(title, addTittleClass='')
+	+e.ct-item
+		//css class "big" can be removed
+		+e.ct-title(class=addTittleClass)=title
+		+e.ct-tr-wrap
+			block
+
+mixin middleContentTableRow(key, val)
+	+e.ct-tr.row
+		+e.ct-key.col-md-6.col-lg-5=key
+		+e.ct-val.col-md=val
 
 
 mixin sProdCardPill(imgNum, key, val)
@@ -103,8 +196,9 @@ mixin sProdCardChar(key, val)
 mixin sProdCardTag(tagName, txt)
 	.col-auto
 		+e.tag(href="#")
-			+e.icon
-				img(loading="lazy" src=`img/svg/${tagName}.svg` alt="")
+			if tagName
+				+e.icon
+					img(loading="lazy" src=`img/svg/${tagName}.svg` alt="")
 			span=txt
 
 mixin sProdCardSlide(imgNum)
