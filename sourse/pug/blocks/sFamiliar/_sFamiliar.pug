@@ -4,13 +4,27 @@ mixin sFamiliar(data)
 		if data.bg
 			+e.bg
 				img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
-		.container
-			+e.row.row.align-items-center.align-items-xxl-start
-				.col
-					+b.section-title
-						h2=data.title
-				+e.arrow-col.col-auto
-					+arrow2()
+		if data.bgAlt
+			+e.bg--alt
+				img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+		+e.container.container
+			if !data.absoluteTitle
+				+e.row.row.align-items-center.align-items-xxl-start
+					.col
+						+b.section-title
+							h2!=data.title
+					+e.arrow-col.col-auto
+						+arrow2()
+			else
+				+e.a-title
+					//-+e.bg
+						img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+					+e.row--absolute.row.align-items-center.align-items-xxl-start
+						.col.col-xl-8
+							+b.section-title
+								h2!=data.title
+						+e.arrow-col.col-auto.col-xl-12
+							+arrow2()
 			+e.slider-wrap
 				.swiper-container.sFamiliar-slider-js
 					.swiper-wrapper
@@ -18,13 +32,12 @@ mixin sFamiliar(data)
 							+sFamiliarSlide(1)
 							+sFamiliarSlide(2)
 							+sFamiliarSlide(3)
-
 	// end sFamiliar
 
 mixin sFamiliarSlide(imgNum)
 	.swiper-slide
-		+e.item
-			+e.i-row.row.align-items-center
+		+b.prod-item
+			+e.row.row.align-items-center
 				.col-auto
 					+e.img(href="#")
 						img(loading="lazy" src=`img/@2x/sFamiliar-${imgNum}.png` alt="")

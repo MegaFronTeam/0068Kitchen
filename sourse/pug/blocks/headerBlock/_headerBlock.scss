@@ -1,55 +1,122 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
+  color: $white;
+  background-color: $body-color;
 
-	h1 {
-		margin-bottom: 1px;
-	}
+  &__slider-wrap{
+    .swiper-container{
 
-	h2 {
-		margin-bottom: 1px;
-	}
+    }
+    .swiper-wrapper{
 
-	@include media-breakpoint-up(xl) {}
+    }
+    .swiper-slide{
+      height: auto;
 
-	@include media-breakpoint-up(lg) {}
+    }
+  }
+  &__item{
+    min-height: 330px;
 
-	@include media-breakpoint-up(md) {}
+    padding: rem(55) 0;
+    @include media-breakpoint-up(md){
+      padding: rem(80) 0;
+    }
+    @include media-breakpoint-up(xl){
+      min-height: rem(514);
+      padding: rem(60) 0;
+    }
+    @include media-breakpoint-up(xxl){
+      padding: rem(90) 0;
+    }
 
-	@include media-breakpoint-up(sm) {}
+    position: relative;
+    z-index: 1;
+  }
+  &__bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-	@include media-breakpoint-up(xs) {}
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include media-breakpoint-up(sm){
+        object-position: right bottom;
+      }
+    }
+  }
+  &__txt-box{
+    margin-bottom: rem(28);
+    @include media-breakpoint-up(xl){
+      margin-bottom: rem(56);
+    }
 
-	//
-	@include media-breakpoint-between(md, xl) {}
+    & > *:last-child{
+      margin-bottom: 0;
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 25px;
+      /* or 127% */
 
 
-	//
-	@include media-breakpoint-only(xs) {}
+      color: #FFFFFF;
 
-	@include media-breakpoint-only(sm) {}
+    }
+  }
+  &__title{
+    color: $gray-110;
+    margin-bottom: rem(21);
 
-	@include media-breakpoint-only(md) {}
+    font-size: 30px;
+    @include media-breakpoint-up(lg){
+      font-size: rem(40);
+    }
+    @include media-breakpoint-up(xl){
+      font-size: rem(50);
+    }
+    @include media-breakpoint-up(xxl){
+      font-size: rem(59);
+    }
+    line-height: 1.2;
+  }
+  &__learn-more{
+    display: inline-flex;
+    align-items: center;
 
-	@include media-breakpoint-only(lg) {}
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
 
-	@include media-breakpoint-only(xl) {}
+    &:hover{
+      &:after{
+        transform: translateX(5px);
+      }
+    }
+    &:after{
+      @include mt();
+      content: '';
+      display: inline-block;
+      margin-left: rem(15);
+      width: rem(15);
+      height: rem(15);
 
-	//
-	@include media-breakpoint-down(xl) {}
+      background-image: url(../img/svg/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
 
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
-
+  //
+  &__{}
+  &__{}
 }
 
 // end.headerBlock

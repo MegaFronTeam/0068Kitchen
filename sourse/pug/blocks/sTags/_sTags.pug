@@ -1,0 +1,34 @@
+mixin sTags(data)
+	// start sTags
+	+b.SECTION.sTags.section#sTags&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2
+					| Популярные подборки
+					br
+					| бытовой техники
+			+e.row.row.sTags-row-js.justify-content-center
+				+sTagsItem('Встраиваемая техника')
+				+sTagsItem('Варочные панели')
+				+sTagsItem('Варочные панели домино')
+				+sTagsItem('Встраиваемая комбинированная панель')
+				+sTagsItem('Встраиваемые газовые панели')
+				+sTagsItem('Встраиваемые индукционные панели')
+				+sTagsItem('Встраиваемые электрические панели')
+				+sTagsItem('Встраиваемая техника')
+				+sTagsItem('Варочные панели')
+				+sTagsItem('Варочные панели домино')
+				+sTagsItem('Встраиваемая комбинированная панель')
+				+sTagsItem('Встраиваемые газовые панели')
+				+sTagsItem('Встраиваемые индукционные панели')
+				+sTagsItem('Встраиваемые электрические панели')
+				.col-auto.d-block
+					+e.btn--toggle.sTags-btn-js
+						span Показать все
+						span Скрыть
+
+	// end sTags
+
+mixin sTagsItem(txt)
+	.col-auto
+		+e.btn--tag(href="#")=txt

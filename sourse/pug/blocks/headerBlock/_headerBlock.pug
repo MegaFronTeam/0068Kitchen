@@ -1,10 +1,44 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+e.slider-wrap
+			.swiper-container.headerBlock-slider-js
+				.swiper-wrapper
+					+headerBlockSlide(1, 'В каталог')
+						+e.title
+							| Интернет-магазин
+							br
+							| элитной бытовой техники
+					+headerBlockSlide(2)
+						+e.title
+							span.text-primary Скидка 10%
+							br
+							span новосёлам!
+					+headerBlockSlide(3)
+						+e.title
+							| Скидки
+							|
+							span.text-primary до 15%
+							br
+							| на комплект техники
+					+headerBlockSlide(4)
+						+e.title
+							| Утилизация техники
+							|
+							span.text-primary бесплатно!
+						p
+							| При покупке техники в нашем магазине, утилизация старой техники из вашей
+							|
+							br.d-none.d-md-block
+							| квартиры абсолютно бесплатно*
 	// end headerBlock
+
+mixin headerBlockSlide(imgNum, btnTxt='Подробнее')
+	.swiper-slide
+		+e.item
+			+e.bg
+				img(src=`img/@2x/headerBlock-${imgNum}.jpg` loading='lazy' alt='')
+			.container
+				+e.txt-box
+					block
+				+e.learn-more(href="#")=btnTxt

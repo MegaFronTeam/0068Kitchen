@@ -19,8 +19,21 @@ mixin sIcons(data)
 				a(href="mailto:shop@kitchenmania.ru") shop@kitchenmania.ru
 				|
 				| и мы обязательно отреагируем
-
 	// end sIcons
+
+mixin sIconsAlt(data)
+	// start sIcons
+	+b.sIcons--alt.section#sIcons&attributes(attributes)
+		.container
+			+e.row-wrap
+				+e.row.row.pb-0
+					+sIconsItem(1, `Адекватные <br> цены`)
+					+sIconsItem(2, `Бесплатная <br> доставка`)
+					+sIconsItem(3, `Бесплатная <br> установка`)
+					+sIconsItem(4, `Простой возврат <br> и обмен`)
+					+sIconsItem(5, `Фирменная <br> гарантия`)
+					+sIconsItem(6, `Много акций <br> и скидок`)
+					+sIconsItem(7, `Всегда живая <br> обратная связь`)
 
 mixin sIconsItem(imgNum, txt)
 	+e.col.col-6.col-sm-4.col-lg-3
