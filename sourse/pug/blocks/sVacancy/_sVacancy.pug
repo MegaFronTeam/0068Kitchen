@@ -1,6 +1,6 @@
 mixin sVacancy(data)
 	// start sVacancy
-	+b.SECTION.sVacancy.section#sVacancy&attributes(attributes)
+	+b.sVacancy.section#sVacancy&attributes(attributes)
 		.container
 			+e.row.row
 				.col
@@ -23,8 +23,8 @@ mixin sVacancy(data)
 
 mixin sVacancyFilterItem(txt)
 	+e.LABEL.label
-		input(type="radio" name="sVacancy-filter" val=txt class="invisible")&attributes(attributes)
-		.sVacancy__txt=txt
+		input(type="radio" name="sVacancy-filter" value=txt class="invisible")&attributes(attributes)
+		span.sVacancy__txt=txt
 
 mixin sVacancyItem(title, salary='не указана')
 	+e.item
