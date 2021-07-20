@@ -1,5 +1,30 @@
 mixin header()
 	// start header
-	+b.HEADER.header#header&attributes(attributes)
+	+b.HEADER.header--js#header&attributes(attributes)
 		block
+		+catalogDD()
 	// end header
+
+mixin catalogDD()
+	+b.catalog-dd
+		.container
+			+e.row.tabs
+				+e.caption-col.col-lg-3.tabs__caption
+					.tabs__btn.active
+					.tabs__btn
+					.tabs__btn
+					.tabs__btn
+				.col-lg.tabs__wrap
+					.tabs__content.active
+					.tabs__content
+					.tabs__content
+					.tabs__content
+
+mixin catalogDDTabsBtn(activeClasses)
+	.col-auto.col-lg-12
+		.tabs__btn(class=activeClasses)
+			+e.btn-row.row
+				.col
+					+e.txt=txt
+				.col-auto
+					+e.img

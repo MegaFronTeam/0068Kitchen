@@ -16,7 +16,10 @@
 	&__slider-wrap{
 		position: relative;
 		.swiper-container{
-
+			
+			@include media-breakpoint-down(md){
+				overflow: visible!important;
+			}
 		}
 		.swiper-wrapper{
 
