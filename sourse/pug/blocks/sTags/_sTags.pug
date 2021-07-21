@@ -22,7 +22,7 @@ mixin sTags(data)
 				+sTagsItem('Встраиваемые газовые панели')
 				+sTagsItem('Встраиваемые индукционные панели')
 				+sTagsItem('Встраиваемые электрические панели')
-				.col-auto.d-block
+				.col-sm-auto.d-block
 					+e.btn--toggle.sTags-btn-js
 						span Показать все
 						span Скрыть
@@ -30,5 +30,5 @@ mixin sTags(data)
 	// end sTags
 
 mixin sTagsItem(txt)
-	.col-auto
+	.col-sm-auto
 		+e.btn--tag(href="#")=txt
