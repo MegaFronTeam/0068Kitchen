@@ -23,30 +23,13 @@
 						<li class="menu-item"><a href="#">Доставка и оплата</a></li>
 						<li class="menu-item"><a href="#">Контакты</a></li>
 					</ul>
-					<div class="location">
-						<svg class="icon icon-location ">
-							<use xlink:href="img/svg/sprite.svg#location"></use>
-						</svg><span>null</span>
-					</div>
+					<button class="catalog-btn catalog-btn-js mb-4" type="button"><span class="catalog-btn__c-img"><img loading="lazy" src="img/svg/catalog.svg" alt=""/></span><span>Каталог</span>
+					</button>
 					<div class="menu-mobile__address mb-4">ул.Складочная д.1, стр.9
 					</div>
-					<div class="search mb-4">
-						<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/>
-						</div>
-						<!-- +e.input-wrap-->
-						<button class="search__s-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
-						</button>
-					</div><a class="menu-mobile__tel" href="#">8 (800) 775-82-72</a><a class="menu-mobile__order-call link-modal-js" href="#modal-call">Заказать звонок</a><a class="menu-mobile__log link-modal-js" href="#modal-enter">Войти</a>
-					<div class="topNavItems">
-						<div class="topNavItems__row row">
-							<div class="col-auto"><a class="topNavItems__item" href="#"><img loading="lazy" src="img/svg/bars.svg" alt=""/></a>
-							</div>
-							<div class="col-auto"><a class="topNavItems__item" href="#"><img loading="lazy" src="img/svg/like.svg" alt=""/></a>
-							</div>
-							<div class="col-auto"><a class="topNavItems__item" href="#"><img loading="lazy" src="img/svg/cart.svg" alt=""/></a>
-							</div>
-						</div>
-					</div>
+					<!--+topNavSearch('mb-4')--><a class="menu-mobile__tel" href="#">8 (800) 775-82-72</a><a class="menu-mobile__order-call link-modal-js" href="#modal-call">Заказать звонок</a>
+					<!--+e.log.link-modal-js(href="#modal-enter") Войти-->
+					<!--+topNavItems()-->
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -83,15 +66,42 @@
 				<!-- end topLine-->
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
-					<div class="top-nav__container container">
-						<div class="top-nav__row row align-items-center">
-							<div class="top-nav__logo-col col-auto"><a class="top-nav__logo" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							</div>
-							<div class="col-auto">
-								<button class="top-nav__catalog-btn catalog-btn-js" type="button"><span class="top-nav__c-img"><img loading="lazy" src="img/svg/catalog.svg" alt=""/></span><span>Каталог</span>
+					<div class="top-nav__mob-search mob-search-js d-xl-none">
+						<div class="top-nav__container top-nav__container--mob container">
+							<div class="search">
+								<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/>
+								</div>
+								<!-- +e.input-wrap-->
+								<button class="search__s-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
 								</button>
 							</div>
-							<div class="col">
+							<div class="top-nav__close-m-search mob-search-btn-js">
+								<svg class="icon icon-cross ">
+									<use xlink:href="img/svg/sprite.svg#cross"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="top-nav__container container">
+						<div class="top-nav__row row align-items-center">
+							<div class="top-nav__logo-col col col-sm-auto"><a class="top-nav__logo" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col col-xl-auto d-none d-sm-block">
+								<button class="catalog-btn catalog-btn-js" type="button"><span class="catalog-btn__c-img"><img loading="lazy" src="img/svg/catalog.svg" alt=""/></span><span>Каталог</span>
+								</button>
+							</div>
+							<div class="col-auto d-xl-none">
+								<div class="location">
+									<svg class="icon icon-location ">
+										<use xlink:href="img/svg/sprite.svg#location"></use>
+									</svg><span>null</span>
+								</div>
+							</div>
+							<div class="col-auto d-xl-none">
+								<div class="top-nav__mob-search-btn mob-search-btn-js"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
+								</div>
+							</div>
+							<div class="col d-none d-xl-block">
 								<div class="search d-none d-xl-block">
 									<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/>
 									</div>
@@ -100,7 +110,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="top-nav__tell-col col-auto d-none d-lg-block"><a class="top-nav__tel" href="#">8 (800) 775-82-72</a><a class="top-nav__order-call link-modal-js" href="#modal-call">Заказать звонок</a>
+							<div class="top-nav__tell-col col-auto d-none d-xl-block"><a class="top-nav__tel" href="#">8 (800) 775-82-72</a><a class="top-nav__order-call link-modal-js" href="#modal-call">Заказать звонок</a>
 							</div>
 							<div class="top-nav__items-col col-auto d-none d-md-block">
 								<div class="topNavItems">
@@ -114,7 +124,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="top-nav__log-col col-auto d-none d-sm-block"><a class="top-nav__log link-modal-js" href="#modal-enter">Войти</a>
+							<div class="top-nav__log-col col-auto d-none d-md-block"><a class="top-nav__log link-modal-js" href="#modal-enter">Войти</a>
 							</div>
 							<div class="col-auto d-xl-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -585,7 +595,7 @@
 								</div>
 							</div>
 							<!---->
-							<div class="sProdCard__char-col col-xl-auto col-md-5">
+							<div class="sProdCard__char-col col-xl-auto col-md-5 d-none d-md-block">
 								<div class="prodCard-chars">
 									<div class="prodCard-chars__box">
 										<div class="prodCard-chars__char"><span class="prodCard-chars__key">Артикул:</span><span class="prodCard-chars__val">10209256</span>
@@ -1508,6 +1518,22 @@
 					</div>
 				</div>
 			</footer>
+		</div>
+		<div class="fixed-nav fixed-nav--js d-md-none">
+			<div class="fixed-nav__container container-fluid">
+				<div class="fixed-nav__row row">
+					<div class="col"><a class="fixed-nav__item" href="#"><span class="fixed-nav__icon"><img loading="lazy" src="img/svg/footMobNavItem-1.svg" alt=""/></span><span class="fixed-nav__txt">Сравнение</span></a>
+					</div>
+					<div class="col"><a class="fixed-nav__item" href="#"><span class="fixed-nav__icon"><img loading="lazy" src="img/svg/footMobNavItem-2.svg" alt=""/></span><span class="fixed-nav__txt">Избранное</span></a>
+					</div>
+					<div class="col"><a class="fixed-nav__item" href="#"><span class="fixed-nav__icon"><img loading="lazy" src="img/svg/footMobNavItem-3.svg" alt=""/></span><span class="fixed-nav__txt">Корзина</span></a>
+					</div>
+					<div class="col"><a class="fixed-nav__item" href="#"><span class="fixed-nav__icon"><img loading="lazy" src="img/svg/footMobNavItem-4.svg" alt=""/></span><span class="fixed-nav__txt">Помощь</span></a>
+					</div>
+					<div class="col"><a class="fixed-nav__item" href="#"><span class="fixed-nav__icon"><img loading="lazy" src="img/svg/footMobNavItem-5.svg" alt=""/></span><span class="fixed-nav__txt">Войти</span></a>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--  start modal-->
 		<div class="modal-win" id="modal-call" style="display: none">

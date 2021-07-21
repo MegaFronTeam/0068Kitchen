@@ -4,9 +4,7 @@ mixin topLine()
 		.container
 			+e.row.row.align-items-center
 				+e.location-col.col.col-xl-auto
-					+b.location
-						+icon('location')
-						span null
+					+location()
 				.col.d-none.d-xl-block
 					+mnu()
 				.col-auto
@@ -14,3 +12,8 @@ mixin topLine()
 				.col-auto.d-none.d-xxl-block
 					+e.tell(href='tel:88007758272') 8 (800) 775-82-72 (По России)
 	// end topLine
+
+mixin location()
+	+b.location
+		+icon('location')
+		span null

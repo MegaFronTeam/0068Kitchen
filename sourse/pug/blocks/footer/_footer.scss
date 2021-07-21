@@ -1,6 +1,6 @@
 .footer {
 	margin-top: auto;
-	padding: 52px 0 38px;
+	padding: rem(52) 0 calc(var(--fixed-foot-nav-h) + 38px);
 	position: relative;
 	z-index: 1;
 	&__bg{
