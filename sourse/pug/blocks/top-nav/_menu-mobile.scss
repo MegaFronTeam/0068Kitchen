@@ -206,4 +206,13 @@ $h: em(2);
 		text-decoration: none;
 		margin-bottom: rem(30);
 	}
+	&__log{
+		display: block;
+		font-size: rem(19);
+		line-height: (28/19);
+		color: $white;
+
+		text-decoration: none;
+		margin-bottom: rem(30);
+	}
 }

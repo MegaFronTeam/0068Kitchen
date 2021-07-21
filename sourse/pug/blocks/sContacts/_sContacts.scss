@@ -22,7 +22,14 @@
 	}
 	&__map{
 		position: relative;
-		height: rem(904);
+
+		height: rem(380);
+		@include media-breakpoint-up(sm){
+			height: rem(480);
+		}
+		@include media-breakpoint-up(lg){
+			height: rem(904);
+		}
 		min-height: 100%;
 		& > ymaps{
 			position: absolute!important;

@@ -12,7 +12,8 @@ mixin mob-mnu()
 			+e.address.mb-4 ул.Складочная д.1, стр.9
 			+topNavSearch('mb-4')
 			+e.tel(href="#") 8 (800) 775-82-72
-			+e.order-call(href="#") Заказать звонок
+			+e.order-call.link-modal-js(href="#modal-call") Заказать звонок
+			+e.log.link-modal-js(href="#modal-enter") Войти
 			+topNavItems()
 	//  мобильное меню
 
@@ -24,8 +25,8 @@ mixin top-nav()
 				+e.logo-col.col-auto
 					+e.logo(href="/")
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
-				.col-auto.d-none.d-sm-block
-					+e.catalog-btn(type="button")
+				.col-auto
+					+e.catalog-btn.catalog-btn-js(type="button")
 						+e.SPAN.c-img
 							img(loading="lazy" src='img/svg/catalog.svg' alt="")
 						span Каталог
@@ -33,11 +34,11 @@ mixin top-nav()
 					+topNavSearch('d-none d-xl-block')
 				+e.tell-col.col-auto.d-none.d-lg-block
 					+e.tel(href="#") 8 (800) 775-82-72
-					+e.order-call(href="#") Заказать звонок
+					+e.order-call.link-modal-js(href="#modal-call") Заказать звонок
 				+e.items-col.col-auto.d-none.d-md-block
 					+topNavItems()
-				+e.log-col.col-auto
-					+e.log(href="#") Войти
+				+e.log-col.col-auto.d-none.d-sm-block
+					+e.log.link-modal-js(href="#modal-enter") Войти
 				//-
 				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js

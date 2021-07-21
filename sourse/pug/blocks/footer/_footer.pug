@@ -1,5 +1,5 @@
 mixin footer()
-  +b.FOOTER.footer
+  +b.FOOTER.footer.footer-dd-items-js
     +e.bg
       img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
     .container
@@ -10,21 +10,20 @@ mixin footer()
               +e.tells
                 +e.tell(href="tel:+78007758272") +7 (800) 775-82-72
                 +e.tell(href="tel:+74957758272") +7 (495) 775-82-72
-              +e.callback-btn(href="#") Заказать звонок
+              +e.callback-btn.link-modal-js(href="#modal-call") Заказать звонок
               +e.mail-cont
                 +e.mail(href="mailto:shop@kitchenmania.ru") shop@kitchenmania.ru
-            .col-auto.col-lg-12
+            .col-sm-auto.col-lg-12
               +e.soc-row.row
-                +socItem()
-                +socItem()
+                +socItem('fb')
+                +socItem('inst')
               +e.white Узнавайте о новинках, акциях и выгодных предложениях первыми
               +e.FORM.mail-form
                 +input('Электронная почта', 'email')
                 +e.btn(type="submit")
                   +icon('arrow-r')
         .col-sm-4.col-lg.col-xxl-3
-          +e.menu-title Интернет-магазин
-          +b.UL.menu
+          +footerDDItem('Интернет-магазин')
             li: a(href='#') Доставка и оплата
             li: a(href='#') Акции
             li: a(href='#') Рассрочка и кредит
@@ -33,16 +32,14 @@ mixin footer()
             li: a(href='#') Статьи
             li: a(href='#') Карта сайта
         .col-sm-4.col-lg.col-xxl-2
-          +e.menu-title О компании
-          +b.UL.menu
+          +footerDDItem('О компании')
             li: a(href='#') О нас
             li: a(href='#') Вакансии
             li: a(href='#') Сотрудничество
             li: a(href='#') Контакты
             li: a(href='#') Вход для партнеров
         .col-sm-4.col-lg.col-xxl-3
-          +e.menu-title Каталог
-          +b.UL.menu
+          +footerDDItem('Каталог')
             li: a(href='#') Встраиваемая техника
             li: a(href='#') Крупная бытовая техника
             li: a(href='#') Мелкая кухонная техника
@@ -54,4 +51,10 @@ mixin footer()
 mixin socItem(iconName)
   .col-auto
     +e.item(href='#')
-      //-iconName
+      +icon(iconName)
+
+mixin footerDDItem(title)
+  +e.dd-item
+    +e.menu-title.dd-head-js=title
+    +b.UL.menu.dd-content-js
+      block

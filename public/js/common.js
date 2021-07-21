@@ -40,16 +40,19 @@ const JSCCommon = {
 				// SHARE: "Share",
 				// ZOOM: "Zoom"
 
-			} // beforeLoad: function () {
-			// 	root.style.setProperty('--spacing-end', scrollWidth + 'px');
-			// },
-			// afterClose: function () {
-			// 	root.style.setProperty('--spacing-end', null);
-			// },
-
-		}); // $(link).fancybox({
-		// });
-
+			},
+			//
+			//infinite: false,
+			on: {
+				initCarousel: (fancybox, slide) => {
+					$('.header').addClass('has-pe');
+				},
+				destroy: (fancybox, slide) => {
+					$('.header').removeClass('has-pe');
+					console.log(this);
+				}
+			}
+		});
 		$(".modal-close-js").click(function () {
 			fancybox.close();
 		}); // fancybox.defaults.backFocus = false;
@@ -259,7 +262,7 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
 
 	var x = window.location.host;
 	let screenName;
@@ -421,7 +424,7 @@ function eventHandler() {
 		}
 	}
 
-	makeDDGroup(['.payment-dd-items-js']); //
+	makeDDGroup(['.payment-dd-items-js', '.footer-dd-items-js']); //
 
 	let sUseFullPrev = document.querySelector('.sUseFull--js .swiper-prev');
 	let sUseFullNext = document.querySelector('.sUseFull--js .swiper-next');
@@ -564,7 +567,19 @@ function eventHandler() {
 	window.addEventListener('scroll', calcHeaderHeight, {
 		passive: true
 	});
-	calcHeaderHeight(); //end luckyone Js
+	calcHeaderHeight(); //
+
+	$('.catalog-btn-js').click(function () {
+		$('.catalog-dd--js').toggleClass('active');
+	});
+	document.addEventListener('click', function () {
+		if (!event.target.closest('.catalog-dd') && !event.target.closest('.catalog-btn-js')) {
+			$('.catalog-dd--js').removeClass('active');
+		}
+	});
+	$('.catalog-close-btn-js').click(function () {
+		$('.catalog-dd--js').removeClass('active');
+	}); //end luckyone Js
 }
 
 ;

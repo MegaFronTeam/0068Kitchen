@@ -767,3 +767,7 @@ iframe {
 	}
 }
 //
+.carousel__button.is-next,
+.carousel__button.is-prev{
+	display: none!important;
+}

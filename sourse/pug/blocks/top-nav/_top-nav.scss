@@ -21,7 +21,10 @@
 		min-width: calc(var(--location-col-mw) + var(--bs-gutter-x));
 	}
 	&__logo{
-		width: rem(173);
+		width: rem(120);
+		@include media-breakpoint-up(sm){
+			width: rem(173);
+		}
 		display: block;
 
 		img{
@@ -37,16 +40,30 @@
 		align-items: center;
 		text-transform: uppercase;
 
-		padding: 13px 18px;
+		padding: rem(10);
+		@include media-breakpoint-up(sm){
+			padding: 13px 18px;
+		}
+
+		@include media-breakpoint-down(sm){
+			font-size: rem(14);
+		}
 	}
 	&__c-img{
 		flex-shrink: 0;
-		width: rem(27);
+
+		width: rem(20);
 		height: rem(20);
+		margin-right: rem(8);
+		@include media-breakpoint-up(sm){
+			width: rem(27);
+			height: rem(20);
+			margin-right: rem(13);
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-right: rem(13);
 
 		img{
 			width: auto;

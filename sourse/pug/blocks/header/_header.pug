@@ -2,29 +2,72 @@ mixin header()
 	// start header
 	+b.HEADER.header--js#header&attributes(attributes)
 		block
-		//+catalogDD()
+		+catalogDD()
 	// end header
 
 mixin catalogDD()
-	+b.catalog-dd
+	+b.catalog-dd--js
 		.container
-			+e.row.tabs
-				+e.caption-col.col-lg-3.tabs__caption
-					.tabs__btn.active
-					.tabs__btn
-					.tabs__btn
-					.tabs__btn
+			+e.close-btn.catalog-close-btn-js
+				span Закрыть
+				+icon('cross')
+			+e.tabs-row.row.tabs
+				+e.caption-col.col-lg-4.col-xxl-3.tabs__caption
+					+e.sub-row.row
+						+catalogDDTabsBtn(1, 'Встраиваемая техника', 'active')
+						+catalogDDTabsBtn(2, 'Крупная бытовая техника')
+						+catalogDDTabsBtn(3, 'Мелкая кухонная техника')
+						+catalogDDTabsBtn(false, 'Сантехника для кухни')
 				.col-lg.tabs__wrap
 					.tabs__content.active
+						+catalogDDContent()
 					.tabs__content
+						+catalogDDContent(1)
 					.tabs__content
+						+catalogDDContent(2)
 					.tabs__content
+						+catalogDDContent(3)
 
-mixin catalogDDTabsBtn(activeClasses)
-	.col-auto.col-lg-12
-		.tabs__btn(class=activeClasses)
+mixin catalogDDContent(mod='')
+	+e.content
+		+catalogDDMenuItem(`Варочные панели ${mod}`)
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+		+catalogDDMenuItem('Винные шкафы')
+		+catalogDDMenuItem('Вытяжки')
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+		+catalogDDMenuItem('Духовые шкафы')
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+		+catalogDDMenuItem('Кофемашины')
+		+catalogDDMenuItem('Микроволновые печи')
+		+catalogDDMenuItem('Морозильные камеры')
+		+catalogDDMenuItem('Посудомоечные машины')
+		+catalogDDMenuItem('Стиральные машины')
+		+catalogDDMenuItem('Холодильники')
+			li: a(href='#') Панели домино
+			li: a(href='#') Панели домино
+		+catalogDDMenuItem('Шкафы для подогрева посуды')
+
+
+mixin catalogDDMenuItem(title)
+	+e.menu
+		ul
+			li: a(href='#')=title
+			block
+
+mixin catalogDDTabsBtn(imgNum, txt, activeClasses='')
+	.col-md-6.col-lg-12
+		+e.btn.tabs__btn(class=activeClasses)
 			+e.btn-row.row
 				.col
 					+e.txt=txt
-				.col-auto
-					+e.img
+				.col-4.d-none.d-lg-block
+					if imgNum
+						+e.img
+							img(loading="lazy" src=`img/@2x/catalogdd-${imgNum}.png` alt="")
