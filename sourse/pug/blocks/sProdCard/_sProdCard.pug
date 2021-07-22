@@ -101,7 +101,7 @@ mixin middleContent()
 
 mixin sProdCardTabs(fBtnTxt='Характеристики')
 	+b.pc-tabs.tabs
-		+e.caption-slider
+		+e.caption-slider.d-none.d-sm-block
 			.swiper-container.pc-tabs-slider-js
 				.swiper-wrapper
 					.swiper-slide
@@ -110,8 +110,8 @@ mixin sProdCardTabs(fBtnTxt='Характеристики')
 						+e.tabs-btn.tabs__btn Отзывы
 					.swiper-slide
 						+e.tabs-btn.tabs__btn Доставка и оплата
-		.tabs__wrap
-			.tabs__content.active
+		.tabs__wrap.prod-card-dd-items-js
+			+sProdCardTabsContent(fBtnTxt, 1, 'active')
 				+e.char-table
 					+middleContentTableItem('Габариты и вес')
 						+middleContentTableRow('Глубина встраивания (см)','49')
@@ -161,8 +161,21 @@ mixin sProdCardTabs(fBtnTxt='Характеристики')
 						+middleContentTableRow('Расположение элементов управления','спереди')
 					+middleContentTableItem('Установка')
 						+middleContentTableRow('Размеры выреза, см:','28x49')
-			.tabs__content 2
-			.tabs__content 3
+			+sProdCardTabsContent('Отзывы', 2)
+				| 2
+			+sProdCardTabsContent('Доставка и оплата', 3)
+				| 3
+
+mixin sProdCardTabsContent(tabName, imgNum, activeClasses='')
+	+e.tabs-content.tabs__content(class=activeClasses)
+		+e.dd-item
+			+e.dd-head.d-sm-none.dd-head-js
+				+e.dd-img
+					img.img-svg-js(loading="lazy" src=`img/svg/footMobNavItem-${imgNum}.svg` alt="")
+				span=tabName
+			+e.dd-content.dd-content-js
+				block
+
 
 mixin middleContentTableItem(title, addTittleClass='')
 	+e.ct-item
