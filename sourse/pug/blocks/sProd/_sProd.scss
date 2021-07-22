@@ -343,6 +343,7 @@
 		}
 
 		&__dd-head{
+			cursor: pointer;
 			display: flex;
 			align-items: center;
 			background-color: lighten($gray-900, 8);
