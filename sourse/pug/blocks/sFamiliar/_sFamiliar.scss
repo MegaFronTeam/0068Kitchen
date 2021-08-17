@@ -161,6 +161,18 @@
 
 	&__{}
 	&__{}
+
+	.swiper-slide{
+		height: auto;
+		// .prod-item{
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	&__row{
+		// 		// min-height: 100%;
+		// 		flex-grow: 1;
+		// 	}
+		// }
+	}
 } // end.sFamiliar
 
 .prod-item{
