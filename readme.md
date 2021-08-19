@@ -16,3 +16,5 @@
 1. <https://luckyone1221.github.io/0068Kitchen/public/013-vacancy.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/014-prod-card.html>
 1. <https://luckyone1221.github.io/0068Kitchen/public/014-prod-card-2.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/015-filtr.html>
+1. <https://luckyone1221.github.io/0068Kitchen/public/015-filtr-2.html>

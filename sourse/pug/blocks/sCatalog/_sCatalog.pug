@@ -1,0 +1,202 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section(class=data.addClasses)#sCatalog&attributes(attributes)
+		+e.baner
+			+e.bg
+				img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+			.container
+				+e.b-content
+					if data.hasBread
+						+breadcrumb('Главная', 'Каталог', 'Крупная бытовая техника', 'Стиральные машины')
+					+b.section-title
+						h1!=data.title
+					+e.tags-row.row.sTags-row-js
+						-for(let i = 0; i < 2; i ++)
+							+sCatalogTag('Стиральные машины из Германии')
+							+sCatalogTag('Стиральные машины шириной 55 см')
+							+sCatalogTag('Узкие стиральные машины')
+							+sCatalogTag('Стиральные машины под раковину')
+							+sCatalogTag('Угловые стиральные машины')
+						.col-sm-auto.d-block
+							+e.btn--toggle.sTags-btn-js
+								span Показать еще
+								span Скрыть
+					+e.img.d-none.d-lg-flex
+						img(loading="lazy" src="img/@2x/sCatalog-baner-img.png" alt="")
+		+e.content
+			.container
+				+e.c-row.row
+					+e.sidebar-col.col-xl-auto
+						+sCatalogSidebar()
+						+e.filter-btn.d-xl-none.filter-btn-js
+							span Показать Фильтр
+							span Свернуть Фильтр
+					.col-xl
+						+e.found-row.row.align-items-center.gy-3
+							+e.f-txt.col-sm Найдено 78 товаров
+							.col-sm-auto
+								.row.align-items-center.gx-3
+									.col-auto
+										+e.SELECT.sort-select.form-select.sort-select
+											option Сначала популярные
+											option Сначала Новие
+									.col-auto
+										+e.LABEL.sort-order
+											input(type="checkbox" class='invisible')
+											span.icon-wrap
+												+icon('sort-order')
+						+e.items-row.row.gy-0.gx-0
+							+sCatalogCard({
+								imgNum: '1',
+								title: 'Стиральная машина HAIER HW70-12829A',
+							})
+							+sCatalogCard({
+								imgNum: '2',
+								title: 'Стиральная машина HAIER HW70-12829A',
+							})
+							+sCatalogCard({
+								imgNum: '1',
+								title: 'Стиральная машина HAIER HW70-12829A',
+							})
+							+sCatalogCard({
+								imgNum: '1',
+								title: 'Стиральная машина HAIER HW70-12829A',
+							})
+							-for(var i = 0; i < 12; i++)
+								+sCatalogCard({
+									imgNum: '1',
+									title: 'Вытяжка 60 см Bosch Serie | 4 DWK65AD60R',
+								})
+							.col-12
+								+e.show-more(href="#") Показать еще
+						+e.pugin-wrap
+							+pugin(false)
+						+e.tags-row.orange.row.sTags-row-js
+							-for(let i = 0; i < 2; i ++)
+								+sCatalogTagOrange('Стиральные машины Miele')
+								+sCatalogTagOrange('Стиральные машины Bosch')
+								+sCatalogTagOrange('Стиральные машины Gorenje')
+								+sCatalogTagOrange('Стиральные машины Asko')
+								+sCatalogTagOrange('Стиральные машины Miele')
+								+sCatalogTagOrange('Стиральные машины Bosch')
+								+sCatalogTagOrange('Стиральные машины Gorenje')
+							.col-sm-auto.d-block
+								+e.btn--orange-toggle.sTags-btn-js
+									span Показать еще
+									span Скрыть
+						+sCatalogArticles()
+	// end sCatalog
+
+mixin sCatalogCard(data)
+	+e.prod-col.col-sm-6.col-md-4.col-lg-4.col-xxl-3
+		+b.prod-item--card
+			+e.img(href="#")
+				img(loading="lazy" src=`img/@2x/cat-card-${data.imgNum}.png` alt="")
+			+e.title=data.title
+			+e.chars
+				+sFamiliarSlideChar('Скорость отжима (об/мин):', '1400')
+				+sFamiliarSlideChar('Макс. загрузка (кг):', '8')
+			+e.foot-row.row.align-items-center
+				.col
+					+e.price 54 999 руб.
+				.col-auto
+					+e.add-btn.link-modal-js(href="#modal-callback")
+						+icon('plus')
+
+mixin sCatalogTag(txt)
+	.col-sm-auto
+		+e.btn--tag(href="#")=txt
+
+mixin sCatalogTagOrange(txt)
+	.col-sm-auto
+		+e.btn--orange-tag(href="#")=txt
+
+mixin sCatalogSidebar()
+	+b.sidebar--js
+		+e.dd-items
+			+sidebarDdItem({
+				headTxt: 'Специальные предложения',
+				activeClasses: 'active',
+			})
+			+sidebarDdItem({
+				headTxt: 'Производители',
+				hint: true,
+				popTitle: 'Производители',
+				popDescr: `
+					<p>Каминная - называется так благодаря декоративному кожуху, который напоминает верхнюю куполообразную часть старинных каминов.</p>
+					<p>Подвесная - плоская вытяжка с простой конструкцией, не требующая подключения к вентиляционной системе.</p>
+				`,
+			})
+			+sidebarDdItem({
+				headTxt: 'Установка',
+				hint: true,
+				popTitle: 'Установка',
+				popDescr: `
+					<p>
+						<b>Каминная</b> - называется так благодаря декоративному кожуху, который напоминает верхнюю куполообразную часть старинных каминов.</p>
+					<p>
+						<b>Подвесная</b> - плоская вытяжка с простой конструкцией, не требующая подключения к вентиляционной системе.</p>
+				`,
+			})
+			+sidebarDdItem({
+				headTxt: 'Цена',
+				activeClasses: 'active',
+			})
+				+e.range-wrap
+					+range('99', '9989898')
+		+e.discard
+			+icon('cross')
+			span Сбросить все фильтры
+
+mixin sidebarDdItem(data)
+	+e.dd-item(class=`${data.activeClasses || ''}`)
+		+e.dd-head.free-dd-head-js
+			+e.h-row.row.align-items-center.flex-nowrap
+				.col-auto
+					+e.head-txt=data.headTxt
+				if data.hint
+					.col-auto
+						+e.hint.hint-js(data-title=data.popTitle data-descr=data.popDescr data-bs-toggle="popover"  data-bs-content="And here's some amazing content. It's very engaging. Right?")
+							+e.hint-ball ?
+				+e.chevron-col.col-auto.ms-auto
+					+icon('chevron-down')
+		+e.dd-content.free-dd-content-js.rm-cont-js(class=`${data.activeClasses || ''}`)
+			if block
+				block
+			else
+				+sidebarChbItem('Кредит/рассрочка', '113')(checked)
+				+sidebarChbItem('Акция', '226')
+				+sidebarChbItem('Новинка', '653')
+				.rm-hidden-js
+					+sidebarChbItem('lalal', '1130')
+					+sidebarChbItem('lalal', '1130')
+				+e.read-more.rm-btn-js
+					span Показать еще
+					span Свернуть
+
+mixin sidebarChbItem(txt, num)
+	+b.LABEL.chb-item
+		input(type="checkbox" class="invisible")&attributes(attributes)
+		span.square
+		+e.txt=txt
+		if num
+			+e.num=num
+
+mixin sCatalogArticles()
+	+b.cat-articles
+		+e.title-row.row
+			.col-sm
+				h2 Полезные статьи
+			.col-sm-auto
+				a(href="#") Смотреть все
+		+e.row.row
+			+sCatalogArticlesItem(1)
+			+sCatalogArticlesItem(2)
+			+sCatalogArticlesItem(3)
+
+mixin sCatalogArticlesItem(imgNum)
+	.col-sm-4
+		+e.item(href="#")
+			+e.img
+				img(loading="lazy" src=`img/@2x/sCatalog-article-${imgNum}.png` alt="")
+			+e.title Какой духовой шкаф подобрать для кухни?

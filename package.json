@@ -60,6 +60,7 @@
     "@fancyapps/ui": "^4.0.0-alpha.4",
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
+    "ion-rangeslider": "^2.3.1",
     "loading-attribute-polyfill": "^1.5.4",
     "swiper": "^6.7.5"
   }

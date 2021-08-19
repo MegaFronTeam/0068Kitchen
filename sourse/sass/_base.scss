@@ -1,5 +1,6 @@
 .pixel-perfect {
 	top: 0;
+	top: 11px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -11,6 +12,7 @@
 	opacity: 0;
 	//opacity: 0.7;
 }
+
 
 body,
 html {
@@ -564,6 +566,9 @@ iframe {
 
 
 		a{
+			@include media-breakpoint-down(sm){
+				font-size: 13px;
+			}
 			text-decoration: none;
 			line-height: 1;
 
@@ -652,7 +657,7 @@ iframe {
 				margin-right: rem(22);
 			}
 			&:last-child{
-				margin-right: 0;
+				margin-right: 0!important;
 			}
 		}
 
@@ -770,4 +775,58 @@ iframe {
 .carousel__button.is-next,
 .carousel__button.is-prev{
 	display: none!important;
+}
+
+//
+.btn-toggle{
+	span:first-child{
+		display: inline;
+	}
+	span:last-child{
+		display: none;
+	}
+	&.active{
+		span:first-child{
+			display: none;
+		}
+		span:last-child{
+			display: inline;
+		}
+	}
+}
+
+//
+.rm-hidden-js{
+	//@include mt(.4s);
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+.rm-btn-js{
+	cursor: pointer;
+	display: inline-block;
+
+	span:first-child{
+		display: inline-block;
+	}
+
+	span:last-child{
+		display: none;
+	}
+
+	&.active{
+		span:first-child{
+			display: none;
+		}
+
+		span:last-child{
+			display: inline-block;
+		}
+	}
+}
+
+//
+.new-page{
+	line-height: 1.457;
 }
