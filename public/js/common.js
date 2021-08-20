@@ -404,9 +404,7 @@ function eventHandler() {
 				// childHeads, kind of funny))
 				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
 				$(ChildHeads).click(function () {
-					let clickedHead = this; //if (event.target.closest('.hint-js')) return
-
-					console.log(event.target.closest('.hint-js'));
+					let clickedHead = this;
 					$(ChildHeads).each(function () {
 						if (this === clickedHead) {
 							//parent element gain toggle class, style head change via parent
@@ -430,6 +428,7 @@ function eventHandler() {
 	]); //free
 
 	$('.free-dd-head-js').click(function () {
+		if (event.target.closest('.hint-js')) return;
 		$(this.parentElement).toggleClass('active');
 		$(this.parentElement).find('.free-dd-content-js').slideToggle(function () {
 			$(this).toggleClass('active');
@@ -658,8 +657,6 @@ function eventHandler() {
 	}
 
 	$(".range-wrap").each(function () {
-		console.log(this);
-
 		let _this = $(this);
 
 		var $range = _this.find(".slider-js");

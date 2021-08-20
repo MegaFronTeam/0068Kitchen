@@ -67,9 +67,14 @@
 
 	.icon{
 		@include mt();
-		font-size: rem(15);
-		color: $gray-650;
-		margin-right: rem(11);
+		color: $gray-400;
+		font-size: rem(26);
+
+		@include media-breakpoint-up(lg){
+			font-size: rem(15);
+			color: $gray-650;
+			margin-right: rem(11);
+		}
 	}
 	color: $gray-650;
 	&:hover{
