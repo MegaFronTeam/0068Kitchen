@@ -1,9 +1,9 @@
-mixin header()
+mixin header(searchActive='')
 	// start header
 	+b.HEADER.header--js#header&attributes(attributes)
 		block
 		+catalogDD()
-		+searchDD()
+		+searchDD(searchActive)
 	// end header
 
 mixin catalogDD()
@@ -29,8 +29,8 @@ mixin catalogDD()
 					.tabs__content
 						+catalogDDContent(3)
 
-mixin searchDD()
-	+b.search-dd--js
+mixin searchDD(addClasses)
+	+b.search-dd--js(class=addClasses)
 		.container-md
 			+e.close-btn.catalog-close-btn-js
 				span Закрыть
