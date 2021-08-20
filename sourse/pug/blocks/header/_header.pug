@@ -3,6 +3,7 @@ mixin header()
 	+b.HEADER.header--js#header&attributes(attributes)
 		block
 		+catalogDD()
+		+searchDD()
 	// end header
 
 mixin catalogDD()
@@ -27,6 +28,79 @@ mixin catalogDD()
 						+catalogDDContent(2)
 					.tabs__content
 						+catalogDDContent(3)
+
+mixin searchDD()
+	+b.search-dd--js
+		.container-md
+			+e.close-btn.catalog-close-btn-js
+				span Закрыть
+				+icon('cross')
+			+e.items
+				+searchDDItem('Часто ищут')
+					+e.links
+						a(href='#')
+							span.text-primary Сти
+							| ральные машины из Германии
+						a(href='#')
+							span.text-primary Сти
+							| ральные машины шириной 55 см
+						a(href='#')
+							| Узкие
+							|
+							span.text-primary сти
+							|
+							| ральные машины
+				+searchDDItem('Категории')
+					+e.links
+						a(href="#")
+							span.text-primary Сти
+							| ральные машины
+						a(href="#")
+							span.text-primary Сти
+							| ральные машины с сушкой
+						a(href="#")
+							| Встраиваемые
+							|
+							span.text-primary сти
+							| ральные машины
+				+searchDDItem('Товары')
+					+e.prods
+						+searchDDProdItem()
+						+searchDDProdItem()
+				+searchDDItem('Бренды')
+					+e.brands-row.row
+						-for (var i = 0; i < 7; i ++)
+							+searchDDItemBrend()
+						//brand-img-alt
+
+mixin searchDDItemBrend()
+	.col-auto
+		+e.brand(href="#")
+			img(loading="lazy" src=`img/@2x/brand-img-alt.png` alt="")
+
+mixin searchDDProdItem()
+	+e.prod-item
+		+e.pi-row.row.align-items-center
+			.col-auto
+				+e.i-img
+					img(loading='lazy' src="img/@2x/sm-prod.png" alt="")
+			.col
+				+e.i-name(href="#")
+					span.text-primary Вин
+					| ный шкаф LIEBHERR EWTGB 1683
+			+e.price-col.col-auto
+				+e.price--old 64 999 руб.
+				+e.price--curr 54 999 руб.
+		+e.chevron-link(href="#")
+			+icon('chevron-right')
+
+mixin searchDDItem(txt)
+	+e.item
+		+e.item-row.row.gy-3
+			+e.left-col.col-lg-auto.text-lg-end=txt
+			+e.right-col.col-lg
+				+e.content
+					block
 
 mixin catalogDDContent(mod='')
 	+e.content

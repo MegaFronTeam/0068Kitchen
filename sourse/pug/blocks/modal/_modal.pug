@@ -1,3 +1,5 @@
+include ../sCatalog/_sCatalog.pug
+
 mixin modal()
 	//  start modal
 	+b.modal-win(id="modal-call" style="display: none")
@@ -22,6 +24,41 @@ mixin modal()
 				+e.inputs
 					+input('', 'tel')
 					+e.btn--primary(type="submit") Получить код в SMS
+	+b.modal-callback.modal-win.text-center(id="modal-callback" style="display: none")
+		+form-wrap
+			+e.title
+				h2 Заголовок
+				p Мы перезвоним и уточним детали заказа
+			+e.box
+				+input('Имя', 'text')
+				+input('Телефон', 'tel')
+			+e.box
+				+callbackRadioItem('Частное лицо')(checked)
+				+callbackRadioItem('Организация')
+			+e.box.input-group
+				+e.btn--orange.disabled(type="button") -
+				+e.INPUT.input.form-control.text-center(type="text" value="1")
+				+e.btn--orange(type="button") +
+			+e.box
+				+sidebarChbItem('Подъем на')
+				+sidebarChbItem('Срочная доставка')
+			+e.btn--dark.continue(type="submit") ПРодолжить
+			+e.policy
+				| Нажимая кнопку "Отправить" я соглашаюсь с
+				|
+				a(href='#') Положением о персональных данных и конфиденциальности.
 	// #modal-call
 	
 	// end modals
+
+mixin callbackRadioItem(txt, name='modal-callback')
+	+b.LABEL.custom-chb
+		input(type="radio" name=name value=txt class="invisible")&attributes(attributes)
+		span.circle
+		span.txt=txt
+
+mixin callbackChBItem(txt, name='modal-callback')
+	+b.LABEL.custom-chb
+		input(type="radio" name=name value=txt class="invisible")&attributes(attributes)
+		span.circle
+		span.txt=txt

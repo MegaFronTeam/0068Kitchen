@@ -1,5 +1,5 @@
 /**
- * Swiper Svelte 6.8.2
+ * Swiper Svelte 6.7.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: August 16, 2021
+ * Released on: July 1, 2021
  */
 
 /* eslint-disable */

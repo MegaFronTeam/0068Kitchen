@@ -412,12 +412,22 @@ function eventHandler() {
       }
     }
   }
-
   makeDDGroup([
     '.payment-dd-items-js',
     '.footer-dd-items-js',
     '.prod-card-dd-items-js',
+    //'.sidebar-dd-items-js',
   ]);
+
+  //free
+  $('.free-dd-head-js').click(function () {
+    if (event.target.closest('.hint-js')) return
+    $(this.parentElement).toggleClass('active');
+    $(this.parentElement).find('.free-dd-content-js').slideToggle(function () {
+      $(this).toggleClass('active');
+    });
+  });
+
 
   //
   let sUseFullPrev = document.querySelector('.sUseFull--js .swiper-prev');
@@ -552,11 +562,18 @@ function eventHandler() {
     },
   });
   //
+  // $('.sTags-btn-js').click(function () {
+  //   $('.sTags-btn-js, .sTags-row-js').toggleClass('active');
+  // });
+  //
   $('.sTags-btn-js').click(function () {
-    $('.sTags-btn-js, .sTags-row-js').toggleClass('active');
+    let row = this.closest('.sTags-row-js');
+    $(row).toggleClass('active').find('.sTags-btn-js').toggleClass('active');
   });
+
   //css vars
   let header = document.querySelector(".header--js");
+  let brands = document.querySelector(".brands--js");
   let fixedNav = document.querySelector(".fixed-nav--js");
 
   function calcHeaderHeight() {
@@ -564,6 +581,7 @@ function eventHandler() {
       document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
     }
     document.documentElement.style.setProperty('--header-real-height', `${header.offsetHeight}px`);
+    document.documentElement.style.setProperty('--brands-h', `${brands.offsetHeight}px`);
 
     if (fixedNav){
       document.documentElement.style.setProperty('--fixed-foot-nav-h', `${fixedNav.offsetHeight}px`);
@@ -618,8 +636,171 @@ function eventHandler() {
       $img.replaceWith($svg);
     }, 'xml');
   });
+  //
+
+  let readMoreConts = document.querySelectorAll('.rm-cont-js');
+  for (let cont of readMoreConts){
+    let btn = cont.querySelector('.rm-btn-js');
+    if (btn){
+      btn.addEventListener('click', function (){
+        this.classList.toggle('active');
+        let hidden = cont.querySelector('.rm-hidden-js');
+
+        $(hidden).slideToggle(function (){
+          $(this).toggleClass('active');
+        })
+      });
+    }
+  }
+
+  // rangle sliders
+  function currencyFormat(num) {
+    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+  }
+  $(".range-wrap").each(function () {
+
+    let _this = $(this);
+    var $range= _this.find(".slider-js");
+    var $inputFrom = _this.find(".input_from");
+    var $inputTo = _this.find(".input_to");
+
+    var instance, from, to,
+      min = $range.data('min'),
+      max = $range.data('max');
+
+    $range.ionRangeSlider({
+      skin: "round",
+      type: "double",
+      grid: false,
+      grid_snap: false,
+      hide_min_max: false,
+      hide_from_to: true,
+      //here
+      onStart: updateInputs,
+      onChange: updateInputs,
+      onFinish: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+      from = data.from;
+      to = data.to;
+
+      $inputFrom.prop("value", currencyFormat(from));
+      $inputTo.prop("value", currencyFormat(to));
+      // InputFormat();
+    }
+
+    $inputFrom.on("change input ", function () {
+      var val = +($(this).prop("value").replace(/\s/g, ''));
+      // validate
+      if (val < min) {
+        val = min;
+      } else if (val > to) {
+        val = to;
+      }
+
+      instance.update({
+        from: val
+      });
+      $(this).prop("value", currencyFormat(val));
+      console.log(val)
+    });
+
+    $inputTo.on("change input ", function () {
+      var val = +($(this).prop("value").replace(/\s/g, ''));
+
+      // validate
+      if (val < from) {
+        val = from;
+      } else if (val > max) {
+        val = max;
+      }
+
+      instance.update({
+        to: val
+      });
+      $(this).prop("value", currencyFormat(val));
+    });
+
+  });
 
   //end luckyone Js
+  let popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  let popovers = [];
+
+  for(let elem of popoverTriggerList){
+    let popoverContent = {
+      title: elem.dataset.title,
+      descr: elem.dataset.descr,
+    };
+
+    let popoverInner= `
+      <div class="sidebar__popover">
+        <div class="sidebar__close-btn close-popover-js">
+          <img loading="lazy" src="img/svg/cross-sm.svg" alt="">
+        </div>
+        <h4>
+          ${popoverContent.title}
+        </h4>
+        ${popoverContent.descr}
+      </div>`;
+
+    let index = $(popoverTriggerList).index(elem);
+
+    let popover =  new bootstrap.Popover(elem, {
+      template: `<div class="popover" role="tooltip">
+			${popoverInner}`,
+      container: '#sCatalog',
+      trigger: 'manual',
+      placement: 'auto',
+    });
+    popovers.push(popover);
+
+    elem.addEventListener('click', popOverElemClick);
+  }
+
+  $('body').click(function (){
+    if (event.target.closest('.close-popover-js')){
+      $(popovers).each(function (){
+        this.hide();
+      });
+    }
+  });
+
+  function popOverElemClick(){
+    document.removeEventListener('click', popoverMissClick);
+    let index = $(popoverTriggerList).index(this);
+
+    $(popovers).each(function (){
+      this.hide();
+    })
+    popovers[index].show();
+    $(this).addClass('active');
+
+    window.setTimeout(function (){
+      document.addEventListener('click', popoverMissClick);
+    }, 10);
+  }
+
+
+  let popoverMissClick = function (){
+    if (!event.target.closest('.popover') ){
+      $(popovers).each(function (){
+        this.hide();
+      });
+    }
+  };
+
+
+  //.filter-btn-js
+  $('.filter-btn-js').click(function (){
+    $(this).toggleClass('active');
+    $('.sidebar--js').slideToggle(function (){
+      $(this).toggleClass('active');
+    })
+  });
+
 
 };
 if (document.readyState !== 'loading') {

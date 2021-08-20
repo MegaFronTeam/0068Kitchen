@@ -256,7 +256,38 @@
 			color: $primary;
 		}
 	}
+
 	//
-	&__{}
+	&__creator-col{
+		display: flex;
+		flex-direction: column;
+	}
+	&__creator-logo{
+		padding-top: rem(30);
+		@include media-breakpoint-up(sm){
+			padding-top: rem(10);
+		}
+		margin-top: auto;
+		display: block;
+
+		text-decoration: none;
+		font-size: rem(18);
+		line-height: 1.35;
+
+		color: $gray-520;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__cr-img{
+		display: block;
+		max-width: rem(135);
+		margin-bottom: rem(6);
+
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+	}
 	&__{}
 }
