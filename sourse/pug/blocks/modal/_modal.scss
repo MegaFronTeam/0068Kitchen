@@ -237,9 +237,9 @@
 	&.big{
 		max-width: 100%;
 	}
-	height: 100%;
+	// height: 100%;
 	@include media-breakpoint-up(md){
-		max-height: calc(100vh - #{rem(60)});
+		// max-height: calc(100vh - #{rem(60)});
 	}
 
 	padding: var(--modal-py) var(--modal-px) !important;
@@ -303,8 +303,8 @@
 			@extend .custom-scroll;
 			overflow-y: auto;
 
-			min-height: rem(400);
-			height: calc(100vh - #{rem(60)} - var(--modal-py)*2 - var(--title-fs)*var(--title-lh) - var(--title-mb) - #{rem(60)} - var(--input-mb) - var(--title-mb) - #{rem(32)});
+			// min-height: rem(400);
+			// height: calc(100vh - #{rem(60)} - var(--modal-py)*2 - var(--title-fs)*var(--title-lh) - var(--title-mb) - #{rem(60)} - var(--input-mb) - var(--title-mb) - #{rem(32)});
 			&--popular{
 
 			}
