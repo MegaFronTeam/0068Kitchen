@@ -15,5 +15,16 @@ mixin topLine()
 
 mixin location()
 	+b.location
-		+icon('location')
-		span.d-none.d-lg-inline-block Комсомольск-на-Амуре
+		+e.dd-btn.location-btn-js
+			+icon('location')
+			span.d-none.d-lg-inline-block Комсомольск-на-Амуре
+		+e.dd.location-dd-js
+			+e.dd-inner
+				+e.title
+					span.d-block.d-sm-inline Ваш город
+					span Комсомольск-на-Амуре
+				+e.btns-row.row.gy-1
+					.col-sm-6
+						+e.btn--orange.location-close-js(type='button') Да, верно
+					.col-sm-6
+						+e.btn--out-gray.location-close-js(href="#modal-city" data-fancybox='') Нет, другой

@@ -214,15 +214,30 @@ const JSCCommon = {
     }, {passive: true});
   },
   animateScroll() {
-    $(document).on('click', " .menu li a, .scroll-link", function () {
-      const elementClick = $(this).attr("href");
-      if (!document.querySelector(elementClick)) {
-        $(this).attr("href", '/' + elementClick)
-      } else {
-        let destination = $(elementClick).offset().top;
-        $('html, body').animate({scrollTop: destination - 80}, 0);
-        return false;
+    let header = document.querySelector("#headerAlt") || document.querySelector('.top-nav');
+    $(document).on('click', '.scroll-link, .aside-menu-js > ul > li > a', function () {
+      event.preventDefault();
+      let elementClick = $(this).attr("href");
+      let scrollBox = this.getAttribute('data-scrollbox');
+
+      if (scrollBox){
+        scrollBox = document.querySelector(scrollBox);
+        let destination = $(elementClick).offset().top - $(elementClick).parent().offset().top;
+
+        $(scrollBox).animate({
+          scrollTop: destination,
+        }, 700);
       }
+      else{
+        let destination = $(elementClick).offset().top - header.offsetHeight - 20;
+        $('html, body').animate({ scrollTop: destination }, 600);
+      }
+      // window.scrollTo({
+      //   top: destination,
+      //   behavior: "smooth"
+      // });
+
+      return false;
     });
   },
   getCurrentYear(el) {
@@ -801,6 +816,29 @@ function eventHandler() {
     })
   });
 
+  //location
+  $('.location-btn-js').click(function (){
+    $('.location-dd-js').toggleClass('active');
+  });
+  $('.location-close-js').click(function (){
+    $('.location-dd-js').removeClass('active');
+  })
+  document.addEventListener('click', function (){
+    if(!event.target.closest('.location-dd-js') && !event.target.closest('.location-btn-js')){
+      $('.location-dd-js').removeClass('active');
+    }
+  })
+
+
+  //#modal-city
+  $('.mc-show-all-js').click(function (){
+    $(this).fadeOut(function (){
+      $(this).removeClass('active');
+    }, 0);
+    $('.modal-city--js').toggleClass('big');
+    $('.mc-popular-js, .mc-all-js').toggleClass('active');
+  })
+
 
 };
 if (document.readyState !== 'loading') {
@@ -808,11 +846,3 @@ if (document.readyState !== 'loading') {
 } else {
   document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }

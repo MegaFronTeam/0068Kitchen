@@ -48,8 +48,54 @@ mixin modal()
 				|
 				a(href='#') Положением о персональных данных и конфиденциальности.
 	// #modal-call
-	
+	+b.modal-city--js(id="modal-city" style="display: none")
+		+form-wrap
+			+e.H2.title Выберите свой город
+			+input('Ввести название города', 'text')
+			+e.city--popular.mc-popular-js.active
+				.row
+					-for(var i = 0; i < 18; i++)
+						+modCityPopularLink(`Комсомольск-на-Амуре${i}`)
+			+e.city--all.mc-all-js#city-all
+				.row
+					.col
+						+modCityAllItem('A', 'Абакан')
+						+modCityAllItem('Б', 'Балаково')
+						+modCityAllItem('В', 'Валуйки')
+						+modCityAllItem('Д', 'Дзержинск')
+						+modCityAllItem('Я', 'Яркутськ', 100)
+					.col-auto.d-xl-none
+						+e.ancors
+							+modCityAllLetter('A')
+							+modCityAllLetter('Б')
+							+modCityAllLetter('В')
+							+modCityAllLetter('Д')
+			+e.show-all.mc-show-all-js
+				+e.plus
+					+icon('plus')
+				span показать все города
 	// end modals
+
+mixin modCityAllLetter(letter)
+	a.scroll-link(href=`#${letter}` data-scrollbox="#city-all")=letter
+
+mixin modCityAllItem(letter, city, amount=12)
+	+e.item(id=letter)
+		.row.gy-3.gy-sm-4
+			.col-md-auto
+				+e.letter=letter
+			.col-md
+				+e.city-row.row
+					-for(var i = 1; i <= amount; i++)
+						+modCityAllLink(city+i)
+
+mixin modCityAllLink(txt)
+	.col-sm-6.col-md-4.col-xl-3.col-base-2
+		a(href="#")=txt
+
+mixin modCityPopularLink(txt)
+	.col-sm-6.col-md-4
+		a(href="#")=txt
 
 mixin callbackRadioItem(txt, name='modal-callback')
 	+b.LABEL.custom-chb

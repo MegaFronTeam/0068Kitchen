@@ -449,12 +449,9 @@ iframe {
 
 
 
-.custom-scroll {
-	scrollbar-color: var(--bs-primary)  transparent;
-
-	scrollbar-width: thin;
-	scrollbar-color: var(--bs-primary)  transparent;
-
+.custom-scroll{
+	//--track-bg
+	//--thumb-bg
 	&::-webkit-scrollbar-thumb {
 		opacity: 1;
 		display: block
@@ -462,8 +459,8 @@ iframe {
 
 	&::-webkit-scrollbar-track {
 		border: none;
-		background-color: transparent;
-		border-color: transparent;
+		background: var(--track-bg, #{$gray-100});
+		border-radius: 5px;
 		-webkit-box-shadow: none;
 	}
 
@@ -471,17 +468,15 @@ iframe {
 		width: 4px;
 		height: 2px;
 		background-color: transparent;
-		// border-right: 2px;
-		/* or add it to the track */
+		border-radius: 5px;
 		border-color: transparent;
 		opacity: 0;
 		-webkit-box-shadow: none;
-
 	}
 
 	/* Add a thumb */
 	&::-webkit-scrollbar-thumb {
-		background: var(--bs-primary) ;
+		background: var(--thumb-bg, var(--bs-primary));
 		border-radius: 2.5px;
 	}
 

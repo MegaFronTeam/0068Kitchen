@@ -263,7 +263,7 @@ $enable-shadows: false !default;
 $enable-gradients: false !default;
 $enable-transitions: true !default;
 $enable-reduced-motion: true !default;
-$enable-smooth-scroll: true !default;
+$enable-smooth-scroll: false !default;
 $enable-grid-classes: true !default;
 $enable-button-pointers: true !default;
 $enable-rfs: true !default;
@@ -353,7 +353,9 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1430px) !default;
+  xxl: 1430px,
+  base: 1800px,
+) !default;
 // scss-docs-end grid-breakpoints
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");

@@ -42,9 +42,25 @@
 						<div class="topLine__row row align-items-center">
 							<div class="topLine__location-col col col-xl-auto">
 								<div class="location">
-									<svg class="icon icon-location ">
-										<use xlink:href="img/svg/sprite.svg#location"></use>
-									</svg><span class="d-none d-lg-inline-block">Комсомольск-на-Амуре</span>
+									<div class="location__dd-btn location-btn-js">
+										<svg class="icon icon-location ">
+											<use xlink:href="img/svg/sprite.svg#location"></use>
+										</svg><span class="d-none d-lg-inline-block">Комсомольск-на-Амуре</span>
+									</div>
+									<div class="location__dd location-dd-js">
+										<div class="location__dd-inner">
+											<div class="location__title"><span class="d-block d-sm-inline">Ваш город</span><span>Комсомольск-на-Амуре</span>
+											</div>
+											<div class="location__btns-row row gy-1">
+												<div class="col-sm-6">
+													<button class="location__btn location__btn--orange location-close-js" type="button">Да, верно
+													</button>
+												</div>
+												<div class="col-sm-6"><a class="location__btn location__btn--out-gray location-close-js" href="#modal-city" data-fancybox="">Нет, другой</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="col d-none d-xl-block">
@@ -93,9 +109,25 @@
 							</div>
 							<div class="col-auto d-xl-none">
 								<div class="location">
-									<svg class="icon icon-location ">
-										<use xlink:href="img/svg/sprite.svg#location"></use>
-									</svg><span class="d-none d-lg-inline-block">Комсомольск-на-Амуре</span>
+									<div class="location__dd-btn location-btn-js">
+										<svg class="icon icon-location ">
+											<use xlink:href="img/svg/sprite.svg#location"></use>
+										</svg><span class="d-none d-lg-inline-block">Комсомольск-на-Амуре</span>
+									</div>
+									<div class="location__dd location-dd-js">
+										<div class="location__dd-inner">
+											<div class="location__title"><span class="d-block d-sm-inline">Ваш город</span><span>Комсомольск-на-Амуре</span>
+											</div>
+											<div class="location__btns-row row gy-1">
+												<div class="col-sm-6">
+													<button class="location__btn location__btn--orange location-close-js" type="button">Да, верно
+													</button>
+												</div>
+												<div class="col-sm-6"><a class="location__btn location__btn--out-gray location-close-js" href="#modal-city" data-fancybox="">Нет, другой</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="col-auto d-xl-none">
@@ -973,6 +1005,264 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-city modal-city--js" id="modal-city" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<h2 class="form-wrap__title">Выберите свой город
+					</h2>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввести название города"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__city form-wrap__city--popular mc-popular-js active">
+						<div class="row">
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре0</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре1</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре2</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре3</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре4</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре5</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре6</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре7</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре8</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре9</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре10</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре11</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре12</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре13</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре14</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре15</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре16</a></div>
+							<div class="col-sm-6 col-md-4"><a href="#">Комсомольск-на-Амуре17</a></div>
+						</div>
+					</div>
+					<div class="form-wrap__city form-wrap__city--all mc-all-js" id="city-all">
+						<div class="row">
+							<div class="col">
+								<div class="form-wrap__item" id="A">
+									<div class="row gy-3 gy-sm-4">
+										<div class="col-md-auto">
+											<div class="form-wrap__letter">A
+											</div>
+										</div>
+										<div class="col-md">
+											<div class="form-wrap__city-row row">
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан1</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан2</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан3</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан4</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан5</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан6</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан7</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан8</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан9</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан10</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан11</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Абакан12</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__item" id="Б">
+									<div class="row gy-3 gy-sm-4">
+										<div class="col-md-auto">
+											<div class="form-wrap__letter">Б
+											</div>
+										</div>
+										<div class="col-md">
+											<div class="form-wrap__city-row row">
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково1</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково2</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково3</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково4</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково5</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково6</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково7</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково8</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково9</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково10</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково11</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Балаково12</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__item" id="В">
+									<div class="row gy-3 gy-sm-4">
+										<div class="col-md-auto">
+											<div class="form-wrap__letter">В
+											</div>
+										</div>
+										<div class="col-md">
+											<div class="form-wrap__city-row row">
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки1</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки2</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки3</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки4</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки5</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки6</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки7</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки8</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки9</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки10</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки11</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Валуйки12</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__item" id="Д">
+									<div class="row gy-3 gy-sm-4">
+										<div class="col-md-auto">
+											<div class="form-wrap__letter">Д
+											</div>
+										</div>
+										<div class="col-md">
+											<div class="form-wrap__city-row row">
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск1</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск2</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск3</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск4</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск5</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск6</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск7</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск8</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск9</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск10</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск11</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Дзержинск12</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__item" id="Я">
+									<div class="row gy-3 gy-sm-4">
+										<div class="col-md-auto">
+											<div class="form-wrap__letter">Я
+											</div>
+										</div>
+										<div class="col-md">
+											<div class="form-wrap__city-row row">
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ1</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ2</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ3</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ4</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ5</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ6</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ7</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ8</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ9</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ10</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ11</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ12</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ13</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ14</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ15</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ16</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ17</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ18</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ19</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ20</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ21</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ22</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ23</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ24</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ25</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ26</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ27</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ28</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ29</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ30</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ31</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ32</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ33</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ34</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ35</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ36</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ37</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ38</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ39</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ40</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ41</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ42</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ43</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ44</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ45</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ46</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ47</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ48</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ49</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ50</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ51</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ52</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ53</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ54</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ55</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ56</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ57</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ58</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ59</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ60</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ61</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ62</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ63</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ64</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ65</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ66</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ67</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ68</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ69</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ70</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ71</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ72</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ73</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ74</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ75</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ76</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ77</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ78</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ79</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ80</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ81</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ82</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ83</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ84</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ85</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ86</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ87</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ88</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ89</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ90</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ91</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ92</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ93</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ94</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ95</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ96</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ97</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ98</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ99</a></div>
+												<div class="col-sm-6 col-md-4 col-xl-3 col-base-2"><a href="#">Яркутськ100</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-xl-none">
+								<div class="form-wrap__ancors"><a class="scroll-link" href="#A" data-scrollbox="#city-all">A</a><a class="scroll-link" href="#Б" data-scrollbox="#city-all">Б</a><a class="scroll-link" href="#В" data-scrollbox="#city-all">В</a><a class="scroll-link" href="#Д" data-scrollbox="#city-all">Д</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-wrap__show-all mc-show-all-js">
+						<div class="form-wrap__plus">
+							<svg class="icon icon-plus ">
+								<use xlink:href="img/svg/sprite.svg#plus"></use>
+							</svg>
+						</div><span>показать все города</span>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- end modals-->
 		<!-- modal libs--><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
