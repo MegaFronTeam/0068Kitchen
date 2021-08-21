@@ -208,11 +208,22 @@ mixin sProdCardChar(key, val)
 
 mixin sProdCardTag(tagName, txt)
 	.col-auto
-		+e.tag(href="#")
-			if tagName
-				+e.icon
-					img(loading="lazy" src=`img/svg/${tagName}.svg` alt="")
-			span=txt
+		if txt == "Поделиться"
+			+e.tag--share
+				+e.share-toggle
+					if tagName
+						+e.icon
+							img(loading="lazy" src=`img/svg/${tagName}.svg` alt="")
+					span=txt
+				+e.share-dropdown
+					<script src="https://yastatic.net/share2/share.js"></script>
+					<div class="ya-share2" data-curtain data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki"></div>
+		else
+			+e.tag(href="#")
+				if tagName
+					+e.icon
+						img(loading="lazy" src=`img/svg/${tagName}.svg` alt="")
+				span=txt
 
 mixin sProdCardSlide(imgNum)
 	.swiper-slide

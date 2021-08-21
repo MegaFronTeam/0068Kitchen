@@ -438,11 +438,32 @@
 
 		font-size: rem(18);
 		line-height: 1.45;
+		padding-top: 10px;
+		padding-bottom: 10px;
 
 		color: inherit;
+		position: relative;
 		&:hover{
 			color: $primary;
+			--d: block;
 			//	--icon-color: #{$primary};
+		}
+	}
+	&__share-toggle{
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+	&__share-dropdown{
+		display: var(--d, none);
+		background-color: #fff;
+		top: 100%;
+		left: 0;
+		padding: rem(15);
+		position: absolute;
+		box-shadow: 0 5px 5px rgba($color: #000000, $alpha: .1);
+		.ya-share2__list{
+			display: flex;
 		}
 	}
 	&__icon{
