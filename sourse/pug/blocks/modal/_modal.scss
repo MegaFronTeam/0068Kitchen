@@ -227,6 +227,10 @@
 	@include media-breakpoint-down(md){
 		padding: 0!important;
 	}
+	@include media-breakpoint-up(md){
+		padding-top: rem(24)!important;
+		padding-bottom: rem(24)!important;
+	}
 }
 .modal-city{
 	//@include mt();
@@ -306,7 +310,7 @@
 			@extend .custom-scroll;
 			overflow-y: auto;
 
-			min-height: rem(280);
+			//min-height: rem(280);
 			&--popular{
 				height: calc(100vh - var(--modal-py)*2 - var(--title-fs)*var(--title-lh) - var(--title-mb) - #{rem(60)} - var(--input-mb) - var(--title-mb) - #{rem(32)});
 				@include media-breakpoint-up(md){
