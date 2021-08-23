@@ -1,7 +1,13 @@
+
+.fancybox__content{
+		padding: 0;
+		background: none;
+}
 .modal-win {
 	width: 100%;
 	position: relative;
 	max-width: rem(500);
+	background-color: #fff;
 
 	.modal-content {
 		// max-width: 485px;
