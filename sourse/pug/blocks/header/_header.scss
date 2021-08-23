@@ -13,13 +13,25 @@
 	//
 	&.fixed{
 		.topLine{
-			display: none!important;
+			// display: none!important;
+			// @includse mt;
+			// transform: translateY(-41px);
+			margin-top: -41px;
 		}
 		.brands{
-			display: none!important;
+			// display: none!important;
+			
+			transform: translateY(-100%);
 		}
 	}
 } // end.header
+.topLine{
+	@include mt;
+}
+.brands{
+	@include mt;
+	z-index: -1;
+}
 
 .catalog-dd{
 	border-top: 1px solid $gray-800;
