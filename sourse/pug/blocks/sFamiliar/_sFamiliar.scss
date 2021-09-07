@@ -178,6 +178,10 @@
 .prod-item{
 	min-height: 100%;
 	background-color: $white;
+		img {
+			max-height: 100%;
+			height: auto;
+		}
 
 	position: relative;
 	@include media-breakpoint-down(md){
