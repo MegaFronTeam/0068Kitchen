@@ -45,28 +45,40 @@ mixin sCatalog(data)
 											input(type="checkbox" class='invisible')
 											span.icon-wrap
 												+icon('sort-order')
+							if data.hasAltView
+								.col-auto
+									+e.view-row.row
+										+sCatalogViewItem(1)
+										+sCatalogViewItem(2, 'active')
 						+e.items-row.row.gy-0.gx-0
-							+sCatalogCard({
-								imgNum: '1',
-								title: 'Стиральная машина HAIER HW70-12829A',
-							})
-							+sCatalogCard({
-								imgNum: '2',
-								title: 'Стиральная машина HAIER HW70-12829A',
-							})
-							+sCatalogCard({
-								imgNum: '1',
-								title: 'Стиральная машина HAIER HW70-12829A',
-							})
-							+sCatalogCard({
-								imgNum: '1',
-								title: 'Стиральная машина HAIER HW70-12829A',
-							})
-							-for(var i = 0; i < 12; i++)
+							if data.hasAltView
+								-for (var i = 0; i < 12; i++)
+									+sCatalogCardLong({
+										imgNum: '1',
+										title: 'Стиральная машина HAIER HW70-12829A',
+									})
+							else
 								+sCatalogCard({
 									imgNum: '1',
-									title: 'Вытяжка 60 см Bosch Serie | 4 DWK65AD60R',
+									title: 'Стиральная машина HAIER HW70-12829A',
 								})
+								+sCatalogCard({
+									imgNum: '2',
+									title: 'Стиральная машина HAIER HW70-12829A',
+								})
+								+sCatalogCard({
+									imgNum: '1',
+									title: 'Стиральная машина HAIER HW70-12829A',
+								})
+								+sCatalogCard({
+									imgNum: '1',
+									title: 'Стиральная машина HAIER HW70-12829A',
+								})
+								-for (var i = 0; i < 12; i++)
+									+sCatalogCard({
+										imgNum: '1',
+										title: 'Вытяжка 60 см Bosch Serie | 4 DWK65AD60R',
+									})
 							.col-12
 								+e.show-more(href="#") Показать еще
 						+e.pugin-wrap
@@ -102,6 +114,61 @@ mixin sCatalogCard(data)
 				.col-auto
 					+e.add-btn(href="#modal-callback" data-fancybox='')
 						+icon('plus')
+
+mixin sCatalogCardLong(data)
+	.col-12
+		+b.long-prod
+			.row.gx-0.gy-0
+				+e.col--long.col-md-7.col-xxl-8
+					+e.actions
+						.row.gx-3.justify-content-end
+							+longProdAction(1)
+							+longProdAction(2)
+							+longProdAction(3)
+					+e.main-row.row.align-items-center.align-items-lg-start.gy-4
+						.col-sm-auto
+							+e.img(href="#")
+								img(loading="lazy" src=`img/@2x/cat-card-${data.imgNum}.png` alt="")
+						.col-sm
+							+e.title=data.title
+							+e.chars
+								+sFamiliarSlideChar('Скорость отжима (об/мин):', '1400')
+								+sFamiliarSlideChar('Макс. загрузка (кг):', '8')
+				+e.col--gray.col
+					+e.price-row.row.align-items-end
+						.col
+							+e.price--old 96 990 руб.
+							+e.price--curr 54 999 руб.
+						.col-auto
+							+e.bonus-row.row.align-items-center
+								+e.b-txt-col.col-auto
+									+e.SPAN.b-blue +1500
+									|
+									| бонусов
+								.col-auto
+									.sidebar__hint.hint-js(data-title='Бонус' data-descr='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias expedita explicabo, ipsum iste molestias odio perferendis placeat quod temporibus ullam?' data-bs-toggle="popover"  data-bs-content="And here's some amazing content. It's very engaging. Right?")
+										.sidebar__hint-ball ?
+					+e.delivery-box
+						+longProdDeliveryItem('Доставка', `18 декабря, <b>490 руб.</b>`)
+						+longProdDeliveryItem('Самовывоз', `сегодня, <b>бесплатно</b>`)
+					+e.foot-row.row.align-items-center.gx-3.gy-2
+						.col
+							+e.buy-btn(href="#modal-callback" data-fancybox='')
+								+icon('plus')
+								| Купить
+						.col-auto
+							+e.credit(href="#") Оформить рассрочку
+
+mixin longProdDeliveryItem(key, val)
+	+e.d-item
+		+e.d-row.row.align-items-center
+			+e.d-key.col=key
+			+e.d-val.col-auto!=val
+
+mixin longProdAction(imgNum)
+	.col-auto
+		+e.action(href="#")
+			img(loading="lazy" src=`img/svg/long-prod-action-${imgNum}.svg` alt="")
 
 mixin sCatalogTag(txt)
 	.col-sm-auto
@@ -200,3 +267,8 @@ mixin sCatalogArticlesItem(imgNum)
 			+e.img
 				img(loading="lazy" src=`img/@2x/sCatalog-article-${imgNum}.png` alt="")
 			+e.title Какой духовой шкаф подобрать для кухни?
+
+mixin sCatalogViewItem(iconNum, addClasses='')
+	.col-auto
+		+e.view-item(href='#' class=addClasses)
+			+icon(`sort-${iconNum}`)
