@@ -10,15 +10,15 @@ mixin sCart(data)
 			+e.white-box
 				.row.gx-0.align-items-start
 					+e.col--left.col-lg-8
-						+e.action-row.row
-							+sCartAction(1, 'Очистить корзину')
-							+sCartAction(2, 'Поделиться корзиной')
+						+b.tags-row.row
+							+sProdCardTag('sCart-action-1', 'Очистить корзину')
+							+sProdCardTag('sCart-action-2', 'Поделиться')
 						+e.items
 							+sCartItem({
 								imgNum: 1,
 								title: 'Стиральная машина Miele WWV 980 WPS WhiteEdition',
 								oldPrice: '196 990 руб.',
-								currPrice: '189 999 руб.',
+								currPrice: '99 189 999 руб.',
 								hasAddBtn: true,
 								inpVal: '1 шт.',
 							})
@@ -123,11 +123,3 @@ mixin addDDItem()
 					+e.price-col.col 10 998 руб.
 					.col-auto
 						+e.buy-btn(href='#') Купить
-
-
-mixin sCartAction(imgNum, txt)
-	.col-auto
-		+e.action(href='#')
-			+e.icon
-				img(loading="lazy" src=`img/svg/sCart-action-${imgNum}.svg` alt="")
-			span=txt

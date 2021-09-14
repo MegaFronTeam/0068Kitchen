@@ -66,7 +66,9 @@
 	//
 	&__col{
 		&--left{
-			padding-top: var(--wb-pt);
+			@include media-breakpoint-up(lg){
+				padding-top: var(--wb-pt);
+			}
 
 			background: $gray-130;
 			@include media-breakpoint-up(base){
@@ -85,12 +87,16 @@
 		}
 	}
 	&__top-box{
-		padding: rem(0) var(--wb-shift-x) rem(40) var(--wb-shift-x);
+		padding: rem(20) var(--wb-shift-x);
+		@include media-breakpoint-up(lg){
+			padding: rem(0) var(--wb-shift-x) rem(40) var(--wb-shift-x);
+		}
 	}
 	&__tb-row{
 		--bs-gutter-x: #{rem(22)};
 	}
 	&__img{
+		margin-top: rem(6);
 		max-width: rem(20);
 		max-height: rem(20);
 
@@ -116,19 +122,44 @@
 		line-height: calc(26/18);
 		color: $headings-color;
 	}
-	&__links{
+	&__mob-quit{
+		@extend .btn;
+		@extend .btn-primary;
+		padding: rem(6) rem(12);
+	}
 
+	&__links{
+		display: flex;
+		flex-wrap: wrap;
+		@include media-breakpoint-up(lg){
+			display: block;
+		}
 	}
 	&__link{
 		text-decoration: none;
 
-		padding: rem(12px) var(--wb-shift-x);
+		width: 50%;
+		padding: rem(17px) var(--wb-shift-x);
+		@include media-breakpoint-up(md){
+			width: 25%;
+			padding: rem(25px) var(--wb-shift-x);
+		}
+
+		border-right: 1px solid $gray-115;
+		text-align: center;
+		@include media-breakpoint-up(lg){
+			border-right: none;
+			text-align: left;
+			width: 100%;
+			padding: rem(12px) var(--wb-shift-x);
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 		@include media-breakpoint-up(xxl){
 			padding: rem(19.5px) var(--wb-shift-x);
 		}
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 
 		border-top: 1px solid $gray-115;
 		&.current{
@@ -140,12 +171,20 @@
 			background: darken($gray-290, 3);
 		}
 
-		font-size: rem(20);
-		line-height: calc(29/20);
+		font-size: rem(15);
+		@include media-breakpoint-up(md){
+			font-size: rem(17);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(20);
+			line-height: calc(29/20);
+		}
 		color: $headings-color!important;
 
 		&:after{
-			content: '';
+			@include media-breakpoint-up(lg){
+				content: '';
+			}
 			display: inline-block;
 			margin-left: auto;
 			flex-shrink: 0;
@@ -159,6 +198,11 @@
 		}
 
 		&:last-child{
+			display: none;
+			@include media-breakpoint-up(lg){
+				display: flex;
+			}
+
 			color: $gray-550!important;
 			&:hover{
 				color: $primary!important;

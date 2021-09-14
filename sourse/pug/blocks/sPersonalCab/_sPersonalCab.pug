@@ -11,13 +11,15 @@ mixin sPersonalCab(data)
 				.row.gx-0.align-items-start
 					+e.col--left.col-lg-3
 						+e.top-box
-							+e.tb-row.row
+							+e.tb-row.row.gy-3
 								.col-auto
 									+e.img
 										img(loading="lazy" src="img/svg/portrait-stab.svg" alt="")
 								.col
 									+e.name Сергей
 									+e.mail ivanov@yandex.ru
+								.col-auto.d-lg-none
+									+e.mob-quit(href="#") Выход
 						+e.links
 							-for(let [index,link] of Object.entries(data.sbLinks))
 								+e.link(href="#" class=`${index == data.sbActive ? 'current' : ''}`)=link

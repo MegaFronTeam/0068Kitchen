@@ -875,6 +875,12 @@ function eventHandler() {
   //
   let sCompareMainSlider = new Swiper('.sCompare-main-slider-js', {
     slidesPerView: 'auto',
+
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      //draggable: true,
+      //hide: true,
+    },
   });
   let subSlidersConts = document.querySelectorAll('.sCompare-sub-slider-js');
   for(let [index, sliderCont] of Object.entries(subSlidersConts)){
@@ -928,6 +934,20 @@ function eventHandler() {
   //-window.addEventListener('scroll', compareCardResize, {passive: true});
   compareCardResize();
 
+  let sAboutSlider = new Swiper('.sAbout-slider-js', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.sAbout--js .swiper-next',
+      prevEl: '.sAbout--js .swiper-prev',
+    },
+    pagination: {
+      el: ' .swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+  });
 
 };
 if (document.readyState !== 'loading') {
