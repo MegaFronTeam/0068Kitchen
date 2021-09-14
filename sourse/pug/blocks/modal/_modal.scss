@@ -1,7 +1,6 @@
-
 .fancybox__content{
-		padding: 0;
-		background: none;
+	//padding: 0;
+	background: none;
 }
 .modal-win {
 	width: 100%;
@@ -423,4 +422,76 @@
 	//
 	&__{}
 	&__{}
+}
+//
+.modal-address{
+	width: 100%;
+	position: relative;
+	max-width: rem(500);
+	background-color: #fff;
+
+	padding: rem(24) rem(24) rem(32);
+	@include media-breakpoint-up(sm){
+		padding: rem(33) rem(55) rem(60);
+	}
+
+	.form-wrap{
+		&__name-label{
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(37);
+			}
+		}
+		&__input-title{
+			font-size: rem(14);
+			line-height: calc(20/14);
+			text-transform: uppercase;
+			color: $gray-550;
+		}
+		&__name-inp{
+			font-size: rem(20);
+			line-height: 1.35;
+			color: $black;
+			padding: rem(4) 0;
+			box-shadow: none!important;
+
+			border: none!important;
+			border-top: 1px solid transparent!important;
+			border-bottom: 1px solid $gray-115!important;
+		}
+		//
+		&__inp-row{
+			--bs-gutter-x: #{rem(12)};
+			--bs-gutter-y: #{rem(12)};
+			@include media-breakpoint-up(sm){
+				--bs-gutter-x: #{rem(24)};
+				--bs-gutter-y: #{rem(24)};
+			}
+		}
+		&__input{
+			border-width: 1px;
+			color: $black;
+			padding: rem(19) rem(30);
+
+			font-size: rem(18);
+			line-height: calc(26/18);
+		}
+
+		&__btn{
+			@extend .btn;
+			@extend .btn-dark;
+			width: 100%;
+			padding: rem(21);
+
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: calc(23/16);
+			letter-spacing: rem(0.3);
+			text-transform: uppercase;
+			color: $gray-520!important;
+		}
+		//-
+		&__{}
+		&__{}
+	}
 }

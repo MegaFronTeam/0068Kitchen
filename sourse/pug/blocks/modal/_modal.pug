@@ -74,6 +74,22 @@ mixin modal()
 				+e.plus
 					+icon('plus')
 				span показать все города
+	//-
+	+b.modal-address(id="modal-address" style="display: none")
+		+form-wrap
+			+e.LABEL.name-label
+				+e.SPAN.input-title Название
+				+e.INPUT.name-inp.form-control(type="text" value="Моя дача")
+			+e.inp-row.row
+				.col-sm-12
+					+input('Улица', 'text')
+				.col-sm-6
+					+input('Дом, корпус', 'text')
+				.col-sm-6
+					+input('Квартира', 'text')
+				.col-12
+					+e.btn(type="submit") Сохранить данные
+
 	// end modals
 
 mixin modCityAllLetter(letter)

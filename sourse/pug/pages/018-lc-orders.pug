@@ -12,10 +12,10 @@ include ../blocks/sPersonalCab/_sPersonalCab.pug
 
 block variables
 	- let  mainPage='new-page'
-	- let  bg= '016.png'
+	- let  bg= '018.png'
 
 block title
-	- let  title= '016-cart'
+	- let  title= '018-lc-orders'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -23,6 +23,16 @@ block pagecontent
 		+topLine()
 		+top-nav()
 		+brands()
-	+sCart()
-	+sBuyWith()
+	+sPersonalCab({
+		subTitle: 'Мои заказы',
+		sbLinks: [
+			'Мои заказы',
+			'Личные данные',
+			'Избранное',
+			'Сравнения',
+			'Выход',
+		],
+		sbActive: 0,
+		myOrders: true,
+	})
 	+footer()

@@ -872,6 +872,61 @@ function eventHandler() {
       $(this).removeClass('active');
     })
   })
+  //
+  let sCompareMainSlider = new Swiper('.sCompare-main-slider-js', {
+    slidesPerView: 'auto',
+  });
+  let subSlidersConts = document.querySelectorAll('.sCompare-sub-slider-js');
+  for(let [index, sliderCont] of Object.entries(subSlidersConts)){
+    let prevBtns = sliderCont.querySelectorAll('.sub-slider-prev-js');
+    let nextBtns = sliderCont.querySelectorAll('.sub-slider-next-js');
+
+    let subSlider = new Swiper(sliderCont, {
+      initialSlide: index,
+      slidesPerView: 'auto',
+      allowTouchMove: false,
+    });
+    $(prevBtns).click(function (){
+      subSlider.slidePrev();
+    });
+    $(nextBtns).click(function (){
+      subSlider.slideNext();
+    });
+  }
+  //
+  let allSlides = document.querySelectorAll('.sCompare-sub-slider-js .swiper-slide');
+  let compareCard = document.querySelector('.compare-card--js');
+  let headlines = document.querySelectorAll('.c-item-js');
+  let lines=[];
+  //
+  for (let [headLineIndex,line] of Object.entries(headlines)){
+    lines[headLineIndex] = [line];
+    for(let slide of allSlides){
+      let slideLine = slide.querySelectorAll(`.slide-char-js`)[headLineIndex];
+      lines[headLineIndex].push(slideLine);
+    }
+  }
+
+  function compareCardResize() {
+    if (compareCard){
+      document.documentElement.style.setProperty('--comp-card-h', `${compareCard.offsetHeight}px`);
+    }
+    if (window.matchMedia("(max-width: 992px)").matches) return
+    for (let line of lines){
+      let minH = 0;
+      for (let item of line){
+        if (minH < item.offsetHeight){
+          minH = item.offsetHeight;
+        }
+      }
+      $(line).each(function (){
+        this.style.minHeight = minH+'px';
+      })
+    }
+  }
+  window.addEventListener('resize', compareCardResize, {passive: true});
+  //-window.addEventListener('scroll', compareCardResize, {passive: true});
+  compareCardResize();
 
 
 };

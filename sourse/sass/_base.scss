@@ -861,3 +861,13 @@ iframe {
 		background-repeat: no-repeat;
 	}
 }
+//
+.txt-crop{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-clamp: var(--lines-num, 1);
+	display: -webkit-box;
+	display: box;
+	word-wrap: break-word;
+	box-orient: vertical;
+}

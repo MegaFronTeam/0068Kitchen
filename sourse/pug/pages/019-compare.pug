@@ -9,13 +9,14 @@ include ../blocks/sCart/_sCart.pug
 include ../blocks/sBuyWith/_sBuyWith.pug
 include ../blocks/sNew/_sNew.pug
 include ../blocks/sPersonalCab/_sPersonalCab.pug
+include ../blocks/sCompare/_sCompare.pug
 
 block variables
 	- let  mainPage='new-page'
-	- let  bg= '016.png'
+	- let  bg= '019.png'
 
 block title
-	- let  title= '016-cart'
+	- let  title= '019-compare'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -23,6 +24,5 @@ block pagecontent
 		+topLine()
 		+top-nav()
 		+brands()
-	+sCart()
-	+sBuyWith()
+	+sCompare()
 	+footer()
