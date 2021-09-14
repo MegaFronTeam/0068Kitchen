@@ -215,6 +215,12 @@
 	&__main-slider{
 		position: relative;
 		& > .swiper-container{
+			& > .swiper-wrapper{
+				@include media-breakpoint-down(sm){
+					transform: none!important;
+				}
+			}
+
 			@include media-breakpoint-down(lg){
 				overflow: visible!important;
 			}
