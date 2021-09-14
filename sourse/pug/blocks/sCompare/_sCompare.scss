@@ -255,8 +255,15 @@
 
 	//
 	&__main-slide{
-		width: rem(230);
-		max-width: 100%;
+		@include media-breakpoint-down(sm){
+			&:nth-child(1n + 3){
+				display: none;
+			}
+		}
+
+		//width: rem(230);
+		//max-width: 100%;
+		width: calc(100%/2);
 		@include media-breakpoint-up(sm){
 			width: calc(100%/2);
 		}
@@ -328,7 +335,10 @@
 	}
 
 	&__content{
-		padding: rem(20);
+		padding: rem(20) rem(10);
+		@include media-breakpoint-up(sm){
+			padding: rem(20);
+		}
 	}
 	&__top-row{
 		--bs-gutter-x: #{rem(10)};
@@ -399,9 +409,18 @@
 		display: block;
 		text-decoration: none;
 		color: $body-color;
-		font-size: rem(17);
-		height: rem(96);
-		margin-bottom: rem(30);
+
+		font-size: rem(14);
+		line-height: calc(20/14);
+		height: rem(80);
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(sm){
+			font-size: rem(17);
+			line-height: 1.46;
+			height: rem(96);
+			margin-bottom: rem(30);
+		}
+
 		@extend .txt-crop;
 		--lines-num: 4;
 	}
@@ -409,7 +428,10 @@
 		--bs-gutter-x: #{rem(8)};
 	}
 	&__price{
-		font-size: rem(17);
+		font-size: rem(13);
+		@include media-breakpoint-up(sm){
+			font-size: rem(17);
+		}
 	}
 	&__buy-btn{
 		@extend .btn;
@@ -462,8 +484,12 @@
 		justify-content: center;
 
 
-		width: rem(65);
-		height: rem(65);
+		width: rem(30);
+		height: rem(30);
+		@include media-breakpoint-up(sm){
+			width: rem(65);
+			height: rem(65);
+		}
 		min-height: 100%;
 		border: none;
 
