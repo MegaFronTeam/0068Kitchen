@@ -924,6 +924,18 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
+	}); //
+
+	let tagsSlider = new Swiper('.tags-slider-js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		scrollbar: {
+			el: ".swiper-scrollbar"
+		}
 	});
 }
 

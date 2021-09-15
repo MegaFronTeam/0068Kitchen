@@ -872,3 +872,29 @@ iframe {
 	word-wrap: break-word;
 	box-orient: vertical;
 }
+//
+.swiper-scrollbar{
+	width: 100%;
+	height: 10px;
+
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $primary;
+	}
+
+	//-
+	.swiper-scrollbar-drag{
+		cursor: pointer;
+		background: $primary;
+		border-radius: rem(20);
+		height: rem(10);
+	}
+}

@@ -4,7 +4,7 @@ mixin sPersonalCab(data)
 		+e.bg
 			img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
 		.container
-			+breadcrumb('Главная', 'Оформление заказа')
+			+breadcrumb('Главная', data.bcTxt)
 			+b.section-title
 				h1 Личный кабинет
 			+e.white-box

@@ -7,28 +7,32 @@ mixin sTags(data)
 					| Популярные подборки
 					br
 					| бытовой техники
-			+e.row.row.sTags-row-js.justify-content-center
-				+sTagsItem('Встраиваемая техника')
-				+sTagsItem('Варочные панели')
-				+sTagsItem('Варочные панели домино')
-				+sTagsItem('Встраиваемая комбинированная панель')
-				+sTagsItem('Встраиваемые газовые панели')
-				+sTagsItem('Встраиваемые индукционные панели')
-				+sTagsItem('Встраиваемые электрические панели')
-				+sTagsItem('Встраиваемая техника')
-				+sTagsItem('Варочные панели')
-				+sTagsItem('Варочные панели домино')
-				+sTagsItem('Встраиваемая комбинированная панель')
-				+sTagsItem('Встраиваемые газовые панели')
-				+sTagsItem('Встраиваемые индукционные панели')
-				+sTagsItem('Встраиваемые электрические панели')
-				.col-sm-auto.d-block
-					+e.btn--toggle.sTags-btn-js
-						span Показать все
-						span Скрыть
-
+			.tags-slider-wrap
+				.swiper-container.tags-slider-js
+					.swiper-wrapper
+						.swiper-slide
+							+e.row.row.sTags-row-js.justify-content-md-center.my-3
+								+sTagsItem('Встраиваемая техника')
+								+sTagsItem('Варочные панели')
+								+sTagsItem('Варочные панели домино')
+								+sTagsItem('Встраиваемая комбинированная панель')
+								+sTagsItem('Встраиваемые газовые панели')
+								+sTagsItem('Встраиваемые индукционные панели')
+								+sTagsItem('Встраиваемые электрические панели')
+								+sTagsItem('Встраиваемая техника')
+								+sTagsItem('Варочные панели')
+								+sTagsItem('Варочные панели домино')
+								+sTagsItem('Встраиваемая комбинированная панель')
+								+sTagsItem('Встраиваемые газовые панели')
+								+sTagsItem('Встраиваемые индукционные панели')
+								+sTagsItem('Встраиваемые электрические панели')
+								.col-sm-auto.d-block
+									+e.btn--toggle.sTags-btn-js
+										span Показать все
+										span Скрыть
+					.swiper-scrollbar.d-md-none
 	// end sTags
 
 mixin sTagsItem(txt)
-	.col-sm-auto
+	.col-auto
 		+e.btn--tag(href="#")=txt

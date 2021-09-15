@@ -18,11 +18,12 @@
 		}
 	}
 	&__row{
-		--bs-gutter-x: #{rem(10)};
-
-		--bs-gutter-y: #{rem(16)};
+		padding-bottom: rem(8);
+		--bs-gutter-y: #{rem(8)};
+		--bs-gutter-x: #{rem(8)};
 		@include media-breakpoint-up(sm){
-			--bs-gutter-y: #{rem(20)};
+			--bs-gutter-x: #{rem(10)};
+			--bs-gutter-y: #{rem(10)};
 		}
 
 		&:not(.active){
