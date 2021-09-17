@@ -125,7 +125,10 @@
 	--slide-char-pt: calc(var(--c-item-mb)/2);
 	--slide-char-h: calc(var(--c-item-h) * 2 + var(--slide-char-pt));
 
-	--comp-card-mb: #{rem(40)};
+	--comp-card-mb: #{rem(70)};
+	@include media-breakpoint-up(xl){
+		--comp-card-mb: #{rem(80)};
+	}
 	@include media-breakpoint-up(xxl){
 		--comp-card-mb: #{rem(99)};
 	}
@@ -237,6 +240,19 @@
 			left: 0;
 		}
 	}
+	&__difference{
+		position: absolute;
+		z-index: 10;
+
+		@include media-breakpoint-down(lg){
+			left: 0;
+			top: calc(var(--comp-card-h) + #{rem(25)});
+		}
+		@include media-breakpoint-up(lg){
+			right: 0;
+			top: calc(var(--comp-card-h) + var(--comp-card-mb));
+		}
+	}
 
 	//
 	&__main-slide{
@@ -295,6 +311,8 @@
 			min-height: 0!important;
 		}
 	}
+
+
 	&__{}
 	&__{}
 } // end.sCompare

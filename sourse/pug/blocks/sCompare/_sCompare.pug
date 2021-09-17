@@ -49,6 +49,11 @@ mixin sCompare(data)
 									-for(var i=1; i <= 7; i++)
 										+sCompareMainSlide({})
 								.swiper-scrollbar
+								+e.difference
+									+b.LABEL.custom-chb
+										input(type="checkbox" name='uniq' class="invisible" checked)
+										span.square
+										span.txt Показывать только различия
 	// end sCompare
 
 mixin sCompareMainSlide(data)
