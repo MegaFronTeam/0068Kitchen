@@ -537,7 +537,11 @@ function eventHandler() {
 	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
-		loop: true // navigation: {
+		loop: true,
+		pagination: {
+			el: '.headerBlock-slider-js .swiper-pagination',
+			clickable: true
+		} // navigation: {
 		// 	nextEl: '.swiper-next',
 		// 	prevEl: '.swiper-prev',
 		// },

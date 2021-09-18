@@ -531,7 +531,7 @@ function eventHandler() {
     slidesPerView: 'auto',
     spaceBetween: 0,
     loop: true,
-
+    
     navigation: {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
@@ -543,7 +543,10 @@ function eventHandler() {
     slidesPerView: 'auto',
     spaceBetween: 0,
     loop: true,
-
+    pagination: {
+      el: '.headerBlock-slider-js .swiper-pagination',
+      clickable: true,
+    },
     // navigation: {
     // 	nextEl: '.swiper-next',
     // 	prevEl: '.swiper-prev',

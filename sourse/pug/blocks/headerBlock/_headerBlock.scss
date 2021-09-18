@@ -2,7 +2,12 @@
 .headerBlock {
   color: $white;
   background-color: $body-color;
-
+  position: relative;
+  .swiper-pagination{
+    position: absolute;
+    z-index: 20;
+    bottom: 20px;
+  }
   &__slider-wrap{
     .swiper-container{
 
