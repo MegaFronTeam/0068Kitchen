@@ -1009,7 +1009,41 @@
 	&__buy-btn{
 		@extend .btn;
 		@extend .btn-primary;
+		.icon{
+			&:nth-child(2){
+				display: none;
+				margin-right: 3px;
+			}
+		}
+		.long-prod__text{
+			span{
+				&:nth-child(2){display: none; }
+			}
+		}
+		&.active {
+			background: #00D649 !important;
+			border-color: #00D649 !important;
+			.icon {
+				&:nth-child(1) {
+					display: none;
+				}
+				&:nth-child(2){
+					display: inline-block;
+				}
+			}
 
+			.long-prod__text {
+				span {
+						&:nth-child(1) {
+							display: none;
+						}
+
+						&:nth-child(2) {
+							display: inline-block;
+						}
+				}
+			}
+		}
 		display: inline-flex;
 		align-items: center;
 
@@ -1019,6 +1053,7 @@
 		.icon{
 			stroke: $white;
 			font-size: rem(16);
+			fill: transparent;
 			margin-right: rem(12);
 		}
 

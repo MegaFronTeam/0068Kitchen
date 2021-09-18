@@ -158,9 +158,12 @@ mixin sCatalogCardLong(data)
 						+longProdDeliveryItem('Самовывоз', `сегодня, <b>бесплатно</b>`)
 					+e.foot-row.row.align-items-center.gx-3.gy-2
 						.col
-							+e.buy-btn(href="#modal-callback" data-fancybox='')
+							+e.buy-btn(href="#modal-callback" data-fancybox='').active
 								+icon('plus')
-								| Купить
+								+icon('check')
+								+e.SPAN.text
+									span Купить
+									span В корзине
 						.col-auto
 							+e.credit(href="#") Оформить рассрочку
 
