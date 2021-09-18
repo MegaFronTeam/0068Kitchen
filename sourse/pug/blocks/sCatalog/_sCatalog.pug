@@ -86,19 +86,23 @@ mixin sCatalog(data)
 								+e.show-more(href="#") Показать еще
 						+e.pugin-wrap
 							+pugin(false)
-						+e.tags-row.orange.row.sTags-row-js
-							-for(let i = 0; i < 2; i ++)
-								+sCatalogTagOrange('Стиральные машины Miele')
-								+sCatalogTagOrange('Стиральные машины Bosch')
-								+sCatalogTagOrange('Стиральные машины Gorenje')
-								+sCatalogTagOrange('Стиральные машины Asko')
-								+sCatalogTagOrange('Стиральные машины Miele')
-								+sCatalogTagOrange('Стиральные машины Bosch')
-								+sCatalogTagOrange('Стиральные машины Gorenje')
-							.col-sm-auto.d-block
-								+e.btn--orange-toggle.sTags-btn-js
-									span Показать еще
-									span Скрыть
+						
+						.tags-slider-wrap
+							.tags-slider-js
+								.tag-wrapper
+									+e.tags-row.row.sTags-row-js
+										-for(let i = 0; i < 4; i ++)  
+											+sCatalogTagOrange('Стиральные машины Miele')
+											+sCatalogTagOrange('Стиральные машины Bosch')
+											+sCatalogTagOrange('Стиральные машины Gorenje')
+											+sCatalogTagOrange('Стиральные машины Asko')
+											+sCatalogTagOrange('Стиральные машины Miele')
+											+sCatalogTagOrange('Стиральные машины Bosch')
+											+sCatalogTagOrange('Стиральные машины Gorenje')
+										.col-auto.d-none.d-md-block 
+											+e.btn--orange-toggle.sTags-btn-js
+												span Показать еще
+												span Скрыть
 						+sCatalogArticles()
 	// end sCatalog
 

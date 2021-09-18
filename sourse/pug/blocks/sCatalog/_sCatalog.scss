@@ -130,6 +130,7 @@
 		@include media-breakpoint-down(md){
 			height: (47px * 4);
 			flex-direction: column;
+			.sCatalog__btn--orange-tag,
 			.sCatalog__btn--tag{
 				width: 100%;
 			}
@@ -144,13 +145,17 @@
 		}
 
 		&.orange{
-			padding-bottom: var(--sTPB);
+			margin-bottom: var(--sTPB);
 			@include media-breakpoint-up(xxl){
-				padding-bottom: rem(90);
+				margin-bottom: rem(90);
 			}
-			&:not(.active){
-				& > *:nth-child(n + 8){
-					display: none;
+
+			@include media-breakpoint-up(md){
+
+				&:not(.active){
+					& > *:nth-child(n + 8){
+						display: none;
+					}
 				}
 			}
 		}
