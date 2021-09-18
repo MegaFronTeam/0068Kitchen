@@ -11,21 +11,19 @@ mixin sCatalog(data)
 					+b.section-title
 						h1!=data.title
 					.tags-slider-wrap
-						.swiper-container.tags-slider-js
-							.swiper-wrapper
-								.swiper-slide
-									+e.tags-row.row.sTags-row-js
-										-for(let i = 0; i < 2; i ++)
-											+sCatalogTag('Стиральные машины из Германии')
-											+sCatalogTag('Стиральные машины шириной 55 см')
-											+sCatalogTag('Узкие стиральные машины')
-											+sCatalogTag('Стиральные машины под раковину')
-											+sCatalogTag('Угловые стиральные машины')
-										.col-sm-auto.d-block
-											+e.btn--toggle.sTags-btn-js
-												span Показать еще
-												span Скрыть
-							.swiper-scrollbar.d-md-none.my-3
+						.tags-slider-js
+							.tag-wrapper
+								+e.tags-row.row.sTags-row-js
+									-for(let i = 0; i < 4; i ++) 
+										+sCatalogTag('Стиральные машины из Германии') 
+										+sCatalogTag('Стиральные машины шириной 55 см') 
+										+sCatalogTag('Узкие стиральные машины') 
+										+sCatalogTag('Стиральные машины под раковину') 
+										+sCatalogTag('Угловые стиральные машины')
+									.col-auto.d-none.d-md-block 
+										+e.btn--toggle.sTags-btn-js
+											span Показать еще
+											span Скрыть
 					+e.img.d-none.d-lg-flex
 						img(loading="lazy" src="img/@2x/sCatalog-baner-img.png" alt="")
 		+e.content
@@ -117,9 +115,11 @@ mixin sCatalogCard(data)
 				.col
 					+e.price 54 999 руб.
 				.col-auto
-					+e.add-btn(href="#modal-callback" data-fancybox='')
-						+icon('plus')
-
+					+e.btn-wrap
+						+e.add-btn(href="#modal-callback" data-fancybox='')
+							+icon('plus')
+							+e.add-btn-toggle-text в корзину
+ 
 mixin sCatalogCardLong(data)
 	.col-12
 		+b.long-prod
