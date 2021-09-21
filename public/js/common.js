@@ -537,7 +537,11 @@ function eventHandler() {
 	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
-		loop: true // navigation: {
+		loop: true,
+		pagination: {
+			el: '.headerBlock-slider-js .swiper-pagination',
+			clickable: true
+		} // navigation: {
 		// 	nextEl: '.swiper-next',
 		// 	prevEl: '.swiper-prev',
 		// },
@@ -925,17 +929,30 @@ function eventHandler() {
 			clickable: true
 		}
 	}); //
+	// let tagsSlider = new Swiper('.tags-slider-js', {
+	//   slidesPerView: 'auto',
+	//   freeMode: true,
+	//   loopFillGroupWithBlank: true,
+	//   touchRatio: 0.2,
+	//   slideToClickedSlide: true,
+	//   freeModeMomentum: true,
+	//   slidesPerColumn: 4,
+	//   slidesPerColumnFill: 'row',
+	//   scrollbar: {
+	//     el: ".swiper-scrollbar",
+	//     draggable: true,
+	//   }
+	// });
 
-	let tagsSlider = new Swiper('.tags-slider-js', {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		scrollbar: {
-			el: ".swiper-scrollbar"
-		}
+	new ScrollBooster({
+		viewport: document.querySelector('.tags-slider-js'),
+		content: document.querySelector('.tag-wrapper'),
+		scrollMode: 'native',
+		// scrollMode: 'transform', // use CSS 'transform' property
+		direction: 'horizontal',
+		// allow only horizontal scrolling
+		emulateScroll: true // scroll on wheel events
+
 	});
 }
 

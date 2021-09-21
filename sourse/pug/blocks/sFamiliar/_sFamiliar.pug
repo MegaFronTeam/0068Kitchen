@@ -51,8 +51,13 @@ mixin sFamiliarSlide(imgNum)
 						.col
 							+e.price 69 990 руб.
 						.col-auto
-							+e.add-btn(href="#")
-								+icon('plus')
+							+e.btn-wrap
+								+e.add-btn(href="#").active
+									+icon('plus')
+									+icon('check')
+									+e.add-btn-toggle-text
+										span в корзину
+										span в корзине
 
 mixin sFamiliarSlideChar(key,val)
 	+e.char

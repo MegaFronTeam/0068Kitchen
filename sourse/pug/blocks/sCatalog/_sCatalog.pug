@@ -11,21 +11,19 @@ mixin sCatalog(data)
 					+b.section-title
 						h1!=data.title
 					.tags-slider-wrap
-						.swiper-container.tags-slider-js
-							.swiper-wrapper
-								.swiper-slide
-									+e.tags-row.row.sTags-row-js
-										-for(let i = 0; i < 2; i ++)
-											+sCatalogTag('Стиральные машины из Германии')
-											+sCatalogTag('Стиральные машины шириной 55 см')
-											+sCatalogTag('Узкие стиральные машины')
-											+sCatalogTag('Стиральные машины под раковину')
-											+sCatalogTag('Угловые стиральные машины')
-										.col-sm-auto.d-block
-											+e.btn--toggle.sTags-btn-js
-												span Показать еще
-												span Скрыть
-							.swiper-scrollbar.d-md-none.my-3
+						.tags-slider-js
+							.tag-wrapper
+								+e.tags-row.row.sTags-row-js
+									-for(let i = 0; i < 4; i ++) 
+										+sCatalogTag('Стиральные машины из Германии') 
+										+sCatalogTag('Стиральные машины шириной 55 см') 
+										+sCatalogTag('Узкие стиральные машины') 
+										+sCatalogTag('Стиральные машины под раковину') 
+										+sCatalogTag('Угловые стиральные машины')
+									.col-auto.d-none.d-md-block 
+										+e.btn--toggle.sTags-btn-js
+											span Показать еще
+											span Скрыть
 					+e.img.d-none.d-lg-flex
 						img(loading="lazy" src="img/@2x/sCatalog-baner-img.png" alt="")
 		+e.content
@@ -88,19 +86,23 @@ mixin sCatalog(data)
 								+e.show-more(href="#") Показать еще
 						+e.pugin-wrap
 							+pugin(false)
-						+e.tags-row.orange.row.sTags-row-js
-							-for(let i = 0; i < 2; i ++)
-								+sCatalogTagOrange('Стиральные машины Miele')
-								+sCatalogTagOrange('Стиральные машины Bosch')
-								+sCatalogTagOrange('Стиральные машины Gorenje')
-								+sCatalogTagOrange('Стиральные машины Asko')
-								+sCatalogTagOrange('Стиральные машины Miele')
-								+sCatalogTagOrange('Стиральные машины Bosch')
-								+sCatalogTagOrange('Стиральные машины Gorenje')
-							.col-sm-auto.d-block
-								+e.btn--orange-toggle.sTags-btn-js
-									span Показать еще
-									span Скрыть
+						
+						.tags-slider-wrap
+							.tags-slider-js
+								.tag-wrapper
+									+e.tags-row.row.sTags-row-js
+										-for(let i = 0; i < 4; i ++)  
+											+sCatalogTagOrange('Стиральные машины Miele')
+											+sCatalogTagOrange('Стиральные машины Bosch')
+											+sCatalogTagOrange('Стиральные машины Gorenje')
+											+sCatalogTagOrange('Стиральные машины Asko')
+											+sCatalogTagOrange('Стиральные машины Miele')
+											+sCatalogTagOrange('Стиральные машины Bosch')
+											+sCatalogTagOrange('Стиральные машины Gorenje')
+										.col-auto.d-none.d-md-block 
+											+e.btn--orange-toggle.sTags-btn-js
+												span Показать еще
+												span Скрыть
 						+sCatalogArticles()
 	// end sCatalog
 
@@ -117,9 +119,11 @@ mixin sCatalogCard(data)
 				.col
 					+e.price 54 999 руб.
 				.col-auto
-					+e.add-btn(href="#modal-callback" data-fancybox='')
-						+icon('plus')
-
+					+e.btn-wrap
+						+e.add-btn(href="#modal-callback" data-fancybox='')
+							+icon('plus')
+							+e.add-btn-toggle-text в корзину
+ 
 mixin sCatalogCardLong(data)
 	.col-12
 		+b.long-prod
@@ -158,9 +162,12 @@ mixin sCatalogCardLong(data)
 						+longProdDeliveryItem('Самовывоз', `сегодня, <b>бесплатно</b>`)
 					+e.foot-row.row.align-items-center.gx-3.gy-2
 						.col
-							+e.buy-btn(href="#modal-callback" data-fancybox='')
+							+e.buy-btn(href="#modal-callback" data-fancybox='').active
 								+icon('plus')
-								| Купить
+								+icon('check')
+								+e.SPAN.text
+									span Купить
+									span В корзине
 						.col-auto
 							+e.credit(href="#") Оформить рассрочку
 
@@ -180,7 +187,7 @@ mixin sCatalogTag(txt)
 		+e.btn--tag(href="#")=txt
 
 mixin sCatalogTagOrange(txt)
-	.col-sm-auto
+	.col-auto
 		+e.btn--orange-tag(href="#")=txt
 
 mixin sCatalogSidebar()
