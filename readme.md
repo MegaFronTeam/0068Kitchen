@@ -5,6 +5,7 @@
 3. <https://luckyone1221.github.io/0068Kitchen/public/02-colaboration.html>
 4. <https://luckyone1221.github.io/0068Kitchen/public/03-contacts.html>
 5. <https://luckyone1221.github.io/0068Kitchen/public/04-delivery-1.html>
+5. <https://luckyone1221.github.io/0068Kitchen/public/04-delivery-2.html>
 6. <https://luckyone1221.github.io/0068Kitchen/public/05-prod-card.html>
 7. <https://luckyone1221.github.io/0068Kitchen/public/06-actions.html>
 8. <https://luckyone1221.github.io/0068Kitchen/public/07-credit.html>

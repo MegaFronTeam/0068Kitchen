@@ -429,6 +429,7 @@ function eventHandler() {
   }
   makeDDGroup([
     '.payment-dd-items-js',
+    '.delivery-dd-items-js',
     '.footer-dd-items-js',
     '.prod-card-dd-items-js',
     //'.sidebar-dd-items-js',
