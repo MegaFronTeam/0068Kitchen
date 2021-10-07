@@ -898,3 +898,12 @@ iframe {
 		height: rem(10);
 	}
 }
+
+
+.sCatalog__prod-col .prod-item--card{
+	display: flex !important;
+	flex-direction: column;
+	.prod-item__chars{
+		flex-grow: 1;
+	}
+}
