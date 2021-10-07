@@ -74,7 +74,7 @@
 			//height: calc(100%);
 			@include media-breakpoint-up(xxl){
 
-				height: rem(496);
+				height: rem(646);
 			}
 			height: rem(696);
 			max-height: 76%;
@@ -190,7 +190,7 @@
 		top: 0;
 		width: 100%;
 			padding: rem(24) rem(16) rem(30);
-			background-color: rgba($white, .7);
+			background-color: rgba($white, 1);
 			opacity: var(--op, 0);
 			@include mt;
 	@include media-breakpoint-up(xl){
@@ -212,6 +212,9 @@
 	background-color: $white;
 	&:hover{
 		--op: 1;
+		img{
+			opacity: 0;
+		}
 	}
 	
 	.col-xxl-auto{
@@ -225,6 +228,7 @@
 		img {
 			max-height: 100%;
 			height: auto;
+			@include mt;
 		}
 
 		// @include media-breakpoint-up(xxl){
@@ -335,7 +339,10 @@
 		@include media-breakpoint-up(xxl){
 			width: rem(138);
 		}
-		
+		@include media-breakpoint-up(xxl){
+			// height: 250px;
+		}
+		height: 200px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -344,9 +351,9 @@
 			width: auto;
 			max-width: 100%;
 			@include media-breakpoint-up(xxl){
-			max-height: 250px;
+			// height: 250px;
 		}
-		max-height: 200px;
+		height: 200px;
 		}
 	}
 	&__title{
