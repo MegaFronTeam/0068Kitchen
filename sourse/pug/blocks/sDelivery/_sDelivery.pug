@@ -5,13 +5,16 @@ mixin sDelivery(data)
 			.tabs
 				+e.caption-row.tabs__caption.row
 					.col-auto
-						+e.tabs-btn.tabs__btn Способы доставки
+						+e.tabs-btn.tabs__btn.active Способы доставки
 					.col-auto
-						+e.tabs-btn.tabs__btn.active Способы оплаты
+						+e.tabs-btn.tabs__btn Способы оплаты
 				.tabs__wrap
-					.tabs__content
-						+delivery()
 					.tabs__content.active
+						if block
+							block
+						else
+							+delivery()
+					.tabs__content
 						+payment()
 	// end sDelivery
 

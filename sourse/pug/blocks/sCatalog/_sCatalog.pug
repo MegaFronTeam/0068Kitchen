@@ -5,11 +5,18 @@ mixin sCatalog(data)
 			+e.bg
 				img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
 			.container
-				+e.b-content
+				+e.b-content(class=(data.logo ? 'mw-100' : ''))
 					if data.hasBread
 						+breadcrumb('Главная', 'Каталог', 'Крупная бытовая техника', 'Стиральные машины')
 					+b.section-title
-						h1!=data.title
+						if !data.logo
+							h1!=data.title
+						else 
+							.col
+								h1!=data.title
+
+							.col-auto.d-none.d-md-block
+								+pic("brand-img.png",'',0)
 					.tags-slider-wrap
 						.tags-slider-js
 							.tag-wrapper
@@ -24,8 +31,9 @@ mixin sCatalog(data)
 										+e.btn--toggle.sTags-btn-js
 											span Показать еще
 											span Скрыть
-					+e.img.d-none.d-lg-flex
-						img(loading="lazy" src="img/@2x/sCatalog-baner-img.png" alt="")
+					if !data.logo
+						+e.img.d-none.d-lg-flex
+							img(loading="lazy" src="img/@2x/sCatalog-baner-img.png" alt="")
 		+e.content
 			.container
 				+e.c-row.row
