@@ -811,12 +811,12 @@
 	align-items: center;
 
 	.square{
-		background-color: var(--bg, transparent);
-
+		background: var(--bg, transparent);
+		background-size: cover;
+		background-repeat: no-repeat;
 		flex-shrink: 0;
 		@include mt();
-		border: 1px solid $gray-520;
-		background-color: transparent;
+		border: 1px solid $gray-520; 
 		border-radius: 1px;
 
 		width: rem(18);
@@ -846,8 +846,8 @@
 
 		input:checked + .square{
 		border: 1px solid var(--bg, #{$primary});
-		background-color: var(--bg, #{$primary});
-		box-shadow: 0px 0px 0px 2px #f7f7f7, 0px 0px 0px 4px var(--bg);
+		background: var(--bg, #{$primary});
+		box-shadow: 0px 0px 0px 2px #f7f7f7, 0px 0px 0px 3px var(--bg);
 		&:after{
 			opacity: 1;
 		}

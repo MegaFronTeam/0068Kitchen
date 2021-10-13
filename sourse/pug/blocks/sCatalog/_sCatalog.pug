@@ -255,6 +255,7 @@ mixin sidebarDdItem(data)
 				+sidebarChbItem('Акция', '226')
 				+sidebarChbItem('Красный', '653', 'red')
 				+sidebarChbItem('Green', '653', 'green')
+				+sidebarChbItem('Green', '653', 'url(img/@2x/cat-card-1.png)')
 				.rm-hidden-js
 					+sidebarChbItem('lalal', '1130')
 					+sidebarChbItem('lalal', '1130')
@@ -266,7 +267,7 @@ mixin sidebarChbItem(txt, num, color)
 	+b.LABEL.chb-item
 		input(type="checkbox" class="invisible")&attributes(attributes)
 		if color
-			span.square(style=`--bg: ${color || ' '}`)
+			span.square.square--bg(style=`--bg: ${color }`)
 		else
 			span.square()
 		+e.txt=txt
