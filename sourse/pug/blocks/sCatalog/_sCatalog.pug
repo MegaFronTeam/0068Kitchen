@@ -253,7 +253,8 @@ mixin sidebarDdItem(data)
 			else
 				+sidebarChbItem('Кредит/рассрочка', '113')(checked)
 				+sidebarChbItem('Акция', '226')
-				+sidebarChbItem('Новинка', '653')
+				+sidebarChbItem('Красный', '653', 'red')
+				+sidebarChbItem('Green', '653', 'green')
 				.rm-hidden-js
 					+sidebarChbItem('lalal', '1130')
 					+sidebarChbItem('lalal', '1130')
@@ -261,10 +262,13 @@ mixin sidebarDdItem(data)
 					span Показать еще
 					span Свернуть
 
-mixin sidebarChbItem(txt, num)
+mixin sidebarChbItem(txt, num, color)
 	+b.LABEL.chb-item
 		input(type="checkbox" class="invisible")&attributes(attributes)
-		span.square
+		if color
+			span.square(style=`--bg: ${color || ' '}`)
+		else
+			span.square()
 		+e.txt=txt
 		if num
 			+e.num=num
