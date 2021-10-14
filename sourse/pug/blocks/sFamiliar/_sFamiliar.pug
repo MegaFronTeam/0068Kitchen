@@ -43,21 +43,19 @@ mixin sFamiliarSlide(imgNum)
 						img(loading="lazy" src=`img/@2x/sFamiliar-${imgNum}.png` alt="")
 				.col
 					+e.title(href="#") Стиральная машина HAIER HW70-12829A
-					+e.chars
-						+sFamiliarSlideChar('Артикул:', '770080')
-						+sFamiliarSlideChar('Производитель:', 'Toshiba')
-						+sFamiliarSlideChar('Цвет:', 'золотистый')
+					//- +e.chars
+					//- 	+sFamiliarSlideChar('Артикул:', '770080')
+					//- 	+sFamiliarSlideChar('Производитель:', 'Toshiba')
+					//- 	+sFamiliarSlideChar('Цвет:', 'золотистый')
 					+e.foot-row.row.align-items-center
 						.col
 							+e.price 69 990 руб.
 						.col-auto
-							+e.btn-wrap
-								+e.add-btn(href="#").active
-									+icon('plus')
-									+icon('check')
-									+e.add-btn-toggle-text
-										span в корзину
-										span в корзине
+							+e.actions
+								.row.gx-3.justify-content-end
+									+longProdAction(1)
+									+longProdAction(2)
+									+longProdAction(3)
 
 mixin sFamiliarSlideChar(key,val)
 	+e.char
