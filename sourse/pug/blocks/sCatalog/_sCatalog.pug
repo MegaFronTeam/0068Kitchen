@@ -125,12 +125,19 @@ mixin sCatalogCard(data)
 				+sFamiliarSlideChar('Макс. загрузка (кг):', '8')
 			+e.foot-row.row.align-items-center
 				.col
-					+e.price 54 999 руб.
+					+e.price 69 990 руб.
 				.col-auto
-					+e.btn-wrap
-						+e.add-btn(href="#modal-callback" data-fancybox='')
-							+icon('plus')
-							+e.add-btn-toggle-text в корзину
+					+e.actions
+						.row.gx-3.justify-content-end
+							+e.btn-wrap
+								+e.add-btn(href="#")
+									+icon('plus')
+									+icon('check')
+									+e.add-btn-toggle-text
+										span в корзину
+										span в корзине
+							+longProdAction(2)
+							+longProdAction(3)
  
 mixin sCatalogCardLong(data)
 	.col-12

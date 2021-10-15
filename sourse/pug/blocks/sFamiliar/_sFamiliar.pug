@@ -53,7 +53,13 @@ mixin sFamiliarSlide(imgNum)
 						.col-auto
 							+e.actions
 								.row.gx-3.justify-content-end
-									+longProdAction(1)
+									+e.btn-wrap
+										+e.add-btn(href="#")
+											+icon('plus')
+											+icon('check')
+											+e.add-btn-toggle-text
+												span в корзину
+												span в корзине
 									+longProdAction(2)
 									+longProdAction(3)
 

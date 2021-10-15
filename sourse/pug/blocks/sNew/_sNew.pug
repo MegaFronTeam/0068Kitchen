@@ -56,9 +56,17 @@ mixin sNewProdItem(addClasses='', imgMod='')
 				+sFamiliarSlideChar('Цвет:', 'золотистый')
 			.mt-auto
 				+e.foot-row.row.align-items-center
-					.col
-						+e.price 85 990 руб.
-					.col-auto
-						+e.btn-wrap
-							+e.add-btn(href="#")
-								+icon('plus')
+						.col
+							+e.price 69 990 руб.
+						.col-auto
+							+e.actions
+								.row.gx-3.justify-content-end
+									+e.btn-wrap
+										+e.add-btn(href="#")
+											+icon('plus')
+											+icon('check')
+											+e.add-btn-toggle-text
+												span в корзину
+												span в корзине
+									+longProdAction(2)
+									+longProdAction(3)
