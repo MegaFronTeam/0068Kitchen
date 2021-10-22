@@ -4,7 +4,6 @@
   @include media-breakpoint-up(md){
     --fontSizeBase: #{$em-base};
   }
-
   --sPT: #{rem(45)};
   --sPB: #{rem(50)};
   --sTPB: #{rem(35)};
@@ -44,5 +43,11 @@
   --fixed-foot-nav-h: 70px;
   --header-height: 205px;
   --header-real-height: 205px;
+
+  //-
+  --l-shift-x: 0px;
+  @include media-breakpoint-up(xxl){
+    --l-shift-x: 50px;
+  }
 
 }

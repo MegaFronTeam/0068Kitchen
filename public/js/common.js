@@ -944,15 +944,29 @@ function eventHandler() {
 	//   }
 	// });
 
-	new ScrollBooster({
-		viewport: document.querySelector('.tags-slider-js'),
-		content: document.querySelector('.tag-wrapper'),
-		scrollMode: 'native',
-		// scrollMode: 'transform', // use CSS 'transform' property
-		direction: 'horizontal',
-		// allow only horizontal scrolling
-		emulateScroll: true // scroll on wheel events
+	try {
+		new ScrollBooster({
+			viewport: document.querySelector('.tags-slider-js'),
+			content: document.querySelector('.tag-wrapper'),
+			scrollMode: 'native',
+			// scrollMode: 'transform', // use CSS 'transform' property
+			direction: 'horizontal',
+			// allow only horizontal scrolling
+			emulateScroll: true // scroll on wheel events
 
+		});
+	} catch (_unused) {//lalala
+	} //.sTime-slider-js
+
+
+	let sTimeSlider = new Swiper('.sTime-slider-js', {
+		loop: true,
+		spaceBetween: 30,
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
 	});
 }
 

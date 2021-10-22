@@ -26,5 +26,6 @@
 22. <https://luckyone1221.github.io/0068Kitchen/public/017-lc.html>
 22. <https://luckyone1221.github.io/0068Kitchen/public/018-lc-orders.html>
 22. <https://luckyone1221.github.io/0068Kitchen/public/019-compare.html>
+22. <https://luckyone1221.github.io/0068Kitchen/public/020-landing.html>
 # //////
 23. <https://luckyone1221.github.io/0068Kitchen/public/020-brand-catalog.html>
