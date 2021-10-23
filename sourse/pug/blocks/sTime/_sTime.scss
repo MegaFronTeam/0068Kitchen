@@ -5,7 +5,7 @@
 	--sTPB: #{rem(35)};
 	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(133)};
-		--sPB: #{rem(90)};
+		--sPB: #{rem(124)};
 		--sTPB: #{rem(40)};
 	}
 
@@ -243,33 +243,7 @@
 	}
 
 	.swiper-pagination{
-		justify-content: flex-start;
-		&-bullet{
-			border-radius: 0;
-			border: none;
-			width: rem(40);
-			height: rem(4);
-			background: $gray-512;
-			margin: 0 rem(20) 0 0;
-			&:last-child{
-				margin: 0;
-			}
-
-			position: relative;
-			&:after{
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 16px;
-				top: 50%;
-				left: 50%;
-				transform: translateX(-50) translateY(-50);
-			}
-
-			&-active{
-				background: $primary;
-			}
-		}
+		@extend .swiper-pagination-alt;
 	}
 	//
 	&__slider-card{

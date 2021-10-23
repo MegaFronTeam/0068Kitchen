@@ -7,6 +7,40 @@
 	&--alt{
 		//??
 	}
+	&.land-form{
+		@include media-breakpoint-up(xxl){
+			--sPT: #{rem(189)};
+			--sPB: #{rem(221)};
+			--sTPB: #{rem(39)};
+		}
+
+		.sForm{
+			&__box{
+				@include media-breakpoint-up(xxl){
+					padding: 58px 23px 84px 72px;
+				}
+			}
+		}
+	}
+	&__pic{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			position: absolute;
+			top: rem(-74);
+			right: rem(90);
+			margin-bottom: 0;
+		}
+		max-width: 100%;
+		width: rem(420);
+		height: rem(210);
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
 	&__box{
 		position: relative;
 		z-index: 1;

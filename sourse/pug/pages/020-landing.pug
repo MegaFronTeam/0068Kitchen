@@ -15,6 +15,9 @@ include ../blocks/sBaner/_sBaner.pug
 include ../blocks/sDescr/_sDescr.pug
 include ../blocks/sOffer/_sOffer.pug
 include ../blocks/sTime/_sTime.pug
+include ../blocks/sExample/_sExample.pug
+include ../blocks/sProdSl/_sProdSl.pug
+include ../blocks/sLMap/_sLMap.pug
 
 block variables
 	- let  mainPage='landing-page'
@@ -34,4 +37,13 @@ block pagecontent
 	+sDescr()
 	+sOffer()
 	+sTime()
+	+sExample()
+	+sProdSl()
+	+e.form-cont
+		+sFormAlt({
+			title: 'Выберите вытяжку вашей мечты',
+			descr: 'Оставьте заявку и наш менеджер свяжется с вами в ближайшее время ',
+			landPic: true,
+		})(class="land-form")
+	+sLMap()
 	+footer()

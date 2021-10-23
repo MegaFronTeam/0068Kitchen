@@ -994,6 +994,77 @@ function eventHandler() {
     },
   });
 
+  //
+  let sExampleSlider = new Swiper('.sExample-slider-js', {
+    slidesPerView: 'auto',
+    //loop: true,
+
+    navigation: {
+      nextEl: '.sExample--js .swiper-next',
+      prevEl: '.sExample--js .swiper-prev',
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: 30,
+      },
+      1200: {
+        spaceBetween: 100,
+      },
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+  //
+  let sProdSlSlider = new Swiper('.sProdSl-slider-js', {
+    slidesPerView: 'auto',
+
+    slidesPerColumnFill: 'row',
+    spaceBetween: 30,
+
+    breakpoints: {
+      1: {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+      },
+      575: {
+        slidesPerColumn: 1,
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+        slidesPerColumn: 3,
+      },
+    },
+
+    navigation: {
+      nextEl: '.sProdSl--js .swiper-next',
+      prevEl: '.sProdSl--js .swiper-prev',
+    },
+
+    pagination: {
+      el: '.sProdSl--js .swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+  //
+  $('.make-yandex-lazy-js').each(function (){
+    let self = this;
+
+    window.setTimeout(function (){
+      $(self.parentElement).html($(self).data("src"));
+      self.remove();
+    }, 3500)
+  });
+
 };
 if (document.readyState !== 'loading') {
   eventHandler();

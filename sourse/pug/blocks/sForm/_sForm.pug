@@ -33,6 +33,8 @@ mixin sFormAlt(data)
 			+e.box--alt
 				+e.bg
 					img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+				if data.landPic
+					+pic('landForm-img.png', undefined, 0)(class="sForm__pic")
 				+b.section-title
 					h2=data.title
 					p=data.descr

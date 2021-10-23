@@ -358,6 +358,41 @@ ul {
 	}
 }
 
+//
+.swiper-pagination-alt{
+	justify-content: flex-start;
+	.swiper-pagination-bullet{
+		border-radius: 0;
+		border: none;
+
+		width: rem(30);
+		margin: 0 rem(10) 0 0;
+		@include media-breakpoint-up(sm){
+			width: rem(40);
+			margin: 0 rem(20) 0 0;
+		}
+		height: rem(4);
+		background: $gray-512;
+		&:last-child{
+			margin: 0;
+		}
+
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 16px;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50) translateY(-50);
+		}
+
+		&-active{
+			background: $primary;
+		}
+	}
+}
 
 
 
@@ -977,7 +1012,65 @@ iframe {
 
 		}
 	}
-	&__{}
+
+	//
+	&__arrows-col{
+		display: flex;
+		align-items: center;
+
+		.swiper-prev,
+		.swiper-next{
+			@extend .btn;
+			@extend .btn-dark;
+			box-shadow: none!important;
+			outline: none!important;
+			padding: 4px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 39px;
+			height: 39px;
+			@include media-breakpoint-up(sm){
+				width: rem(60);
+				height: rem(60);
+			}
+
+			background-color: $gray-730!important;
+			&:hover{
+				background-color: darken($gray-730, 5)!important;
+				&:after{
+					background-color: darken($gray-730, 5)!important;
+				}
+			}
+
+			.icon{
+				color: transparent;
+				font-size: 14px;
+				stroke: $white;
+				stroke-width: 1.7px;
+			}
+		}
+
+		.swiper-prev{
+			margin-right: 20px;
+		}
+		.swiper-next{
+			position: relative;
+			z-index: 1;
+			&:after{
+				@include mt();
+				content: '';
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100vw;
+				background-color: $gray-730!important;
+			}
+		}
+	}
 	&__{}
 	&__{}
 	&__{}
@@ -995,5 +1088,23 @@ iframe {
 		width: 100vw;
 		height: 1px;
 		background: $gray-830;
+	}
+}
+//
+.lined-paggination{
+	position: relative;
+	z-index: 1;
+	&:after{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		pointer-events: none;
+
+		top: 50%;
+		left: -50vw;
+		transform: translateY(-50%);
+		height: 1px;
+		width: 200vw;
+		background-color: $gray-830;
 	}
 }
