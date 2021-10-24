@@ -28,5 +28,5 @@
 26. <https://luckyone1221.github.io/0068Kitchen/public/019-compare.html>
 27. <https://luckyone1221.github.io/0068Kitchen/public/020-landing.html>
 28. 
-//////лендинг
-23. <https://luckyone1221.github.io/0068Kitchen/public/020-brand-catalog.html>
+//////////////////лендинг//////////////////
+29. <https://luckyone1221.github.io/0068Kitchen/public/020-brand-catalog.html>
