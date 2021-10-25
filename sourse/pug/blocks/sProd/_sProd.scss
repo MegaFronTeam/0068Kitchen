@@ -153,8 +153,13 @@
 		}
 	}
 	&__img{
-		@extend .accept-ratio-frame-nh;
-		padding-top: (577/529) * 100%;
+		//@extend .accept-ratio-frame-nh;
+		//padding-top: (577/529) * 100%;
+		width: 100%;
+		img{
+			width: 100%;
+			object-fit: contain;
+		}
 	}
 	//
 	&__p-row{

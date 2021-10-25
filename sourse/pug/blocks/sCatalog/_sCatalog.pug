@@ -63,38 +63,58 @@ mixin sCatalog(data)
 										+sCatalogViewItem(2, 'active')
 						+e.items-row.row.gy-0.gx-0
 							if data.hasAltView
+								+sCatalogCardLong({
+									imgNum: '1',
+									title: 'Стиральная машина HAIER HW70-12829A',
+									imgAmount: 1,
+								})
+								+sCatalogCardLong({
+									imgNum: '1',
+									title: 'Стиральная машина HAIER HW70-12829A',
+									imgAmount: 2,
+								})
+								+sCatalogCardLong({
+									imgNum: '1',
+									title: 'Стиральная машина HAIER HW70-12829A',
+									imgAmount: 3,
+								})
 								-for (var i = 0; i < 12; i++)
 									+sCatalogCardLong({
 										imgNum: '1',
 										title: 'Стиральная машина HAIER HW70-12829A',
+										imgAmount: 4,
 									})
 							else
 								+sCatalogCard({
 									imgNum: '1',
 									title: 'Стиральная машина HAIER HW70-12829A',
+									imgAmount: 1,
 								})
 								+sCatalogCard({
 									imgNum: '2',
 									title: 'Стиральная машина HAIER HW70-12829A',
+									imgAmount: 2,
 								})
 								+sCatalogCard({
 									imgNum: '1',
 									title: 'Стиральная машина HAIER HW70-12829A',
+									imgAmount: 3,
 								})
 								+sCatalogCard({
 									imgNum: '1',
 									title: 'Стиральная машина HAIER HW70-12829A',
+									imgAmount: 4,
 								})
 								-for (var i = 0; i < 12; i++)
 									+sCatalogCard({
 										imgNum: '1',
 										title: 'Вытяжка 60 см Bosch Serie | 4 DWK65AD60R',
+										imgAmount: 4,
 									})
 							.col-12
 								+e.show-more(href="#") Показать еще
 						+e.pugin-wrap
 							+pugin(false)
-						
 						.tags-slider-wrap
 							.tags-slider-js
 								.tag-wrapper
@@ -117,27 +137,31 @@ mixin sCatalog(data)
 mixin sCatalogCard(data)
 	+e.prod-col.col-sm-6.col-md-4.col-lg-4.col-xxl-3
 		+b.prod-item--card
-			+e.img(href="#")
-				img(loading="lazy" src=`img/@2x/cat-card-${data.imgNum}.png` alt="")
+			- var imgAmount = data.imgAmount || 1;
+			+e.a-slider
+				.swiper-container.sNewProdItem-slider-js
+					.swiper-wrapper
+						-for (var i = 1; i <= imgAmount; i++)
+							+sNewProdItemSlide(i)
+						.swiper-slide.text-start
+							+e.c-title Характеристики
+							+e.chars
+								+sFamiliarSlideChar('Артикул:', '770080')
+								+sFamiliarSlideChar('Производитель:', 'Toshiba')
+								+sFamiliarSlideChar('Цвет:', 'золотистый')
+					.swiper-pagination
 			+e.title=data.title
-			+e.chars
-				+sFamiliarSlideChar('Скорость отжима (об/мин):', '1400')
-				+sFamiliarSlideChar('Макс. загрузка (кг):', '8')
 			+e.foot-row.row.align-items-center
-				.col
+				.price-col.col
 					+e.price 69 990 руб.
-				.col-auto
-					+e.actions
-						.row.gx-3.justify-content-end
-							+e.btn-wrap
-								+e.add-btn(href="#")
-									+icon('plus')
-									+icon('check')
-									+e.add-btn-toggle-text
-										span в корзину
-										span в корзине
-							+longProdAction(2)
-							+longProdAction(3)
+				.actions-col.actions-col--js.col-auto
+					.row.gx-2.justify-content-end.align-items-center.ps-1
+						+e.hint-col.hint-col-js.col-auto(data-hint="Купить" data-hint-active="В корзине")
+							+e.n-cart-btn.cart-btn-js(href="#")
+								img(loading="lazy" src="img/svg/n-cart.svg" alt="")
+								img(loading="lazy" src="img/svg/n-cart-done.svg" alt="")
+						+nAction(1, 'Добавить в избранное', 'В избранном')
+						+nAction(2, 'Добавить в избранное', 'В избранном')
 
 mixin sCatalogCardLong(data)
 	.col-12
@@ -151,8 +175,16 @@ mixin sCatalogCardLong(data)
 							+longProdAction(3)
 					+e.main-row.row.align-items-center.align-items-lg-start.gy-4
 						.col-sm-auto
-							+e.img(href="#")
-								img(loading="lazy" src=`img/@2x/cat-card-${data.imgNum}.png` alt="")
+							if data.imgAmount && data.imgAmount > 1
+								+e.a-slider
+									.swiper-container.sNewProdItem-slider-js
+										.swiper-wrapper
+											-for (var i = 1; i <= data.imgAmount; i++)
+												+sNewProdItemSlide(i)
+										.swiper-pagination
+							else
+								+e.img(href="#")
+									img(loading="lazy" src=`img/@2x/cat-card-${data.imgNum}.png` alt="")
 						.col-sm
 							+e.title=data.title
 							+e.chars

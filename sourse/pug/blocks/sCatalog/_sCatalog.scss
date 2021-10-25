@@ -92,7 +92,7 @@
 		align-items: center;
 
 		@include media-breakpoint-up(lg){
-			min-height: rem(220);
+			min-height: rem(160);
 			padding-bottom: rem(20);
 		}
 		@include media-breakpoint-up(xxl){
@@ -514,10 +514,17 @@
 .prod-item--card{
 	border: 1px solid $gray-280!important;
 
-	padding: rem(24) rem(16) rem(15) !important;
+	//
+	--item-px: #{rem(16)};
+	//@include media-breakpoint-up(xl){
+	//	--item-px: #{rem(16)};
+	//}
+
+	padding: rem(24) var(--item-px) rem(15) !important;
 	@include media-breakpoint-up(xxl){
-		padding: 33px 19px 14px 17px!important;
+		padding: 33px var(--item-px) 14px!important;
 	}
+
 	.prod-item__img{
 		margin-left: auto;
 		margin-right: auto;
@@ -530,6 +537,15 @@
 			height: auto;
 		}
 	}
+	.prod-item__a-slider{
+		width: 100% !important;
+		height: rem(162) !important;
+		margin-bottom: rem(23) !important;
+	}
+	.prod-item__a-img{
+		height: auto;
+	}
+
 	.prod-item__title{
 		font-size: rem(17);
 		margin-bottom: rem(15);
@@ -875,6 +891,78 @@
 		--col-py: #{rem(20)};
 	}
 
+	//
+	&__a-slider{
+		position: relative;
+
+		width: 100%;
+		height: rem(120);
+		@include media-breakpoint-up(sm){
+			width: rem(120);
+			height: rem(120);
+		}
+		@include media-breakpoint-up(lg){
+			width: rem(160);
+			height: rem(160);
+		}
+
+		.swiper-container{}
+		.swiper-wrapper{}
+		.swiper-pagination{
+			@include mt();
+			opacity: 0;
+			&.active{
+				opacity: 1;
+			}
+
+			pointer-events: none;
+			position: absolute;
+			z-index: 10;
+			//background-color: red;
+			left: 0;
+			top: 0;
+			width: 100%;
+
+			display: flex;
+			&-bullet {
+				flex-grow: 1;
+				border-radius: 0;
+				border: none;
+				background-color: $gray-300;
+				height: 2px;
+
+				position: relative;
+				z-index: 1;
+				&:after{
+					@include mt();
+					transform-origin: left;
+					transform: scaleX(0);
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: $primary;
+				}
+
+				&-active{
+					&:after{
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+
+		&--commnon{
+			height: 200px;
+			margin-bottom: 0;
+		}
+	}
+	&__a-img {
+
+	}
+
 	&__col{
 		padding: var(--col-py) var(--col-px);
 
@@ -923,6 +1011,7 @@
 			--bs-gutter-x: #{rem(51)};
 		}
 	}
+	&__a-img,
 	&__img{
 		width: 100%;
 		height: rem(120);
