@@ -82,5 +82,5 @@ mixin sNewProdItem(addClasses='', imgMod='', imgAmount=1)
 
 mixin sNewProdItemSlide(imgNum)
 	.swiper-slide
-		+e.a-img
+		+e.a-img(href="#")
 			img(loading="lazy" src=`img/@2x/cat-card-${imgNum}.png` alt="")

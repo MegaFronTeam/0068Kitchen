@@ -150,7 +150,9 @@ mixin sCatalogCard(data)
 								+sFamiliarSlideChar('Производитель:', 'Toshiba')
 								+sFamiliarSlideChar('Цвет:', 'золотистый')
 					.swiper-pagination
-			+e.title=data.title
+			.small.text-secondary.text-center Шкафы для подогрева посуды
+			+e.title
+				a(href="#").text-body.tdn=data.title
 			+e.foot-row.row.align-items-center
 				.price-col.col
 					+e.price 69 990 руб.

@@ -245,7 +245,7 @@
   overflow: hidden;
   &:hover {
     --op: 1;
-    overflow: visible;
+    // overflow: visible;
 
     img {
       // opacity: 0;
@@ -506,6 +506,7 @@
         // height: 250px;
       }
       height: 200px;
+      max-height: 100%;
     }
   }
 
@@ -536,30 +537,30 @@
   &__hint-col{
     position: relative;
     z-index: 1;
+    @include media-breakpoint-up(lg){
+      &:before,
+      &:after{
+        pointer-events: none;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        @include mt();
 
-    &:before,
-    &:after{
-      pointer-events: none;
-      position: absolute;
-      z-index: 2;
-      opacity: 0;
-      @include mt();
-
-      left: 50%;
-      transform: translateX(-50%);
-    }
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
     &:before{
       white-space: nowrap;
       //content: attr(data-hint);
       display: inline-block;
 
-      bottom: calc(100% + 11px);
-      text-align: center;
+        bottom: calc(100% + 11px);
+        text-align: center;
 
-      min-width: 100px;
+        min-width: 100px;
 
-      padding: rem(9);
+        padding: rem(9);
 
       background: $gray-125;
       border-radius: 5px;
@@ -602,6 +603,7 @@
     --bs-gutter-y: #{rem(10)};
     --bs-gutter-x: #{rem(0)};
     flex-wrap: nowrap;
+    margin-top: auto;
     width: 100%;
     justify-content: space-between;
 
@@ -637,6 +639,8 @@
     }
   }
 
+  // &__foot-row {}
+
   &:hover &__foot-row {
     & > .price-col {
       width: 0;
@@ -650,7 +654,22 @@
       transform: translateX(0);
     }
   }
+  @include media-breakpoint-down(lg) {
+       &__foot-row {
+        & > .price-col {
+          width: 0;
+        }
 
+        & > .actions-col {
+          &:after{
+            opacity: 0;
+          }
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+    }
   &__n-action{
     width: rem(24);
     height: rem(36);
