@@ -245,7 +245,7 @@
   overflow: hidden;
   &:hover {
     --op: 1;
-    overflow: visible;
+    // overflow: visible;
 
     img {
       // opacity: 0;
@@ -641,6 +641,7 @@
   }
 
   // &__foot-row {}
+
   &:hover &__foot-row {
     & > .price-col {
       width: 0;
