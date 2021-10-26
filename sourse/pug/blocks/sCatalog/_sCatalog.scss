@@ -251,6 +251,12 @@
 	&__c-row{
 		--bs-gutter-x: #{rem(22)};
 		--bs-gutter-y: var(--sTPB);
+		@include media-breakpoint-up(xl) {
+			
+			&> .col-xl{
+				width: calc(100% - (20.3125rem + var(--bs-gutter-x)))!important;
+			}
+		}
 	}
 	&__sidebar-col{
 		position: relative;
@@ -513,7 +519,8 @@
 //
 .prod-item--card{
 	border: 1px solid $gray-280!important;
-
+	position: relative;
+	overflow: hidden;
 	//
 	--item-px: #{rem(16)};
 	//@include media-breakpoint-up(xl){

@@ -1036,7 +1036,11 @@ function eventHandler() {
 
 	for (let sliderCont of prodItemSliders) {
 		let slider = new Swiper(sliderCont, {
-			slidesPerView: 'auto',
+			slidesPerView: 1,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -1068,19 +1072,18 @@ function eventHandler() {
 			slider.slideTo(0);
 		});
 	} //
+	// $('.cart-btn-js').click(function (){
+	//   event.preventDefault();
+	//   $(this).toggleClass('active');
+	//   $(this).closest('.actions-col--js').toggleClass('active');
+	//   $(this).closest('.hint-col-js').toggleClass('active');
+	// });
+	// $('.toggle-self-active-js').click(function (){
+	//   event.preventDefault();
+	//   $(this).toggleClass('active');
+	//   $(this).closest('.hint-col-js').toggleClass('active');
+	// });
 
-
-	$('.cart-btn-js').click(function () {
-		event.preventDefault();
-		$(this).toggleClass('active');
-		$(this).closest('.actions-col--js').toggleClass('active');
-		$(this).closest('.hint-col-js').toggleClass('active');
-	});
-	$('.toggle-self-active-js').click(function () {
-		event.preventDefault();
-		$(this).toggleClass('active');
-		$(this).closest('.hint-col-js').toggleClass('active');
-	});
 }
 
 ;
