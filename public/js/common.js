@@ -1036,7 +1036,11 @@ function eventHandler() {
 
 	for (let sliderCont of prodItemSliders) {
 		let slider = new Swiper(sliderCont, {
-			slidesPerView: 'auto',
+			slidesPerView: 1,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
