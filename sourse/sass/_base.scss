@@ -1121,7 +1121,7 @@ iframe {
 
 }
 
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-down(md){
 			
 			[data-tippy-root] {
 				display: none !important;
