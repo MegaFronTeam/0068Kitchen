@@ -391,7 +391,9 @@
 
 		width: 100%;
 		margin: 0 auto rem(35) auto;
-
+    .swiper-slide-active{
+      z-index: 4;
+    }
 		.swiper-container{
       padding-top: rem(20);
     }
