@@ -1118,8 +1118,9 @@ function eventHandler() {
       }
     },
   };
+  let tippyInstance;
   if (tippyElems.length > 0){
-    let tippyInstance = tippy(tippyElems, tippySettings);
+    tippyInstance = tippy(tippyElems, tippySettings);
   }
   $('.cart-btn-js').click(function (){
     event.preventDefault();
@@ -1128,8 +1129,10 @@ function eventHandler() {
     $(this).closest('.hint-col-js').toggleClass('active');
 
     //tippy update
-    for (let item of tippyInstance){
-      item.setProps(tippySettings);
+    if (tippyInstance){
+      for (let item of tippyInstance){
+        item.setProps(tippySettings);
+      }
     }
   });
   $('.toggle-self-active-js').click(function (){
@@ -1138,8 +1141,10 @@ function eventHandler() {
     $(this).closest('.hint-col-js').toggleClass('active');
 
     //tippy update
-    for (let item of tippyInstance){
-      item.setProps(tippySettings);
+    if (tippyInstance){
+      for (let item of tippyInstance){
+        item.setProps(tippySettings);
+      }
     }
   });
 

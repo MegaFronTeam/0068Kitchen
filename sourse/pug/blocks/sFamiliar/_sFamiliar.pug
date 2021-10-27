@@ -42,7 +42,6 @@ mixin sFamiliarSlide(imgNum, imgAmount=1)
 			+e.row.row.align-items-center
 				.col-xxl-auto
 					//-here
-					
 					+e.a-slider--commnon
 						.swiper-container.sNewProdItem-slider-js
 							.swiper-wrapper
@@ -77,6 +76,6 @@ mixin nAction(imgNum, hint='hint-txt', hintActive='hint-active-txt')
 			img(loading="lazy" src=`img/svg/action-${imgNum}-active.svg` alt="")
 
 mixin sFamiliarSlideChar(key,val)
-	+e.char
-		+e.SPAN.key=key
-		+e.SPAN.val=val
+	+e.char.row
+		+e.SPAN.key.col=key
+		+e.SPAN.val.col-auto=val
