@@ -1076,6 +1076,7 @@ function eventHandler() {
 
 	let tippyElems = document.querySelectorAll('.hint-col-js');
 	let tippySettings = {
+		theme: 'light',
 		content: function (elem) {
 			if (elem.classList.contains('active')) {
 				return elem.getAttribute('data-hint-active');
