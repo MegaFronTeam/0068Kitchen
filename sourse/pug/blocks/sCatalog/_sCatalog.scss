@@ -527,7 +527,10 @@
 	//	--item-px: #{rem(16)};
 	//}
 
+	padding: rem(16) var(--item-px) rem(15) !important;
+	@include media-breakpoint-up(xl){
 	padding: rem(24) var(--item-px) rem(15) !important;
+	}
 	@include media-breakpoint-up(xxl){
 		padding: 33px var(--item-px) 14px!important;
 	}
