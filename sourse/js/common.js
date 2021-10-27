@@ -1119,7 +1119,7 @@ function eventHandler() {
     },
   };
   if (tippyElems.length > 0){
-    let tippyInstance = tippy(tippyElems, tippySettings);
+    let tippyInstance = tippy(tippyElems, tippySettings); 
   }
   $('.cart-btn-js').click(function (){
     event.preventDefault();
