@@ -1120,3 +1120,10 @@ iframe {
 	}
 
 }
+
+		@include media-breakpoint-up(md){
+			
+			[data-tippy-root] {
+				display: none !important;
+			}
+		}
