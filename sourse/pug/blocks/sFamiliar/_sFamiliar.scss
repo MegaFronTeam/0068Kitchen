@@ -398,7 +398,10 @@
 		.swiper-wrapper{}
 		.swiper-pagination{
 			@include mt();
-			opacity: 0;
+      	@include media-breakpoint-up(xl) {
+          
+          opacity: 0;
+        }
 			&.active{
 				opacity: 1;
 			}
