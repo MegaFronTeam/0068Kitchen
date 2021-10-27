@@ -49,10 +49,10 @@
     .sFamiliar__slider-wrap {
       @include media-breakpoint-up(xl) {
         // clip-path: polygon(33.33% 50%, 33.33% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+        & > .swiper-container > .swiper-wrapper > .swiper-slide-active {
+          opacity: 0;
+        }
       }
-			& > .swiper-container > .swiper-wrapper > .swiper-slide-active {
-				opacity: 0;
-			}
     }
   }
 
@@ -229,7 +229,7 @@
     // 	}
     // }
     @include media-breakpoint-up(md) {
-      margin-right: -1px;
+      // margin-right: -1px;
       // margin-top: -1px;
     }
   }
