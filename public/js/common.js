@@ -1071,19 +1071,45 @@ function eventHandler() {
 			pagination.classList.remove('active');
 			slider.slideTo(0);
 		});
-	} //
-	// $('.cart-btn-js').click(function (){
-	//   event.preventDefault();
-	//   $(this).toggleClass('active');
-	//   $(this).closest('.actions-col--js').toggleClass('active');
-	//   $(this).closest('.hint-col-js').toggleClass('active');
-	// });
-	// $('.toggle-self-active-js').click(function (){
-	//   event.preventDefault();
-	//   $(this).toggleClass('active');
-	//   $(this).closest('.hint-col-js').toggleClass('active');
-	// });
+	} //-
 
+
+	let tippyElems = document.querySelectorAll('.hint-col-js');
+	let tippySettings = {
+		theme: 'light',
+		content: function (elem) {
+			if (elem.classList.contains('active')) {
+				return elem.getAttribute('data-hint-active');
+			} else {
+				return elem.getAttribute('data-hint');
+			}
+		}
+	};
+
+	if (tippyElems.length > 0) {
+		let tippyInstance = tippy(tippyElems, tippySettings);
+	}
+
+	$('.cart-btn-js').click(function () {
+		event.preventDefault();
+		$(this).toggleClass('active');
+		$(this).closest('.actions-col--js').toggleClass('active');
+		$(this).closest('.hint-col-js').toggleClass('active'); //tippy update
+
+		for (let item of tippyInstance) {
+			item.setProps(tippySettings);
+		}
+	});
+	$('.toggle-self-active-js').click(function () {
+		event.preventDefault();
+		$(this).toggleClass('active');
+		$(this).closest('.hint-col-js').toggleClass('active'); //tippy update
+
+		for (let item of tippyInstance) {
+			item.setProps(tippySettings);
+		}
+	}); //-
+	//.hint-col-js
 }
 
 ;
