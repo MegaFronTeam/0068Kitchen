@@ -284,7 +284,7 @@
     min-height: 100%;
     flex-direction: column;
 
-    .col {
+    & > .col {
       // flex: auto auto auto;
       margin-top: 1rem;
       flex-grow: 1;
@@ -521,7 +521,6 @@
   }
 
   &__chars {
-
     //margin-bottom: rem(30);
     //@include media-breakpoint-up(xl) {
     //  margin-bottom: rem(36px);
@@ -529,6 +528,11 @@
   }
 
   &__char {
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+
     font-size: rem(14);
     line-height: (21/14);
   }
@@ -592,11 +596,14 @@
   }
 
   &__key {
+    max-width: 50%;
     color: $gray-585;
     margin-right: rem(3);
   }
 
   &__val {
+    margin-left: auto;
+    max-width: 50%;
   }
 
   &__foot-row {
