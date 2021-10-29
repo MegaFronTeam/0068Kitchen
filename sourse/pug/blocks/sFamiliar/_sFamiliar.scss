@@ -319,7 +319,9 @@
   &--alt {
     border: 1px solid $gray-280 !important;
     @include media-breakpoint-up(xxl) {
-      padding: 29px 24px 17px;
+      // padding: 29px 24px 17px;
+      padding-top: 29px;
+      padding-bottom: 17px;
     }
 
     .prod-item__chars {
