@@ -136,10 +136,20 @@
 
 			li{
 				line-height: (22/16);
-				display: block;
-				&:before{
-					margin: 0 5px 0 0;
-					content: '•';
+				display: block; 
+				position: relative;
+				margin-bottom: rem(15);
+				padding-left: rem(28); 
+				&::before{
+					content: '';
+					background: linear-gradient(0deg, #ADADAD, #ADADAD);
+					border-radius: 20px;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					position: absolute;
+					left: 0;
+					top: rem(8);
 				}
 			}
 		}
@@ -269,16 +279,13 @@
 .custom-list{
 	// font-size: 16px;
 	margin-bottom: rem(50);
-	li{
-		position: relative;
-		margin-bottom: rem(15);
+	li{ 
 		&::before{
-			content: var(--icon) !important;
-			position: absolute;
-			left: 0;
+			content: var(--icon) !important; 
 			top: rem(5);
+			background-image: none !important;
 		}
-		padding-left: rem(42);
+		padding-left: rem(42) !important;
 	}
 	&--plus{
 		--icon: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 7V15M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z' stroke='%23FF8651' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
