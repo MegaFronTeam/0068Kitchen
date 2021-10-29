@@ -157,7 +157,8 @@
 		//padding-top: (577/529) * 100%;
 		width: 100%;
 		img{
-			width: 100%;
+			max-width: 100%;
+			height: auto;
 			object-fit: contain;
 		}
 	}
