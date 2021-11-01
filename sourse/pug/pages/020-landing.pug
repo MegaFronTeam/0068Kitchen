@@ -18,6 +18,7 @@ include ../blocks/sTime/_sTime.pug
 include ../blocks/sExample/_sExample.pug
 include ../blocks/sProdSl/_sProdSl.pug
 include ../blocks/sLMap/_sLMap.pug
+include ../blocks/sProdSl/_sProdSl.pug
 
 block variables
 	- let  mainPage='landing-page'
@@ -33,6 +34,12 @@ block pagecontent
 		+top-nav()
 		+brands()
 	//-+headerBlock()
+	+sFamiliar({
+		title: `Последние поступления`,
+		bgAlt: true,
+		addClasses: 'dark-bg absolute-title',
+		absoluteTitle: true,
+	})
 	+sBaner()
 	+sDescr()
 	+sOffer()

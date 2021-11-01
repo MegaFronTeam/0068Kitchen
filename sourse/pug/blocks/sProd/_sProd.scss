@@ -622,6 +622,8 @@
 
 	//
 	&__slider-wrap{
+		position: relative;
+		overflow: hidden;
 		.swiper-container{
 			overflow: visible!important;
 		}

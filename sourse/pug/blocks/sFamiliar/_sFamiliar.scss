@@ -434,10 +434,10 @@
 					transform: scaleX(0);
 					content: '';
 					position: absolute;
-					left: 0;
+					left: 0 !important;
 					top: 0;
 					width: 100%;
-					height: 100%;
+					height: 100% !important;
 					background-color: $primary;
 				}
 
@@ -729,6 +729,7 @@
 
   &__price {
     white-space: nowrap;
+    color: $body-color;
   }
 
   &__btn-wrap {

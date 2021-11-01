@@ -22,37 +22,37 @@ const JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
-		const link = ".link-modal-js";
-		Fancybox.bind(link, {
-			arrows: false,
-			infobar: false,
-			touch: false,
-			type: 'inline',
-			autoFocus: false,
-			keyboard: {
-				CLOSE: "Закрыть",
-				NEXT: "Вперед",
-				PREV: "Назад" // PLAY_START: "Start slideshow",
-				// PLAY_STOP: "Pause slideshow",
-				// FULL_SCREEN: "Full screen",
-				// THUMBS: "Thumbnails",
-				// DOWNLOAD: "Download",
-				// SHARE: "Share",
-				// ZOOM: "Zoom"
+		const link = ".link-modal-js"; // Fancybox.bind(link, {
+		//   arrows: false,
+		//   infobar: false,
+		//   touch: false,
+		//   type: 'inline',
+		//   autoFocus: false,
+		//   keyboard: {
+		//     CLOSE: "Закрыть",
+		//     NEXT: "Вперед",
+		//     PREV: "Назад",
+		//     // PLAY_START: "Start slideshow",
+		//     // PLAY_STOP: "Pause slideshow",
+		//     // FULL_SCREEN: "Full screen",
+		//     // THUMBS: "Thumbnails",
+		//     // DOWNLOAD: "Download",
+		//     // SHARE: "Share",
+		//     // ZOOM: "Zoom"
+		//   },
+		// 	//
+		// 	//infinite: false,
+		//   on: {
+		// 		initCarousel: (fancybox, slide) => {
+		// 			$('.header').addClass('has-pe');
+		//     },
+		// 		destroy: (fancybox, slide) => {
+		// 			$('.header').removeClass('has-pe');
+		// 			console.log(this);
+		//     },
+		//   },
+		// });
 
-			},
-			//
-			//infinite: false,
-			on: {
-				initCarousel: (fancybox, slide) => {
-					$('.header').addClass('has-pe');
-				},
-				destroy: (fancybox, slide) => {
-					$('.header').removeClass('has-pe');
-					console.log(this);
-				}
-			}
-		});
 		$(".modal-close-js").click(function () {
 			fancybox.close();
 		}); // fancybox.defaults.backFocus = false;
@@ -198,11 +198,8 @@ const JSCCommon = {
 				type: 'POST',
 				data: data
 			}).done(function (data) {
-				fancybox.close();
-				Fancybox.show([{
-					src: "#modal-thanks",
-					type: "inline"
-				}]); // window.location.replace("/thanks.html");
+				fancybox.close(); // Fancybox.show([{src: "#modal-thanks", type: "inline"}]);
+				// window.location.replace("/thanks.html");
 
 				setTimeout(function () {
 					// Done Functions
@@ -1018,7 +1015,7 @@ function eventHandler() {
 			prevEl: '.sProdSl--js .swiper-prev'
 		},
 		pagination: {
-			el: '.sProdSl--js .swiper-pagination',
+			el: '.sProdSl--js .swiper-pagination--main',
 			type: 'bullets',
 			clickable: true
 		}
