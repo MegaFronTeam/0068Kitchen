@@ -49,7 +49,7 @@
 		text-decoration: none;
 
 		font-size: rem(19);
-		line-height: (30/19);
+		line-height: calc(30/19);
 
 		color: $primary;
 		&:hover{
@@ -58,14 +58,14 @@
 	}
 	&__order-call{
 		font-size: rem(17);
-		line-height: (25/17);
+		line-height: calc(25/17);
 
 		color: $white;
 		text-decoration: none;
 	}
 	&__log{
 		font-size: rem(19);
-		line-height: (28/19);
+		line-height: calc(28/19);
 		color: $white;
 
 		text-decoration: none;
@@ -297,7 +297,7 @@
 		display: block;
 		text-decoration: none;
 		font-size: rem(17);
-		line-height: (27/17);
+		line-height: calc(27/17);
 		color: $gray-580;
 	}
 
@@ -338,7 +338,7 @@
 	//
 	&__all-link{
 		font-size: rem(17);
-		line-height: (27/17);
+		line-height: calc(27/17);
 		text-decoration: none;
 
 		color: $primary;

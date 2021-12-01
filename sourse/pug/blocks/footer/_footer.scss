@@ -63,7 +63,7 @@
 		@include mt();
 		display: inline-block;
 		font-size: rem(24);
-		line-height: (40/24);
+		line-height: calc(40/24);
 
 		color: $white;
 		text-decoration: none;
@@ -99,7 +99,7 @@
 	}
 	&__white{
 		font-size: rem(18);
-		line-height: (27/18);
+		line-height: calc(27/18);
 		color: $gray-520;
 		margin-bottom: rem(10);
 
@@ -165,7 +165,7 @@
 	}
 	&__menu-title{
 		font-size: rem(17);
-		line-height: (27/17);
+		line-height: calc(27/17);
 		color: $gray-670;
 
 		@include media-breakpoint-up(sm){
@@ -225,7 +225,7 @@
 			display: block;
 			text-decoration: none;
 			font-size: rem(18);
-			line-height: (27/18);
+			line-height: calc(27/18);
 
 
 			@include media-breakpoint-down(sm){
@@ -243,13 +243,13 @@
 	}
 	&__all-right{
 		font-size: rem(17);
-		line-height: (27/17);
+		line-height: calc(27/17);
 		color: $gray-670;
 	}
 	&__polcy-link{
 		text-decoration: none;
 		font-size: rem(18);
-		line-height: (27/17);
+		line-height: calc(27/17);
 
 		color: $gray-670;
 		&:hover{

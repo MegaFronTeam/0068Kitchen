@@ -15,11 +15,11 @@
 	.section-title{
 		h2{
 			font-size: rem(36);
-			line-height: (44/36);
+			line-height: calc(44/36);
 		}
 	}
 	&__gray{
-		line-height: (25/16);
+		line-height: calc(25/16);
 		color: $gray-511;
 
 		@include media-breakpoint-up(xxl){
@@ -83,7 +83,7 @@
 	&__title{
 		display: block;
 		font-size: rem(19);
-		line-height: (24/19);
+		line-height: calc(24/19);
 		margin-bottom: rem(8);
 
 		@include mt();

@@ -75,7 +75,7 @@
 		@include media-breakpoint-up(sm){
 			font-size: rem(26);
 		}
-		line-height: (34/26);
+		line-height: calc(34/26);
 	}
 	&__chevron{
 		@include mt();

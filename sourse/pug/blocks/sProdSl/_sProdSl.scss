@@ -119,7 +119,7 @@
 		text-decoration: none;
 
 		margin-bottom: rem(27);
-		line-height: (20/16);
+		line-height: calc(20/16);
 		color: $body-color;
 	}
 	&__chars{
@@ -127,7 +127,7 @@
 	}
 	&__char{
 		font-size: rem(14);
-		line-height: (21/14);
+		line-height: calc(21/14);
 	}
 	&__key{
 		color: $gray-585;

@@ -12,7 +12,7 @@
 		h2{
 			@include media-breakpoint-up(xl){
 				font-size: rem(36);
-				line-height: (44/36);
+				line-height: calc(44/36);
 			}
 
 			margin-bottom: 0;

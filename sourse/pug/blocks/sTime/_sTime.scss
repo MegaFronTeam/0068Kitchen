@@ -155,7 +155,7 @@
 	}
 	&__c-title{
 		//@extend .h1;
-		line-height: calc(44/36);
+		line-height: calccalc(44/36);
 		font-size: rem(24);
 		@include media-breakpoint-up(xxl){
 			font-size: rem(36);
@@ -256,12 +256,12 @@
 			font-size: rem(36);
 		}
 		//@extend .h1;
-		line-height: calc(44/36);
+		line-height: calccalc(44/36);
 		margin-bottom: rem(28);
 	}
 	&__s-txt{
 		font-size: rem(16);
-		line-height: calc(26/16);
+		line-height: calccalc(26/16);
 
 		span:first-child{
 			color: $gray-585;
@@ -363,7 +363,7 @@
 		margin-bottom: rem(30);
 	}
 	&__b-foot{
-		line-height: calc(26/16);
+		line-height: calccalc(26/16);
 
 		a{
 			color: $primary;

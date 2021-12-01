@@ -15,11 +15,11 @@
 	}
 	&__top-txt{
 		font-size: rem(20px);
-		line-height: (25/20);
+		line-height: calc(25/20);
 		margin-bottom: rem(35);
 	}
 	&__gray{
-		line-height: (22/16);
+		line-height: calc(22/16);
 		background: $gray-290;
 
 		padding: rem(36) rem(16);
@@ -33,7 +33,7 @@
 		margin-bottom: rem(35);
 	}
 	&__txt-content{
-		line-height: (22/16);
+		line-height: calc(22/16);
 		& > *:last-child{
 			margin-bottom: 0;
 		}
@@ -48,12 +48,12 @@
 
 			font-weight: 300;
 			font-size: rem(18);
-			line-height: (23/18);
+			line-height: calc(23/18);
 		}
 	}
 	&__img{
 		@extend .accept-ratio-frame-nh;
-		padding-top: (325/433) * 100%;
+		padding-top: calc((325/433) * 100%);
 	}
 	//
 	&__{}

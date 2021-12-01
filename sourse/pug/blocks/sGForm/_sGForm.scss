@@ -1,7 +1,7 @@
 // start .sGForm
 .sGForm {
-	--sPT: #{rem(45/2)};
-	--sPB: #{rem(50/2)};
+	--sPT: #{rem(45 * .5)};
+	--sPB: #{rem(50 * .5)};
 	--sTPB: #{rem(0)};
 
 	&__gray-box{

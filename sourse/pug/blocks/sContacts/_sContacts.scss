@@ -60,11 +60,11 @@
 	}
 	&__sub-title{
 		font-weight: 600;
-		line-height: (26/16);
+		line-height: calc(26/16);
 		margin-bottom: 2px;
 	}
 	&__address{
-		line-height: (26/16);
+		line-height: calc(26/16);
 		margin-bottom: 1px;
 	}
 	.a-links{
@@ -78,7 +78,7 @@
 		display: block;
 		margin-bottom: 1px;
 
-		line-height: (26/16);
+		line-height: calc(26/16);
 		color: $body-color;
 		&:hover{
 			color: $primary;
@@ -86,7 +86,7 @@
 	}
 	&__mail{
 		font-size: 16px;
-		line-height: (26/16);
+		line-height: calc(26/16);
 
 		text-decoration-line: underline;
 		color: $blue;
@@ -107,7 +107,7 @@
 		text-decoration: none;
 
 		font-size: rem(14px);
-		line-height: (20/14);
+		line-height: calc(20/14);
 		text-transform: uppercase;
 		color: $primary;
 		&:hover{
@@ -144,7 +144,7 @@
 		align-items: center;
 
 		font-size: rem(14);
-		line-height: (26/14);
+		line-height: calc(26/14);
 		margin-bottom: rem(3);
 		color: $primary;
 

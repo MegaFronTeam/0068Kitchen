@@ -14,16 +14,16 @@
 	}
 	.section-title{
 		h2{
-			line-height: (34/26);
+			line-height: calc(34/26);
 			margin-bottom: rem(10);
 		}
 		p{
-			line-height: (22/16);
+			line-height: calc(22/16);
 		}
 	}
 	&__gray{
 		background: $gray-290;
-		line-height: (22/16);
+		line-height: calc(22/16);
 		margin-bottom: rem(35);
 
 		padding: rem(36) rem(16);
@@ -55,7 +55,7 @@
 			padding: rem(30) rem(30) rem(35);
 		}
 		h4{
-			line-height: (34/20);
+			line-height: calc(34/20);
 			margin-bottom: rem(11);
 		}
 	}
@@ -68,7 +68,7 @@
 			margin-bottom: 0;
 		}
 
-		line-height: (19/16);
+		line-height: calc(19/16);
 
 		b{
 			font-weight: 500;
@@ -78,7 +78,7 @@
 	&__sm{
 		font-weight: 300;
 		font-size: rem(14);
-		line-height: (20/14);
+		line-height: calc(20/14);
 
 		margin-bottom: rem(18);
 

@@ -165,7 +165,7 @@ $h: em(2);
 			display: block;
 			text-decoration: none;
 			font-size: rem(17px);
-			line-height: (25/17);
+			line-height: calc(25/17);
 
 			color: $gray-550;
 			&:hover{
@@ -180,7 +180,7 @@ $h: em(2);
 	}
 	&__address{
 		font-size: rem(17);
-		line-height: (25/17);
+		line-height: calc(25/17);
 		color: $gray-650;
 		margin-bottom: rem(5);
 	}
@@ -190,7 +190,7 @@ $h: em(2);
 		text-decoration: none;
 
 		font-size: rem(19);
-		line-height: (30/19);
+		line-height: calc(30/19);
 
 		color: $primary;
 		&:hover{
@@ -200,7 +200,7 @@ $h: em(2);
 	&__order-call{
 		display: block;
 		font-size: rem(17);
-		line-height: (25/17);
+		line-height: calc(25/17);
 
 		color: $white;
 		text-decoration: none;
@@ -209,7 +209,7 @@ $h: em(2);
 	&__log{
 		display: block;
 		font-size: rem(19);
-		line-height: (28/19);
+		line-height: calc(28/19);
 		color: $white;
 
 		text-decoration: none;

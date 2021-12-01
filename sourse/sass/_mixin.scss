@@ -82,19 +82,19 @@
 @mixin roww($a, $m:p) {
   --bs-gutter-x: #{$a};
 
-  margin-left: calc(-1 * var(--bs-gutter-x)/ 2);
-  margin-right: calc(-1 * var(--bs-gutter-x)/ 2);
+  margin-left: calc(-1 * var(--bs-gutter-x) * .5);
+  margin-right: calc(-1 * var(--bs-gutter-x) * .5);
 
   >* {
     @if $m==m {
-      margin-left: calc(var(--bs-gutter-x)/2);
-      margin-right: calc(var(--bs-gutter-x)/2);
+      margin-left: calc(var(--bs-gutter-x) * .5);
+      margin-right: calc(var(--bs-gutter-x) * .5);
     }
 
     @else {
 
-      padding-left: calc(var(--bs-gutter-x)/2);
-      padding-right: calc(var(--bs-gutter-x)/2);
+      padding-left: calc(var(--bs-gutter-x) * .5);
+      padding-right: calc(var(--bs-gutter-x) * .5);
     }
   }
 }
@@ -203,7 +203,7 @@
   --w: #{$width};
   position: relative;
   width: var(--w);
-  left: calc(-1 * (var(--w) - 100%) / 2);
+  left: calc(-1 * (var(--w) - 100%)  * .5);
 }
 
 @mixin tear-drop() {
@@ -239,6 +239,6 @@
 
 @mixin sw-col(){
   height: auto;
-  padding: 0 calc(var(--bs-gutter-x)/2) !important;
+  padding: 0 calc(var(--bs-gutter-x) * .5) !important;
   margin: calc(var(--bs-gutter-y, 0px)) 0 0 0!important;
 }

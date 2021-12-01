@@ -123,10 +123,10 @@ body {
 	padding-bottom: var(--sTPB);
 
 	h1{
-		line-height: (44/36);
+		line-height: calc(44/36);
 	}
 	h2{
-		line-height: (34/26);
+		line-height: calc(34/26);
 	}
 
 	& > *:last-child{
@@ -616,6 +616,10 @@ iframe {
 .page-head{
 	padding-top: rem(45);
 	padding-bottom: rem(20);
+	h1{
+		@include rfs(59px);
+		margin-bottom: rem(40);
+	}
 }
 
 //
@@ -1084,7 +1088,7 @@ iframe {
 		content: '';
 		position: absolute;
 		top: 0;
-		left: calc(-1 * (100vw - 100%) / 2);
+		left: calc(-1 * (100vw - 100%)  * .5);
 		width: 100vw;
 		height: 1px;
 		background: $gray-830;

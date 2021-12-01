@@ -337,7 +337,7 @@
 			border-width: 1px!important;
 		}
 		&__city{
-			padding: 0 calc(var(--bs-gutter-x)/2);
+			padding: 0 calc(var(--bs-gutter-x) * .5);
 			margin: 0 calc(var(--bs-gutter-x)/-2);
 			//width: calc(100% + var(--bs-gutter-x));
 			display: none;
@@ -479,7 +479,7 @@
 		}
 		&__input-title{
 			font-size: rem(14);
-			line-height: calc(20/14);
+			line-height: calccalc(20/14);
 			text-transform: uppercase;
 			color: $gray-550;
 		}
@@ -520,7 +520,7 @@
 
 			font-weight: 500;
 			font-size: rem(16);
-			line-height: calc(23/16);
+			line-height: calccalc(23/16);
 			letter-spacing: rem(0.3);
 			text-transform: uppercase;
 			color: $gray-520!important;

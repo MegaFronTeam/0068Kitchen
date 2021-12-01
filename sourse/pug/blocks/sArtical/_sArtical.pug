@@ -1,4 +1,36 @@
-mixin sArtical(data)
+mixin sArticalCItem(txt)
+	+e.c-item
+		+e.main-link(href="#")=txt
+		if block
+			ul
+				block
+
+mixin sArticalItem(imgNum, title)
+	+e.item
+		+e.i-row.row
+			+e.img-col.col-md-auto
+				+e.img(href="#")
+					img(src=`img/@2x/sArticalItem-${imgNum}.png` alt="" loading="lazy")
+			.col-md
+				+e.title(href="#")=title
+				+e.descr
+					p Двигатель обеспечивает инструменту стабильную, продуктивную работу. Воздушная система охлаждения эффективно отводит тепло, защищая мотор от перегрева. Конструкция довольно проста и устойчива к поломкам. Модель может комплектоваться удлинителем. Органы управления расположены на одной рукоятке.
+				+e.char-title Характеристики
+				+e.chars
+					+sArticalCharItem('Диаметр бурения:', 'до 300 мм')
+					+sArticalCharItem('Тип двигателя:', 'двухтактный, мощность – 1,9 л.с.;')
+					+sArticalCharItem('Диаметр соединения:', 'стандартный')
+					+sArticalCharItem('Вес устройства:', '6,5 кг')
+					+sArticalCharItem('Шнек в комплекте:', 'не входит')
+					+sArticalCharItem('Ёмкость резервуара для топлива:', '6 литров')
+					//-+sArticalCharItem('', '')
+
+mixin sArticalCharItem(key,val)
+	+e.char
+		+e.SPAN.key=key
+		+e.SPAN.val=val
+
+mixin sArticalBody()
 	// start sArtical
 	+b.sArtical.section#sArtical&attributes(attributes)
 		+e.container.container
@@ -22,7 +54,11 @@ mixin sArtical(data)
 								li: a(href="#") FUBAG FPB 52
 								li: a(href="#") Champion AG243
 							+sArticalCItem('Заключение')
-				+e.txt-col.col
+				+e.txt-col.col 
+					block
+	// end sArtical
+mixin sArtical(data)
+	+sArticalBody()
 					section
 						h1
 							| Как правильно выбрать посудомоечную машину: пособие
@@ -94,36 +130,11 @@ mixin sArtical(data)
 						p Мотобур – специализированный инструмент, который прослужит долго, если обеспечить ему правильный уход и обслуживание. Ответственно подходите к вопросу выбора модели. Доверяйте продукции проверенных торговых марок. Фирменные инструменты характеризуются высокой производительностью, надёжностью, долговечностью. Перед тем как начинать работу, обязательно ознакомьтесь с инструкцией, соблюдайте правила эксплуатации. Используйте рекомендуемое производителем масло, топливо марки АИ-92.
 
 
-	// end sArtical
 
-mixin sArticalCItem(txt)
-	+e.c-item
-		+e.main-link(href="#")=txt
-		if block
-			ul
-				block
 
-mixin sArticalItem(imgNum, title)
-	+e.item
-		+e.i-row.row
-			+e.img-col.col-md-auto
-				+e.img(href="#")
-					img(loading="lazy" src=`img/@2x/sArticalItem-${imgNum}.png` alt="")
-			.col-md
-				+e.title(href="#")=title
-				+e.descr
-					p Двигатель обеспечивает инструменту стабильную, продуктивную работу. Воздушная система охлаждения эффективно отводит тепло, защищая мотор от перегрева. Конструкция довольно проста и устойчива к поломкам. Модель может комплектоваться удлинителем. Органы управления расположены на одной рукоятке.
-				+e.char-title Характеристики
-				+e.chars
-					+sArticalCharItem('Диаметр бурения:', 'до 300 мм')
-					+sArticalCharItem('Тип двигателя:', 'двухтактный, мощность – 1,9 л.с.;')
-					+sArticalCharItem('Диаметр соединения:', 'стандартный')
-					+sArticalCharItem('Вес устройства:', '6,5 кг')
-					+sArticalCharItem('Шнек в комплекте:', 'не входит')
-					+sArticalCharItem('Ёмкость резервуара для топлива:', '6 литров')
-					//-+sArticalCharItem('', '')
+mixin sArtical2(data)
+	+sArticalBody() 
+		p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor repudiandae quas porro quisquam sapiente dolorum neque #[a(href="#") temporibus veritatis], incidunt nihil voluptatibus quod odit eaque dolores dolorem et recusandae fuga excepturi quibusdam. Nemo architecto natus, labore cum tempora ipsam laboriosam atque.
+		h2 Самые лучшие модели нынешнего года
+		p На российском рынке представлены приборы разных производителей. Они выпускаются такими мировыми гигантами как Bosch, Teka, Midea, Smeg и прочими. Ниже рассмотрим самые популярные модели, входящие в топ лучших холодильников нынешнего года. Этот рейтинг составляли мастера и эксперты, оценивая основные характеристики и отзывы владельцев.
 
-mixin sArticalCharItem(key,val)
-	+e.char
-		+e.SPAN.key=key
-		+e.SPAN.val=val

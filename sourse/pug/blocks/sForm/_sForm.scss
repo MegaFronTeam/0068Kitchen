@@ -47,7 +47,7 @@
 		color: $white;
 
 		padding: rem(30) rem(30) rem(45);
-		left: calc(-1 * (100vw - 100%) / 2);
+		left: calc(-1 * (100vw - 100%)  * .5);
 		width: 100vw;
 		@include media-breakpoint-up(md){
 			left: unset;
@@ -170,7 +170,7 @@
 			//
 			font-weight: 300;
 			font-size: rem(14);
-			line-height: (19/14);
+			line-height: calc(19/14);
 			color: $white;
 			a{
 				color: $white!important;

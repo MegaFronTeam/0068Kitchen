@@ -52,7 +52,7 @@
 		justify-content: flex-end;
 
 		&--mid{
-			left: calc(-1 * (100vw - 100%) / 2);
+			left: calc(-1 * (100vw - 100%)  * .5);
 			width: 100vw;
 		}
 	}
@@ -227,7 +227,7 @@
 	}
 	&__d-img{
 		@extend .accept-ratio-frame-nh;
-		padding-top: (321/373) * 100%;
+		padding-top: calc(321/373 * 100%);
 	}
 	//
 	.pc-tabs{
@@ -369,7 +369,7 @@
 		}
 		&__ct-title{
 			font-size: rem(24);
-			line-height: (30/24);
+			line-height: calc(30/24);
 			color: $headings-color;
 			margin-bottom: rem(16);
 
@@ -401,7 +401,7 @@
 				font-weight: 400;
 				font-size: rem(17);
 			}
-			line-height: (27/17);
+			line-height: calc(27/17);
 			color: $gray-550;
 
 			@include media-breakpoint-up(xxl){
@@ -412,7 +412,7 @@
 			@include media-breakpoint-up(md){
 				font-size: rem(18);
 			}
-			line-height: (27/18);
+			line-height: calc(27/18);
 			color: $headings-color;
 		}
 	}
@@ -502,7 +502,7 @@
 			margin-bottom: 0;
 		}
 
-		line-height: (21/16);
+		line-height: calc(21/16);
 	}
 	&__key{
 		color: $gray-585;
@@ -550,12 +550,12 @@
 		padding-bottom: rem(29);
 	}
 	&__b-val{
-		line-height: (27/16);
+		line-height: calc(27/16);
 		color: $blue;
 	}
 	&__b-txt{
 		font-size: 16px;
-		line-height: (27/16);
+		line-height: calc(27/16);
 	}
 	&__tooltit{
 		width: rem(20);
@@ -618,7 +618,7 @@
 		}
 
 		font-size: rem(18);
-		line-height: (27/18);
+		line-height: calc(27/18);
 		text-decoration: none;
 	}
 	//
@@ -662,11 +662,11 @@
 		}
 	}
 	&__p-key{
-		line-height: (21/16);
+		line-height: calc(21/16);
 		color: $primary;
 		margin-right: rem(7);
 	}
 	&__p-val{
-		line-height: (21/16);
+		line-height: calc(21/16);
 	}
 }

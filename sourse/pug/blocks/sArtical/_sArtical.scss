@@ -12,7 +12,7 @@
 			position: absolute;
 
 			width: calc(100% - #{$grid-gutter-width});
-			left: calc(#{$grid-gutter-width} / 2);
+			left: calc(#{$grid-gutter-width}  * .5);
 			height: 1px;
 			bottom: 0;
 
@@ -43,7 +43,7 @@
 		}
 
 		font-size: rem(20);
-		line-height: (34/20);
+		line-height: calc(34/20);
 		color: $headings-color;
 		margin-bottom: rem(12);
 	}
@@ -78,13 +78,13 @@
 				align-items: center;
 
 				font-size: rem(14);
-				line-height: (20/14);
+				line-height: calc(20/14);
 
 				&:before{
 					content: '•';
 					display: inline-block;
 					flex-shrink: 0;
-					line-height: (20/14);
+					line-height: calc(20/14);
 
 					margin: 0 rem(8);
 				}
@@ -93,7 +93,7 @@
 	}
 	&__main-link{
 		display: block;
-		line-height: (20/16);
+		line-height: calc(20/16);
 		padding: rem(7) 0;
 		margin-bottom: rem(4);
 	}
@@ -118,7 +118,7 @@
 			}
 			@include media-breakpoint-up(xxl){
 				font-size: rem(59);
-				line-height: (61/59);
+				line-height: calc(61/59);
 			}
 			color: $body-color;
 
@@ -128,14 +128,14 @@
 			margin-bottom: rem(20);
 		}
 		p{
-			line-height: (22/16);
+			line-height: calc(22/16);
 		}
 		ul{
 			list-style: none;
 			margin: 0 0 rem(16);
 
 			li{
-				line-height: (22/16);
+				line-height: calc(22/16);
 				display: block; 
 				position: relative;
 				margin-bottom: rem(15);
@@ -187,7 +187,7 @@
 	}
 	&__img-col{
 		@include media-breakpoint-up(md){
-			width: (4/9) * 100% !important;
+			width: calc(4/9 * 100%) !important;
 		}
 	}
 	&__img{
@@ -211,12 +211,12 @@
 		text-decoration: none;
 
 		font-size: rem(20);
-		line-height: (34/20);
+		line-height: calc(34/20);
 		color: $headings-color;
 		margin-bottom: rem(14);
 	}
 	&__descr{
-		line-height: (22/16);
+		line-height: calc(22/16);
 
 		margin-bottom: rem(25);
 		@include media-breakpoint-up(md){
@@ -225,12 +225,12 @@
 	}
 	&__char-title{
 		font-weight: 500;
-		line-height: (22/16);
+		line-height: calc(22/16);
 		margin-bottom: rem(12);
 	}
 	&__chars{
 		font-size: rem(14);
-		line-height: (21/14);
+		line-height: calc(21/14);
 	}
 	&__char{
 		margin-bottom: rem(2);

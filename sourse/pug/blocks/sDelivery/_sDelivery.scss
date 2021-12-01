@@ -16,7 +16,7 @@
 
 		padding: rem(6) rem(20);
 		font-size: rem(20);
-		line-height: (44/20);
+		line-height: calc(44/20);
 
 		&:not(.active){
 			background: $gray-280!important;
@@ -37,7 +37,7 @@
 .delivery{
 	&__top-txt{
 		font-size: rem(20);
-		line-height: (25/20);
+		line-height: calc(25/20);
 
 		margin-bottom: rem(39);
 
@@ -62,11 +62,11 @@
 	}
 	&__i-txt{
 		h2{
-			line-height: (34/26);
+			line-height: calc(34/26);
 			margin-bottom: 10px;
 		}
 		p{
-			line-height: (22/16);
+			line-height: calc(22/16);
 			margin-bottom: 16px;
 		}
 
@@ -79,7 +79,7 @@
 	}
 	&__img{
 		@extend .accept-ratio-frame;
-		padding-top: (325/433) * 100%;
+		padding-top: calc((325/433) * 100%);
 	}
 	&__items-row{
 		--bs-gutter-x: #{rem(30)};
@@ -101,11 +101,11 @@
 		}
 
 		h4{
-			line-height: (34/20);
+			line-height: calc(34/20);
 			margin-bottom: rem(5);
 		}
 		p{
-			line-height: (22/16);
+			line-height: calc(22/16);
 		}
 
 		& > *:last-child{
@@ -143,11 +143,11 @@
 		}
 	}
 	&__b-title{
-		line-height: (34/20);
+		line-height: calc(34/20);
 		margin-bottom: rem(5);
 	}
 	&__b-descr{
-		line-height: (22/16);
+		line-height: calc(22/16);
 
 		& > *:last-child{
 			margin-bottom: 0;
@@ -157,18 +157,18 @@
 	}
 	&__b-title-sm{
 		font-weight: 600;
-		line-height: (26/16);
+		line-height: calc(26/16);
 		margin-bottom: 3px;
 	}
 	&__b-address{
-		line-height: (26/16);
+		line-height: calc(26/16);
 		margin-bottom: rem(10);
 	}
 	.a-links{
 		margin-bottom: rem(17);
 	}
 	&__b-price{
-		line-height: (26/16);
+		line-height: calc(26/16);
 	}
 	&__foot{
 		h2{
@@ -176,7 +176,7 @@
 		}
 
 		p{
-			line-height: (22/16);
+			line-height: calc(22/16);
 		}
 		& > *:last-child{
 			margin-bottom: 0;
@@ -252,7 +252,7 @@
 		@include media-breakpoint-up(sm){
 			font-size: rem(26);
 		}
-		line-height: (34/26);
+		line-height: calc(34/26);
 	}
 	&__chevron{
 		@include mt();
@@ -270,7 +270,7 @@
 			display: block;
 		}
 		padding-bottom: rem(23);
-		line-height: (22/16);
+		line-height: calc(22/16);
 
 		p{
 			margin-bottom: 16px;
@@ -340,13 +340,13 @@
 	}
 	&__s-title{
 		font-size: rem(26);
-		line-height: (34/26);
+		line-height: calc(34/26);
 		color: $white;
 
 		margin-bottom: rem(12);
 	}
 	&__s-descr{
-		line-height: (22/16);
+		line-height: calc(22/16);
 		color: $white;
 
 		margin-bottom: rem(34);

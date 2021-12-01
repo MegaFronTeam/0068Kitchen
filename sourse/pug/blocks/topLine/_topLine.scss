@@ -27,7 +27,7 @@
 			display: block;
 			text-decoration: none;
 			font-size: rem(17px);
-			line-height: (25/17);
+			line-height: calc(25/17);
 
 			color: $gray-550;
 			&:hover{
@@ -37,7 +37,7 @@
 	}
 	&__address{
 		font-size: rem(17);
-		line-height: (25/17);
+		line-height: calc(25/17);
 		color: $gray-650;
 
 		display: block;
@@ -45,7 +45,7 @@
 	}
 	&__tell{
 		font-size: rem(17);
-		line-height: (25/17);
+		line-height: calc(25/17);
 		color: $gray-650;
 
 		display: block;
@@ -75,7 +75,7 @@
 			}
 		}
 		font-size: rem(15);
-		line-height: (24/15);
+		line-height: calc(24/15);
 
 		.icon{
 			@include mt();
@@ -166,7 +166,7 @@
 		justify-content: center;
 
 		font-size: rem(16);
-		line-height: calc(20/16);
+		line-height: calccalc(20/16);
 
 		padding: rem(6) rem(12);
 		@include media-breakpoint-up(sm){

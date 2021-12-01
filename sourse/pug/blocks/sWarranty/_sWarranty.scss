@@ -5,7 +5,7 @@
 	--sTPB: #{rem(30)};
 	&__txt{
 		font-size: rem(20);
-		line-height: (25/20);
+		line-height: calc(25/20);
 		margin-bottom: rem(44);
 	}
 	&__row{
@@ -17,12 +17,12 @@
 	}
 	&__img{
 		@extend .accept-ratio-frame-nh;
-		padding-top: (402/665) * 100%;
+		padding-top: calc(402/665 * 100%);
 		margin-bottom: rem(22);
 	}
 	&__i-txt{
 		font-style: italic;
-		line-height: (25/16);
+		line-height: calc(25/16);
 	}
 	&__{}
 } // end.sWarranty

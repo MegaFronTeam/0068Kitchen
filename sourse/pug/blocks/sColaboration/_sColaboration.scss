@@ -17,7 +17,7 @@
 	}
 	&__img{
 		@extend .accept-ratio-frame;
-		padding-top: (340/665) * 100%;
+		padding-top: calc(340/665 * 100%);
 
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(xl){
@@ -29,7 +29,7 @@
 		text-decoration: none;
 
 		font-size: rem(26);
-		line-height: (34/26);
+		line-height: calc(34/26);
 		color: $headings-color;
 
 		margin-bottom: rem(12);

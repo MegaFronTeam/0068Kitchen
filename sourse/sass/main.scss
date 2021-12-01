@@ -1,4 +1,5 @@
 $output-bourbon-deprecation-warnings: false;
+  @use "sass:math";
 // @import "mq";
 @import "bourbon/app/assets/stylesheets/bourbon";
 // @import "../../node_modules/rfs/scss";

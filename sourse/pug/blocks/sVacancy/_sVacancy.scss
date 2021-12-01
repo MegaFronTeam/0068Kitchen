@@ -35,7 +35,7 @@
 		text-decoration: none;
 
 		font-size: rem(20);
-		line-height: (34/20);
+		line-height: calc(34/20);
 		color: $headings-color;
 	}
 	&__salary{
@@ -47,13 +47,13 @@
 			font-weight: 300;
 		}
 
-		line-height: (34/16);
+		line-height: calc(34/16);
 		color: $headings-color;
 		margin-bottom: rem(7);
 	}
 	&__duty-txt{
 		font-size: rem(14);
-		line-height: (22/14);
+		line-height: calc(22/14);
 	}
 	&__duty-list{
 		margin: 0 0 rem(13);
@@ -61,7 +61,7 @@
 
 		li{
 			font-size: rem(14);
-			line-height: (22/14);
+			line-height: calc(22/14);
 			&:before{
 				content: '•';
 				margin: 0 3px 0 0;
@@ -118,7 +118,7 @@
 			}
 
 			display: block;
-			line-height: (20/16);//14
+			line-height: calc(20/16);//14
 			color: $gray-600;
 		}
 	}

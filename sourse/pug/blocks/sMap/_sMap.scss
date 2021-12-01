@@ -53,7 +53,7 @@
 				display: block;
 				font-weight: 500;
 				font-size: rem(20);
-				line-height: (25/20);
+				line-height: calc(25/20);
 				color: $body-color;
 			}
 		}
@@ -73,7 +73,7 @@
 		@include media-breakpoint-up(md){
 			font-size: rem(20);
 		}
-		line-height: (25/20);
+		line-height: calc(25/20);
 		color: $body-color;
 
 		margin-bottom: rem(13);
@@ -85,7 +85,7 @@
 				margin-bottom: rem(5);
 			}
 			a{
-				line-height: (22/16);
+				line-height: calc(22/16);
 				color: $headings-color!important;
 				&:hover{
 					color: $primary!important;
