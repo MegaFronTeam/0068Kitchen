@@ -294,3 +294,98 @@
 		--icon: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 	}
 }
+
+.bestArtical-item{
+	margin-bottom: rem(90);
+	margin-top: rem(30);
+	&:nth-child(even){
+		.row{
+			flex-direction: row-reverse;
+		}
+	}
+	.row{
+		--bs-gutter-x: 50px;
+	}
+	&__head{
+		background: #EEEEEE;
+		@include media-breakpoint-down(md) {
+			text-align: center;
+			padding-bottom: 0;
+			}
+		padding: rem(20);
+	}
+	
+	&__body{
+		padding: 20px rem(20) 0;
+	}
+	&__col{
+		position: relative;
+	}
+	&__left-block{
+		@include media-breakpoint-down(md){
+			position: relative;
+			z-index: 2;
+			&::before{
+				content: '';
+				position: absolute;
+				top: 30%;
+				z-index: -1;
+				left: calc(-1 * var(--bs-gutter-x));
+				width: calc(100% + var(--bs-gutter-x) * 2);
+				height: calc(80% );
+				background-color: #fff;
+			}
+		}
+		@include media-breakpoint-up(md){
+
+			position: absolute;
+			top: 0;
+			// left: 0;
+			left: calc(var(--bs-gutter-x) / 2);
+			width: calc(100% - var(--bs-gutter-x));
+		}
+		text-align: center;
+		position: relative;
+	}
+	&__img-wrap{
+		height: rem(300);
+		vertical-align: middle;
+		line-height: rem(300);
+		border: 2px solid #EEEEEE;
+		background-color: #fff;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(300);
+		margin-bottom: rem(30);
+		display: block;
+		img{
+				max-width: 100%;
+				max-height: 100%;
+		}
+	}
+	&__logo{
+		display: block;
+		margin-bottom: 2rem;
+	}
+	&__title{
+		a{
+
+			border: none !important;
+			text-decoration: none !important;
+		}
+		a:not(:hover){
+			color: $body-color;
+		}
+		@extend .h2;
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+	&__price{
+		@extend .h3;
+		font-weight: normal;
+	}
+	&__content{
+		max-width: rem(550);
+		min-height: rem(500);
+	}
+}

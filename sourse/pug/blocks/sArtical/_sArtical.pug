@@ -132,9 +132,46 @@ mixin sArtical(data)
 
 
 
+mixin bestArtical(i)
+	+b.bestArtical-item
+		+e.head
+			.row
+				.col
+					+e.title
+						a(href="#")  Midea MRB519SFNDX5
+					+e.price 49 990 руб.
+				+e.col.col-md-4.order-md-first
+					+e.left-block
+						+e.img-wrap(href="#")
+							+pic(`artical-prod-${i}.png`,'',0)
+						+e.logo(href="#")
+							+pic(`artical-logo-${i}.png`,'',0)
+		+e.body
+			.row
+				.col-md-4
+				.col
+					+e.content
+						p Это двухкамерный холодильник с хорошим полезным объёмом, электронным управлением, одним компрессором.
+						+b.custom-list--plus
+							p Рассмотрим плюсы:
+							ul
+								li незначительный шум – 41 дБ;
+								li система разморозки Full No Frost;
+								li сенсорное понятное управление с ярким дисплеем;
+								li наличие зоны свежести;
+								li индикация включения, открытой дверцы, температур, включения;
+								li яркое освещение;
+								li точные регулировки температур для морозильной/холодильной камер.
+						+b.custom-list--minus
+							p Минусы:
+							ul 
+								li разморозка: ручная для морозилки, капельная – для холодильной камеры.
 mixin sArtical2(data)
 	+sArticalBody() 
 		p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor repudiandae quas porro quisquam sapiente dolorum neque #[a(href="#") temporibus veritatis], incidunt nihil voluptatibus quod odit eaque dolores dolorem et recusandae fuga excepturi quibusdam. Nemo architecto natus, labore cum tempora ipsam laboriosam atque.
 		h2 Самые лучшие модели нынешнего года
 		p На российском рынке представлены приборы разных производителей. Они выпускаются такими мировыми гигантами как Bosch, Teka, Midea, Smeg и прочими. Ниже рассмотрим самые популярные модели, входящие в топ лучших холодильников нынешнего года. Этот рейтинг составляли мастера и эксперты, оценивая основные характеристики и отзывы владельцев.
+		div
+			+bestArtical(1)
+			+bestArtical(2)
 
