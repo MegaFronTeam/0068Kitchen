@@ -1070,6 +1070,14 @@ function eventHandler() {
     }*/
   }); //-
   //.hint-col-js
+
+  $('.sArtical__content-wrap').hcSticky({
+    stickTo: $('.sArtical.section'),
+    top: 100,
+    bottomEnd: 50
+  });
+
+
 }
 
 ;
