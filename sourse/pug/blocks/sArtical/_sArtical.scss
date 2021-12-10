@@ -32,9 +32,14 @@
 		position: relative;
 	}
 	&__content-wrap{
-		position: sticky;
-		left: 0;
-		top: rem(30);
+		// position: sticky;
+		// left: 0;
+		// top: rem(30);
+		@include media-breakpoint-up(lg){
+		max-height: calc(100vh - 120px);
+		position: relative;
+		overflow-y: auto;
+		}
 	}
 	//
 	&__c-headline{

@@ -1072,8 +1072,8 @@ function eventHandler() {
   //.hint-col-js
 
   $('.sArtical__content-wrap').hcSticky({
-    stickTo: $('.sArtical.section'),
-    top: 100,
+    stickTo: $('.sArtical__content-col'),
+    top: 120,
     bottomEnd: 50
   });
 
