@@ -192,3 +192,9 @@
 	}
 
 }
+
+.page-head {
+	h2 {
+		@extend .h1;
+	}
+}
