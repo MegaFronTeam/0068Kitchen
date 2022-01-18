@@ -11,17 +11,14 @@ extends layout/main.pug
 //- include ../blocks/sGForm/_sGForm.pug
 //- include ../blocks/sBrends/_sBrends.pug
 //- include ../blocks/sTags/_sTags.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sConnectionHead/_sConnectionHead.pug
-include ../blocks/sWhatWeDo/_sWhatWeDo.pug
-include ../blocks/sDisposal/_sDisposal.pug
+include ../blocks/sServiceCenterHead/_sServiceCenterHead.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= 'index.png'
 
 block title
-	- let  title= 'title'
+	- let  title= 'Сервисные центры'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -31,12 +28,9 @@ block pagecontent
 		+brands()
 	+b.page-head
 		.container
-			+breadcrumb('Главная', 'Подключение техники')
-			h2 Подключение техники
-	+sConnectionHead()
-	+sWhatWeDo()
-	+sDisposal()
-	+sForm()
+			+breadcrumb('Главная', 'Сервисные центры')
+			h2 Сервисные центры
+	+sServiceCenterHead()
 	//- +headerBlock()
 	//- +sFamiliar({
 	//- 	title: `Последние поступления`,

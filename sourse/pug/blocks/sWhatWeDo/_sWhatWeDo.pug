@@ -8,11 +8,10 @@ mixin whatWeDoCard(img, text, svg)
 
 mixin sWhatWeDo(data)
 	// start sWhatWeDo
-	+b.sWhatWeDo.section#sWhatWeDo&attributes(attributes)
-		+e.bg
-			img(loading="lazy" src="img/@2x/sWhatWeDo-bg.jpg" alt="")
+	+b.sWhatWeDo.section#sWhatWeDo&attributes(attributes).bg-wrap
+		+pic('sWhatWeDo-bg.jpg', 'bg').picture-bg
 		.container
-			+e.row.row
+			.row
 				.col-12.col-md-6.col-xl-4
 					+whatWeDoCard(1, 'Работы по&nbsp;подключению выполняют наши мастера или партнёрский сервис', 'tool')
 				.col-12.col-md-6.col-xl-4
