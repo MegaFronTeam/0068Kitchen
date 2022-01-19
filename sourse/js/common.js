@@ -1077,7 +1077,9 @@ function eventHandler() {
     bottomEnd: 50
   });
 
-
+  $('.sServiceCenterHead__btn').click(function () {
+		$('.dropdown-menu').toggleClass('active');
+	});
 }
 
 ;

@@ -12,6 +12,7 @@ extends layout/main.pug
 //- include ../blocks/sBrends/_sBrends.pug
 //- include ../blocks/sTags/_sTags.pug
 include ../blocks/sServiceCenterHead/_sServiceCenterHead.pug
+include ../blocks/sServicesList/_sServicesList.pug
 
 block variables
 	- let  mainPage= null 
@@ -31,6 +32,7 @@ block pagecontent
 			+breadcrumb('Главная', 'Сервисные центры')
 			h2 Сервисные центры
 	+sServiceCenterHead()
+	+sServicesList()
 	//- +headerBlock()
 	//- +sFamiliar({
 	//- 	title: `Последние поступления`,

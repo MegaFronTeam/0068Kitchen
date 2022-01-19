@@ -3,6 +3,17 @@ mixin sServiceCenterHead(data)
 	+b.SECTION.sServiceCenterHead#sServiceCenterHead&attributes(attributes).bg-wrap
 		+pic('service-center-bg.jpg', 'bg').picture-bg
 		+e.inner.section
-			.container
-				
+			+e.container.container
+				.dropdown 
+					+e.BUTTON.btn Все бренды
+						+icon('chevron-down')
+					.dropdown-menu
+						a.dropdown-item(href="#") AEG
+						a.dropdown-item(href="#") Asko
+						a.dropdown-item(href="#") Blanco
+						a.dropdown-item(href="#") Dometic
+				+form-wrap()
+					+input('Поиск', 'text')
+					button
+						+icon('zoom')
 	// end sServiceCenterHead
