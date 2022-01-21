@@ -1078,7 +1078,7 @@ function eventHandler() {
   });
 
   $('.dropdown__btn').click(function () {
-    $( ".dropdown__content" ).slideToggle();
+    $(this).siblings().slideToggle();
 	});
 };
 
