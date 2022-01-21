@@ -11,10 +11,7 @@ extends layout/main.pug
 //- include ../blocks/sGForm/_sGForm.pug
 //- include ../blocks/sBrends/_sBrends.pug
 //- include ../blocks/sTags/_sTags.pug
-include ../blocks/sContactInfo/_sContactInfo.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sParking/_sParking.pug
-include ../blocks/sParkingMap/_sParkingMap.pug
+include ../blocks/sEquipmentSstorageBody/_sEquipmentSstorageBody.pug
 
 block variables
 	- let  mainPage= null 
@@ -31,12 +28,9 @@ block pagecontent
 		+brands()
 	+b.page-head
 		.container
-			+breadcrumb('Главная', 'О магазине', 'Контакты')
-			h2 Контактная информация
-	+sContactInfo()
-	+sParking()
-	+sForm()
-	+sParkingMap()
+			+breadcrumb('Главная', 'Бесплатное хранение техники')
+			h2 Бесплатное хранение техники
+	+sEquipmentSstorageBody()
 	//- +headerBlock()
 	//- +sFamiliar({
 	//- 	title: `Последние поступления`,
