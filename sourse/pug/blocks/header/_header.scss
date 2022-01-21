@@ -16,12 +16,14 @@
 			// display: none!important;
 			// @includse mt;
 			// transform: translateY(-41px);
-			margin-top: -41px;
+			// margin-top: -41px;
+			display: none !important;
 		}
 		.brands{
 			// display: none!important;
 			
-			transform: translateY(-100%);
+			// transform: translateY(-100%);
+			display: none !important;
 		}
 	}
 } // end.header

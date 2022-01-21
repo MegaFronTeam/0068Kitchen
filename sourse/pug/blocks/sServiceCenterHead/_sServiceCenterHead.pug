@@ -5,9 +5,9 @@ mixin sServiceCenterHead(data)
 		+e.inner.section
 			+e.container.container
 				.dropdown 
-					+e.BUTTON.btn Все бренды
+					+e.BUTTON.btn.dropdown__btn Все бренды
 						+icon('chevron-down')
-					.dropdown-menu
+					.dropdown-menu.dropdown__content
 						a.dropdown-item(href="#") AEG
 						a.dropdown-item(href="#") Asko
 						a.dropdown-item(href="#") Blanco

@@ -107,12 +107,13 @@
 		top: rem(25);
 		left: 0;
 		z-index: 2;
-		&.active {
-			display: flex;
-		}
+		// &.active {
+		// 	display: flex;
+		// }
 	}
 	.dropdown-item {
 		@include mt;
+		display: block;
 		text-decoration: none;
 		color: $body-color;
 		font-size: rem(17);
