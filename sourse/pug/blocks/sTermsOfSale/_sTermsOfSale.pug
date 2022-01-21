@@ -1,9 +1,39 @@
 mixin sTermsOfSale(data)
 	// start sTermsOfSale
-	+b.SECTION.sTermsOfSale.section#sTermsOfSale&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sTermsOfSale
-				
-			.row
+	+b.sTermsOfSale.section#sTermsOfSale&attributes(attributes)
+		+e.definitions.bg-wrap
+			+pic('dark-bg.png', 'bg', 0).picture-bg
+			.container
+				.row
+					mixin definition(t)
+						.col-md-6.col-lg-4
+							+e.definition
+								h3!= t
+								block
+					+definition(`Продавец`)
+						p Общество с&nbsp;ограниченной ответственностью &laquo;ТД&nbsp;Археон&raquo;, зарегистрированное в&nbsp;качестве юридического лица по&nbsp;законодательству Российской Федерации, имеющее место нахождения 108850&nbsp;г. Москва, поселение Внуковское, ул. Авиаконструктора Петлякова, д.&nbsp;9, пом.3, офис 11, ИНН 7751175159, КПП 775101001, ОГРН 1207700005897.
+					+definition(`Клиент`)
+						p Полностью дееспособное физическое лицо, размещающее Заказы на&nbsp;сайте #[a(href="#") kitchenmania.ru], либо указанное в&nbsp;качестве получателя Товара, либо использующее Товары, приобретённые на&nbsp;сайте #[a(href="#") kitchenmania.ru], исключительно для личных, семейных, домашних и&nbsp;иных нужд, не&nbsp;связанных с&nbsp;осуществлением предпринимательской деятельности
+					+definition(`Интернет-магазин`)
+						p Интернет-сайт, принадлежащий Продавцу, расположенный на&nbsp;сервере в&nbsp;г. Москва и&nbsp;имеющий адрес в&nbsp;сети Интернет #[a(href="#") kitchenmania.ru]. <br> На&nbsp;нем представлены товары, предлагаемые Продавцом своим Клиентам для оформления Заказов, а&nbsp;также условия оплаты и&nbsp;доставки этих Заказов Клиентам
+					+definition(`Сайт`)
+						p
+							a(href="#") kitchenmania.ru
+					+definition(`Товар`)
+						p Объект материального мира, не&nbsp;изъятый из&nbsp;гражданского оборота и&nbsp;представленный к&nbsp;продаже на&nbsp;Сайте.
+					+definition(`Заказ`)
+						p Должным образом оформленный запрос Клиента на&nbsp;доставку по&nbsp;указанному адресу перечня Товаров, выбранных на&nbsp;Сайте
+					+definition(`Пользовательский счет клиента`)
+						p Персональный счет Клиента в&nbsp;Интернет-магазине, на&nbsp;который производится зачисление денежных средств в&nbsp;случае возврата или отказа Клиента от&nbsp;ранее оплаченного им&nbsp;Заказа. Эти денежные средства подлежат использованию в&nbsp;качестве предоплаты за&nbsp;последующие Заказы Клиента у&nbsp;Продавца, либо по&nbsp;письменному заявлению Клиента возврату Клиенту способом, которым была произведена оплата.
+					+definition(`Служба доставки`)
+						p Третье лицо, оказывающее по&nbsp;договору с&nbsp;Продавцом услуги по&nbsp;доставке Заказов Клиентам.
+					+definition(`Интернет-магазин`)
+						p Сайт в&nbsp;глобальной сети Интернет, ссылка на&nbsp;который размещена на&nbsp;сайте #[a(href="#") kitchenmania.ru].
+		+e.regulations
+			.container
+				.text-secondary
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta harum nam ex, enim inventore eius dolorem maiores ipsam. Et nam omnis quis rerum earum alias hic. Suscipit numquam possimus repudiandae!
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta harum nam ex, enim inventore eius dolorem maiores ipsam. Et nam omnis quis rerum earum alias hic. Suscipit numquam possimus repudiandae!
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta harum nam ex, enim inventore eius dolorem maiores ipsam. Et nam omnis quis rerum earum alias hic. Suscipit numquam possimus repudiandae!
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta harum nam ex, enim inventore eius dolorem maiores ipsam. Et nam omnis quis rerum earum alias hic. Suscipit numquam possimus repudiandae!
 	// end sTermsOfSale

@@ -1077,12 +1077,14 @@ function eventHandler() {
     bottomEnd: 50
   });
 
-  $('.sServiceCenterHead__btn').click(function () {
-		$('.dropdown-menu').toggleClass('active');
+  $('.dropdown__btn').click(function () {
+		// $('.dropdown__content').toggleClass('active');
+    $( ".dropdown__content" ).slideToggle();
 	});
-}
-
-;
+  // $('.dropdown__btn').click(function () {
+	// 	$('.dropdown__content').toggleClass('active');
+	// });
+};
 
 if (document.readyState !== 'loading') {
   eventHandler();
