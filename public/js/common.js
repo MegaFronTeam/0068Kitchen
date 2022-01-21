@@ -1078,12 +1078,8 @@ function eventHandler() {
   });
 
   $('.dropdown__btn').click(function () {
-		// $('.dropdown__content').toggleClass('active');
     $( ".dropdown__content" ).slideToggle();
 	});
-  // $('.dropdown__btn').click(function () {
-	// 	$('.dropdown__content').toggleClass('active');
-	// });
 };
 
 if (document.readyState !== 'loading') {
