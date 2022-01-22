@@ -201,7 +201,7 @@
 				--bs-gutter-y: var(--bs-gutter-x);
 				&--main {
 					margin-bottom: calc(var(--bs-gutter-y) * 1.333);
-					@include media-breakpoint-up(lg) {
+					@include media-breakpoint-up(xl) {
 					margin-bottom: calc(var(--bs-gutter-y) * 2.333);
 					}
 				}

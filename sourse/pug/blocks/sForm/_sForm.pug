@@ -65,20 +65,14 @@ mixin sFormReturn(data)
 					p=data.descr
 				+form-wrap()
 					+e.row--main.row
-						.col-lg-8
-							+e.row.row
-								.col-sm-6
-									+input('Ваше имя', 'text')
-								.col-sm-6
-									+input('Ваш телефон', 'tel')
-								.col-sm-6
-									+input('Вашa фамилия', 'text')
-								.col-sm-6
-									+input('Ваша элетронная почта', 'email')
-								.col-sm-6
-									+input('Ваше отчество', 'text')
-								.col-sm-6
-									+input('Ваш номер заказа', 'text')
+						.col-lg-4
+							+input('Ваше имя', 'text')
+							+input('Вашa фамилия', 'text')
+							+input('Ваше отчество', 'text')
+						.col-lg-4
+							+input('Ваш телефон', 'tel')
+							+input('Ваша элетронная почта', 'email')
+							+input('Ваш номер заказа', 'text')
 						.col-lg-4
 							+e.comment
 								+input('Ваш комментарий','textarea')
