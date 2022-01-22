@@ -1,0 +1,27 @@
+// start .sCertificatesHead
+.sCertificatesHead {
+	--sPT: #{rem(140)};
+	--sPB: #{rem(332)};
+	// --sTPB: ;
+	position: relative;
+	.picture-bg{
+		img{
+			width: 100%;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCertificatesHead
+
+.sCertificatesHead__offer{
+	h1{
+		color: $white;
+		@include rfs(59px);
+	}
+	color: $white;
+}

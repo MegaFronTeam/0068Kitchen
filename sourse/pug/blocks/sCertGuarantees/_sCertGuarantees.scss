@@ -1,0 +1,27 @@
+// start .sCertGuarantees
+.sCertGuarantees {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCertGuarantees
+
+.certGuarteesI{
+	max-width: 323px;
+	font-size: rem(20);
+	&__i{
+		width: 70px;
+		height: 70px;
+		border-radius: 100%;
+		background: $gray-290;
+		padding: 17px;
+		margin-bottom: 30px;
+	}
+}

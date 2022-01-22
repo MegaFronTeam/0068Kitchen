@@ -1,0 +1,19 @@
+mixin sAllCertificates(data)
+	// start sAllCertificates
+	+b.SECTION.sAllCertificates.section#sAllCertificates&attributes(attributes)
+		+e.black
+		.container
+			+b.section-title
+			.row
+				mixin certificateEl(i,t)
+					.col-6.col
+						+b.certificateEl
+							+e.w
+								+pic(`certificateEl-${i}.jpg`,'')
+								+e.t 
+									p= t
+				+certificateEl(`1`,'Сертификат официального дилера Kuppersbusch')
+				+certificateEl(`2`,'Сертификат официального дилера Brandt')
+				+certificateEl(`3`,'Сертификат официального дилера Kuppersbusch')
+				+certificateEl(`4`,'Сертификат официального дилера Brandt')
+	// end sAllCertificates
