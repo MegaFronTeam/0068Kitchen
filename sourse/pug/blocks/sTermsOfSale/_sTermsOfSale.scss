@@ -76,6 +76,11 @@
 		&:not(:last-child) {
 			border-bottom: 1px solid #e7e7e7;
 		}
+		&:first-child {
+			.dropdown__content {
+				display: block;
+			}
+		}
 		&.active {
 			.dropdown__btn {
 				color: $primary;
@@ -84,6 +89,7 @@
 				}
 			}
 		}
+
 		&__btn {
 			@include mt;
 			display: flex;
@@ -156,9 +162,9 @@
 						&:last-child {
 							margin-bottom: 0;
 						}
-						&.strong {
-							font-weight: 600;
-						}
+						// &.strong {
+						// 	font-weight: 600;
+						// }
 					}
 					ul {
 						list-style: none;
@@ -169,6 +175,7 @@
 				}
 			}
 		}
+		
 	}
 
 	@include media-breakpoint-up(xl) {

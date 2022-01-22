@@ -1,0 +1,111 @@
+// start .sGuarantee
+.sGuarantee {
+	--sPT: 0;
+	--sPB: #{rem(70)};
+	// --sTPB: ;
+	
+
+	--spanRatio: 384/1920;
+	--spanHeight: calc(var(--spanRatio) * 100%);
+	@include media-breakpoint-up(sm) {
+		--spanRatio: 318/1920;
+	}
+	@include media-breakpoint-up(md) {
+		--spanRatio: 240/1920;
+	}
+	@include media-breakpoint-up(lg) {
+		--spanRatio: 200/1920;
+	}
+	&__img-wrap {
+		@include block(1920, 1325);
+		@include media-breakpoint-up(sm) {
+			--ratio: 1095/1920;
+		}
+		@include media-breakpoint-up(md) {
+			--ratio: 825/1920;
+		}
+		@include media-breakpoint-up(lg) {
+			--ratio: 690/1920;
+		}
+		span {
+			position: absolute;
+			display: block;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			&::before {
+				content: "";
+				position: relative;
+				display: block;
+				height: 0;
+				left: 0;
+				top: 0;
+				padding-bottom: var(--spanHeight);
+				background-color: rgba(0, 0, 0, 0.58);
+			}
+		}
+	}
+	&__body {
+		margin-top: calc(-1 * var(--spanHeight) * 0.75);
+		padding-top: calc(var(--spanHeight) * 0.43);
+		border-top: 1px solid #eeeeee;
+		position: relative;
+		z-index: 2;
+		// .container--custom {
+		// 	@include media-breakpoint-up(xl) {
+		// 		max-width: rem(1506);
+		// 	}
+		// }
+	}
+	&__instruction {
+		position: relative;
+		background-color: $white;
+		padding: 3.677% 5.148%;
+		margin: 0 calc(-1 * 5.148%);
+		p {
+			line-height: calc(22 / 16);
+			margin-bottom: 0.9375em;
+		}
+		ul {
+			list-style: none;
+			margin-top: 1.25em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		li{
+			line-height: calc(22/16);
+			display: block; 
+			position: relative;
+			margin-bottom: 0.9375em;
+			padding-left: 1.75em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&::before{
+				content: '';
+				background: linear-gradient(0deg, #ADADAD, #ADADAD);
+				width: 0.5em;
+				height: 0.5em;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 0.5em;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sGuarantee
