@@ -4,27 +4,27 @@
 	--sPB: #{rem(101)};
 	--sTPB: #{rem(39)};
 
-	&--alt{
+	&--alt {
 		//??
 	}
-	&.land-form{
-		@include media-breakpoint-up(xxl){
+	&.land-form {
+		@include media-breakpoint-up(xxl) {
 			--sPT: #{rem(189)};
 			--sPB: #{rem(221)};
 			--sTPB: #{rem(39)};
 		}
 
-		.sForm{
-			&__box{
-				@include media-breakpoint-up(xxl){
+		.sForm {
+			&__box {
+				@include media-breakpoint-up(xxl) {
 					padding: 58px 23px 84px 72px;
 				}
 			}
 		}
 	}
-	&__pic{
+	&__pic {
 		margin-bottom: rem(30);
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			position: absolute;
 			top: rem(-74);
 			right: rem(90);
@@ -34,38 +34,38 @@
 		width: rem(420);
 		height: rem(210);
 
-		img{
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
 	}
 
-	&__box{
+	&__box {
 		position: relative;
 		z-index: 1;
 		color: $white;
 
 		padding: rem(30) rem(30) rem(45);
-		left: calc(-1 * (100vw - 100%)  * .5);
+		left: calc(-1 * (100vw - 100%) * 0.5);
 		width: 100vw;
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(md) {
 			left: unset;
 			width: 100%;
 			padding: rem(45) rem(40) rem(70);
 		}
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			padding: 55px 70px 89px;
 		}
 
 		//
-		&--alt{
-			@include media-breakpoint-up(xl){
+		&--alt {
+			@include media-breakpoint-up(xl) {
 				padding: 55px 70px 74px;
 			}
 		}
 	}
-	&__bg{
+	&__bg {
 		position: absolute;
 		z-index: -1;
 		top: 0;
@@ -73,88 +73,88 @@
 		width: 100%;
 		height: 100%;
 
-		img{
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
 	}
 
-	.section-title{
-		h2{
+	.section-title {
+		h2 {
 			font-size: rem(36);
-			color: $white!important;
+			color: $white !important;
 			margin-bottom: rem(14px);
 		}
-		p{
+		p {
 			line-height: 1.25;
 		}
 	}
-	.form-wrap{
-		&__row{
+	.form-wrap {
+		&__row {
 			--bs-gutter-x: #{rem(24)};
 			--bs-gutter-y: #{rem(24)};
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				--bs-gutter-x: #{rem(30)};
 				--bs-gutter-y: #{rem(30)};
 			}
 
 			//
-			&--alt{
+			&--alt {
 				padding-bottom: rem(26);
 			}
 		}
-		&__left-col{
-			@include media-breakpoint-up(lg){
+		&__left-col {
+			@include media-breakpoint-up(lg) {
 				width: calc(#{rem(408)} + var(--bs-gutter-x)) !important;
 			}
 		}
 		//alt
-		&__inp-col{
-			@include media-breakpoint-up(lg){
+		&__inp-col {
+			@include media-breakpoint-up(lg) {
 				width: 35% !important;
 			}
 		}
 
 		//
 
-		&__input-wrap{
+		&__input-wrap {
 			margin-bottom: var(--bs-gutter-y);
-			&:last-child{
+			&:last-child {
 				margin-bottom: 0;
 			}
 
-			textarea{
+			textarea {
 				height: calc(#{rem(53)} * 2 + var(--bs-gutter-y));
 			}
 		}
-		&__input{
-			@include placeholder(){
+		&__input {
+			@include placeholder() {
 				text-transform: uppercase;
 			}
 		}
-		&__btn{
+		&__btn {
 			@extend .btn;
 			@extend .btn-primary;
 
 			text-transform: uppercase;
 			width: 100%;
 		}
-		&__policy{
-			@include media-breakpoint-up(lg){
+		&__policy {
+			@include media-breakpoint-up(lg) {
 				min-height: rem(53);
 			}
-			&--mh0{
-				@include media-breakpoint-up(lg){
+			&--mh0 {
+				@include media-breakpoint-up(lg) {
 					min-height: 0;
 				}
 			}
 
 			display: flex;
 			align-items: center;
-			&:before{
+			&:before {
 				display: inline-block;
-				content: '';
+				content: "";
 				flex-shrink: 0;
 
 				width: rem(16);
@@ -170,22 +170,79 @@
 			//
 			font-weight: 300;
 			font-size: rem(14);
-			line-height: calc(19/14);
+			line-height: calc(19 / 14);
 			color: $white;
-			a{
-				color: $white!important;
+			a {
+				color: $white !important;
 				text-decoration: underline;
-				&:hover{
+				&:hover {
 					text-decoration: none;
 				}
 			}
 		}
 
 		//
-		&__{}
-		&__{}
 	}
 	//
-	&__{}
-	&__{}
+	&--return {
+		.sForm__box {
+			@include media-breakpoint-up(xl) {
+				padding: rem(55) rem(89) rem(55) rem(70);
+			}
+		}
+		.form-wrap {
+			form {
+				text-align: center;
+				@include media-breakpoint-up(sm) {
+					text-align: left;
+				}
+			}
+			&__row {
+				--bs-gutter-y: var(--bs-gutter-x);
+				&--main {
+					margin-bottom: calc(var(--bs-gutter-y) * 1.333);
+					@include media-breakpoint-up(lg) {
+					margin-bottom: calc(var(--bs-gutter-y) * 2.333);
+					}
+				}
+				&--footer {
+					align-items: center;
+				}
+			}
+			&__comment {
+				height: 100%;
+				& > * {
+					height: inherit;
+				}
+				textarea {
+					height: 100%;
+					min-height: rem(140);
+				}
+			}
+			&__btn,
+			.btn-upload {
+				width: 343px;
+				max-width: 100%;
+			}
+			
+			&__policy {
+				justify-content: center;
+				text-align: left;
+				@include media-breakpoint-up(sm) {
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
 } // end.sForm
+
+.btn-upload {
+	@extend .btn, .btn-outline-white;
+	display: inline-block !important;
+	border: 1px solid;
+	text-transform: uppercase;
+	padding: rem(13.5) rem(18);	
+	input {
+		@extend .invisible;
+	}
+}

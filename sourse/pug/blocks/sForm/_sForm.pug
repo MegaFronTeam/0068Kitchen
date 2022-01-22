@@ -51,3 +51,46 @@ mixin sFormAlt(data)
 							| Мы безопасно храним данные и никому их не передаём, вот
 							|
 							a(href="#") условия.
+
+mixin sFormReturn(data)
+	// start sForm
+	+b.SECTION.sForm--return.section&attributes(attributes)
+		.container
+			+e.box.bg-wrap
+				+pic('dark-bg.png', 'bg', 0).picture-bg
+				//- +e.bg
+				//- 	img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+				+b.section-title
+					h2=data.title
+					p=data.descr
+				+form-wrap()
+					+e.row--main.row
+						.col-lg-8
+							+e.row.row
+								.col-sm-6
+									+input('Ваше имя', 'text')
+								.col-sm-6
+									+input('Ваш телефон', 'tel')
+								.col-sm-6
+									+input('Вашa фамилия', 'text')
+								.col-sm-6
+									+input('Ваша элетронная почта', 'email')
+								.col-sm-6
+									+input('Ваше отчество', 'text')
+								.col-sm-6
+									+input('Ваш номер заказа', 'text')
+						.col-lg-4
+							+e.comment
+								+input('Ваш комментарий','textarea')
+						.col-sm-6.col-lg-auto
+							label.btn-upload загрузить файлы
+								input(type="file" name="file")
+					+e.row--footer.row
+						.col-sm-6.col-lg-auto
+							+e.BUTTON.btn(type="submit") написать нам
+						.col
+							+e.policy
+								+e.p-txt
+									| Мы безопасно храним данные и никому их не передаём, вот
+									|
+									a(href="#") условия.
