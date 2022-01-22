@@ -51,10 +51,68 @@
 		display: block;
 		text-decoration: none;
 	}
+	&__workTime {
+		position: relative;
+		cursor: pointer;
+		span {
+			font-size: rem(17);
+			color: $gray-650;
+		}
+		.icon-dots {
+			@include mt;
+			font-size: rem(16);
+		}
+		&:hover {
+			.icon-dots {
+				color: $orange;
+			}
+			.topLine__workTime-content {
+				display: block;
+			}
+		}
+	}
+	&__workTime-content {
+		position: absolute;
+		display: block;
+		width: rem(153);
+		background-color: #F5F5F5;
+		border-radius: 5px;
+		padding: rem(10) rem(15);
+		top: 33px;
+		left: 40px;
+    z-index: 11;
+		display: none;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			// width: 18.5px;
+			// height: 9px;
+			border: 9px solid transparent;
+    	border-bottom: 10px solid #F5F5F5;
+			right: 50%;
+			top: -19px;
+    	transform: translateX(50%);
+		}
+		span {
+			font-size: rem(12);
+			color: $body-color;
+		}
+		p {
+			font-size: rem(12);
+			color: $gray-650;
+			padding-top: rem(5);
+			padding-left: rem(17);
+			margin-bottom: 0;
+		}
+		.icon-alert {
+			position: absolute;
+			top: rem(42);
+			font-size: rem(12);
+			color: $orange;
+		}
+	}
 
-	//
-	&__{}
-	&__{}
 } // end.topLine
 
 .location{

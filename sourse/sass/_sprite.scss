@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-alert {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
 .icon-arrow-r {
 	font-size:math.div(10,10)*1rem;
 	width: math.div(14,10)*1em;
@@ -46,6 +50,14 @@
 .icon-cross {
 	font-size:math.div(8,10)*1rem;
 	width: math.div(8,8)*1em;
+}
+.icon-dots {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-drop-arrow {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
 }
 .icon-fb {
 	font-size:math.div(24,10)*1rem;

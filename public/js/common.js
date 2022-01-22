@@ -1077,12 +1077,11 @@ function eventHandler() {
     bottomEnd: 50
   });
 
-  $('.sServiceCenterHead__btn').click(function () {
-		$('.dropdown-menu').toggleClass('active');
+  $('.dropdown__btn').click(function () {
+    $(this).parent().toggleClass( "active" );
+    $(this).siblings().slideToggle();
 	});
-}
-
-;
+};
 
 if (document.readyState !== 'loading') {
   eventHandler();
