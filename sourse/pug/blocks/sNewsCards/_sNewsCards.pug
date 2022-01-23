@@ -1,0 +1,43 @@
+mixin sNewsCards(data)
+	// start sNewsCards
+	+b.sNewsCards.section#sNewsCards&attributes(attributes)
+		.container
+			+e.filter
+				+e.icon-wrap
+					+icon('icon-news')
+					//- img(src="img/svg/icon-news.svg", alt="")
+				+b.dropdown 
+					+e.BUTTON.btn Месяц
+						+icon('chevron-down')
+					+e.content
+						+e.item(href="#") Январь
+						+e.item(href="#") Февраль
+						+e.item(href="#") Март
+						+e.item(href="#") Апрель
+						+e.item(href="#") Май
+						+e.item(href="#") Июнь
+						+e.item(href="#") Июль
+						+e.item(href="#") Август
+						+e.item(href="#") Сентябрь
+						+e.item(href="#") Октябрь
+						+e.item(href="#") Ноябрь
+						+e.item(href="#") Декабрь
+			+e.items
+				mixin sNewsCardsItem()
+					+e.item(href="#")
+						.row
+							.col-md-4
+								+pic(`sNewsCards-1.png`, 'bg', 0)
+							.col-md-8
+								+e.DIV.content
+									h2 Новые сушильные шкафы от&nbsp;Asko
+									+e.date 21.12.2021
+									p Новый сушильный шкаф Asko станет функциональным и&nbsp;стильным дополнением вашего дома&nbsp;&mdash; вы&nbsp;будете удивляться, как вы&nbsp;справлялись без него! <br> Новый сушильный шкаф Asko станет функциональным и&nbsp;стильным дополнением вашего дома&nbsp;&mdash; вы&nbsp;будете удивляться, как вы&nbsp;справлялись без него...
+									+e.btn
+										span подробнее
+										+icon('chevron-right-lg')
+				- for (var x = 0; x < 3; x++)
+					+sNewsCardsItem()
+
+
+	// end sNewsCards

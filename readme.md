@@ -37,6 +37,7 @@
 34. <https://megafronteam.github.io/0068Kitchen/public/027-vacancy-page-2.html>
 35. <https://megafronteam.github.io/0068Kitchen/public/028-guarantee.html>
 36. <https://megafronteam.github.io/0068Kitchen/public/029-how-to-order.html>
+36. <https://megafronteam.github.io/0068Kitchen/public/030-news.html>
 37. 
 //////////////////лендинг//////////////////
 1. <https://megafronteam.github.io/0068Kitchen/public/020-brand-catalog.html>
