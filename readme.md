@@ -27,10 +27,17 @@
 25. <https://megafronteam.github.io/0068Kitchen/public/018-lc-orders.html>
 26. <https://megafronteam.github.io/0068Kitchen/public/019-compare.html>
 27. <https://megafronteam.github.io/0068Kitchen/public/020-landing.html>
-27. <https://megafronteam.github.io/0068Kitchen/public/022-connection-of-equipment.html>
-27. <https://megafronteam.github.io/0068Kitchen/public/026-terms-of-sale.html>
-27. <https://megafronteam.github.io/0068Kitchen/public/028-guarantee.html>
-28. 
+//////////// January 2022
+28. <https://megafronteam.github.io/0068Kitchen/public/022-connection-of-equipment.html>
+29. <https://megafronteam.github.io/0068Kitchen/public/023-service-center.html>
+30. <https://megafronteam.github.io/0068Kitchen/public/024-contact-information.html>
+31. <https://megafronteam.github.io/0068Kitchen/public/025-equipment-storage.html>
+32. <https://megafronteam.github.io/0068Kitchen/public/026-terms-of-sale.html>
+33. <https://megafronteam.github.io/0068Kitchen/public/027-vacancy-page.html>
+34. <https://megafronteam.github.io/0068Kitchen/public/027-vacancy-page-2.html>
+35. <https://megafronteam.github.io/0068Kitchen/public/028-guarantee.html>
+36. <https://megafronteam.github.io/0068Kitchen/public/029-how-to-order.html>
+37. 
 //////////////////лендинг//////////////////
 1. <https://megafronteam.github.io/0068Kitchen/public/020-brand-catalog.html>
 //////////////////лендинг//////////////////

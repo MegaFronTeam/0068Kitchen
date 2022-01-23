@@ -26,13 +26,20 @@
 		}
 		img {
 			background-color: $body-color;
+			margin-left: auto;
+    	display: block;
+			object-fit: cover;
+			min-height: 100%;
 		}
 	}
 	&__wrap {
 		max-width: rem(610);
 		margin-left: auto;
 		background-color: rgba(0, 0, 0, 0.42);
-		padding: rem(110) rem(70) rem(119) rem(61);
+		padding: rem(50) rem(33) rem(44) rem(35);
+		@include media-breakpoint-up(md) {
+			padding: rem(110) rem(70) rem(131) rem(61);
+		}
 		@include media-breakpoint-down(lg)  {
 			max-width: none;
 		}
