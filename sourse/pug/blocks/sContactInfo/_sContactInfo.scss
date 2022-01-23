@@ -28,13 +28,45 @@
 	&__item {
 		display: flex;
 		justify-content: space-between;
+		align-items: self-start;
 		@include media-breakpoint-down(lg) {
 			justify-content: center;
+		}
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
 		}
 		&:not(:last-child) {
 			margin-bottom: rem(30);
 		}
-		& > .icon {
+		// & > .icon {
+		// 	font-size: rem(86);
+		// 	background-color: $gray-290;
+		// 	padding: rem(19);
+		// 	border-radius: 50%;
+		// 	@include media-breakpoint-down(lg) {
+		// 		min-width: rem(86);
+		// 		margin-right: rem(10);
+		// 	}
+		// }
+	}
+	&__icon-wrap {
+		position: relative;
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(20);
+		}
+		&::before {
+			@include media-breakpoint-up(lg) {
+				content: '';
+				@include a-cent(y);
+				display: block;
+				width: rem(170);
+				height: 1px;
+				background-color: $gray-290;
+				left: -40px;
+				z-index: -1;
+			}
+		}
+		.icon {
 			font-size: rem(86);
 			background-color: $gray-290;
 			padding: rem(19);

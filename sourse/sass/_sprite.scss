@@ -11,6 +11,10 @@
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
+.icon-arrow-clockwise {
+	font-size:math.div(48,10)*1rem;
+	width: math.div(48,48)*1em;
+}
 .icon-arrow-down {
 	font-size:math.div(36,10)*1rem;
 	width: math.div(36,36)*1em;
@@ -18,10 +22,6 @@
 .icon-arrow-r {
 	font-size:math.div(10,10)*1rem;
 	width: math.div(14,10)*1em;
-}
-.icon-attention {
-	font-size:math.div(36,10)*1rem;
-	width: math.div(36,36)*1em;
 }
 .icon-call {
 	font-size:math.div(48,10)*1rem;
@@ -148,10 +148,6 @@
 	width: math.div(48,48)*1em;
 }
 .icon-tool-2 {
-	font-size:math.div(48,10)*1rem;
-	width: math.div(48,48)*1em;
-}
-.icon-web {
 	font-size:math.div(48,10)*1rem;
 	width: math.div(48,48)*1em;
 }

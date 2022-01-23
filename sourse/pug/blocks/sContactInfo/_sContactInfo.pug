@@ -15,7 +15,8 @@ mixin sContactInfo(data)
 						</picture>
 				+e.col.col-lg-auto
 					+e.item
-						+icon('marker')
+						+e.icon-wrap
+							+icon('marker')
 						+e.content
 							h6 Адрес:
 							p г. Москва, ул.Складочная д.1, стр. 9
@@ -24,7 +25,8 @@ mixin sContactInfo(data)
 							a(href="#") Схема проезда от станции метро Дмитровская
 								+icon('contact-info-arrow')
 					+e.item
-						+icon('phone')
+						+e.icon-wrap
+							+icon('phone')
 						+e.content
 							h6 Телефоны:
 							p Россия +7 (800) 505-82-93 
@@ -33,7 +35,8 @@ mixin sContactInfo(data)
 							h6 Электронная почта:
 							a(href="#") shop@kitchenmania.ru
 					+e.item
-						+icon('info')
+						+e.icon-wrap
+							+icon('info')
 						+e.content
 							h6 Юридические реквизиты:
 							p ООО «ТД АРХЕОН»
