@@ -30,6 +30,7 @@
 27. <https://megafronteam.github.io/0068Kitchen/public/022-connection-of-equipment.html>
 27. <https://megafronteam.github.io/0068Kitchen/public/026-terms-of-sale.html>
 28. 
+27. <https://megafronteam.github.io/0068Kitchen/public/031-certificates.html>
 //////////////////лендинг//////////////////
 1. <https://megafronteam.github.io/0068Kitchen/public/020-brand-catalog.html>
 //////////////////лендинг//////////////////
