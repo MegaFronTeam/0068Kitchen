@@ -1079,7 +1079,7 @@ function eventHandler() {
 
   $('.dropdown__btn').click(function () {
     $(this).parent().toggleClass( "active" );
-    $(this).siblings().slideToggle();
+    $(this).siblings('.dropdown__content').slideToggle();
 	});
 };
 
