@@ -2,9 +2,10 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section&attributes(attributes)
 		.container
-			+e.box
-				+e.bg
-					img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+			+e.box.bg-wrap
+				+pic('dark-bg.png', 'bg', 0).picture-bg
+				//- +e.bg
+				//- 	img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
 				+b.section-title
 					h2 Хотите связаться с нами и что-то предложить?
 					p Заполните форму обратной связи, напишите ваше мнение. Мы ответим вам на указанную почту

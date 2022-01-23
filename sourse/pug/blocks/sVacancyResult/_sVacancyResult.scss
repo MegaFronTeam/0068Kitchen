@@ -101,6 +101,9 @@
 			stroke: $orange;
 			font-size: rem(23);
 		}
+		&--noresult {
+			margin-bottom: rem(70);
+		}
 	}
 	&__vacany-card {
 		padding: rem(28.5) rem(29) rem(44) rem(33);
@@ -143,6 +146,17 @@
 			&:first-child {
 				margin-right: rem(16);
 			}
+		}
+	}
+	.info-message {
+		&__content {
+			padding: 0;
+			background-color: transparent;
+			max-width: rem(667);
+			color: $gray-580;
+		}
+		p {
+			font-size: rem(20);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

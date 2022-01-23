@@ -791,7 +791,7 @@
 								</button>
 								<div class="dropdown-menu dropdown__content"><a class="dropdown-item" href="#">Административный персонал</a><a class="dropdown-item" href="#">Бухгалтерия, управленческий учёт и пр</a><a class="dropdown-item" href="#">Высший менеджмент</a><a class="dropdown-item" href="#">Закупки</a></div>
 							</div>
-							<div class="form-wrap">
+							<div class="form-wrap form-wrap--noresult">
 								<form>
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Поиск"/>
 									</div>
@@ -805,15 +805,28 @@
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="info-message">
+							<div class="info-message__img-wrap"><img src="img/svg/attention.svg" alt=""/>
+							</div>
+							<div class="info-message__content">
+								<p>У&nbsp;нас пока нет свободных вакансий, но&nbsp;вы&nbsp;можете с&nbsp;нами связаться. Возможно, вы&nbsp;именно тот сотрудник, который создан для нашей команды.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end sVacancyResult-->
 			<!-- start sForm-->
 			<section class="sForm section">
 				<div class="container">
-					<div class="sForm__box">
-						<div class="sForm__bg"><img loading="lazy" src="img/@2x/sAbout-bg.png" alt=""/>
-						</div>
+					<div class="sForm__box bg-wrap">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/avif" srcset="img/@2x/avif/dark-bg.avif"/>
+							<source type="image/webp" srcset="img/@2x/webp/dark-bg.webp"/><img class="object-fit-js" src="img/@2x/dark-bg.png" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 						<div class="section-title">
 							<h2>Хотите связаться с нами и что-то предложить?</h2>
 							<p>Заполните форму обратной связи, напишите ваше мнение. Мы ответим вам на указанную почту</p>

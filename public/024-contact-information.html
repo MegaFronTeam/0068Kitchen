@@ -736,9 +736,11 @@
 						</div>
 						<div class="sContactInfo__col col-lg-auto">
 							<div class="sContactInfo__item">
-								<svg class="icon icon-marker ">
-									<use xlink:href="img/svg/sprite.svg#marker"></use>
-								</svg>
+								<div class="sContactInfo__icon-wrap">
+									<svg class="icon icon-marker ">
+										<use xlink:href="img/svg/sprite.svg#marker"></use>
+									</svg>
+								</div>
 								<div class="sContactInfo__content">
 									<h6>Адрес:</h6>
 									<p>г. Москва, ул.Складочная д.1, стр. 9</p><a href="#">Схема проезда от станции метро Дмитровская
@@ -751,9 +753,11 @@
 								</div>
 							</div>
 							<div class="sContactInfo__item">
-								<svg class="icon icon-phone ">
-									<use xlink:href="img/svg/sprite.svg#phone"></use>
-								</svg>
+								<div class="sContactInfo__icon-wrap">
+									<svg class="icon icon-phone ">
+										<use xlink:href="img/svg/sprite.svg#phone"></use>
+									</svg>
+								</div>
 								<div class="sContactInfo__content">
 									<h6>Телефоны:</h6>
 									<p>Россия +7 (800) 505-82-93 </p>
@@ -763,9 +767,11 @@
 								</div>
 							</div>
 							<div class="sContactInfo__item">
-								<svg class="icon icon-info ">
-									<use xlink:href="img/svg/sprite.svg#info"></use>
-								</svg>
+								<div class="sContactInfo__icon-wrap">
+									<svg class="icon icon-info ">
+										<use xlink:href="img/svg/sprite.svg#info"></use>
+									</svg>
+								</div>
 								<div class="sContactInfo__content">
 									<h6>Юридические реквизиты:</h6>
 									<p>ООО «ТД АРХЕОН»</p>
@@ -820,9 +826,13 @@
 			<!-- start sForm-->
 			<section class="sForm section">
 				<div class="container">
-					<div class="sForm__box">
-						<div class="sForm__bg"><img loading="lazy" src="img/@2x/sAbout-bg.png" alt=""/>
-						</div>
+					<div class="sForm__box bg-wrap">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/avif" srcset="img/@2x/avif/dark-bg.avif"/>
+							<source type="image/webp" srcset="img/@2x/webp/dark-bg.webp"/><img class="object-fit-js" src="img/@2x/dark-bg.png" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 						<div class="section-title">
 							<h2>Хотите связаться с нами и что-то предложить?</h2>
 							<p>Заполните форму обратной связи, напишите ваше мнение. Мы ответим вам на указанную почту</p>

@@ -81,11 +81,14 @@ mixin sVacancyResult2(data)
 							a.dropdown-item(href="#") Бухгалтерия, управленческий учёт и пр
 							a.dropdown-item(href="#") Высший менеджмент
 							a.dropdown-item(href="#") Закупки
-					+form-wrap()
+					+form-wrap().--noresult
 						+input('Поиск', 'text')
 						button
 							+icon('zoom')
-			//- .row
-			//- 	.col
-			//- 		+icon('attention')
+			.row
+				+b.info-message
+					+e.img-wrap
+						img(src="img/svg/attention.svg", alt="")
+					+e.content
+						p У&nbsp;нас пока нет свободных вакансий, но&nbsp;вы&nbsp;можете с&nbsp;нами связаться. Возможно, вы&nbsp;именно тот сотрудник, который создан для нашей команды.
 	// end sVacancyResult
