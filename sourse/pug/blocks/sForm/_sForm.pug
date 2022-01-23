@@ -89,3 +89,25 @@ mixin sFormReturn(data)
 									| Мы безопасно храним данные и никому их не передаём, вот
 									|
 									a(href="#") условия.
+
+mixin sFormNews(data)
+	// start sForm
+	+b.SECTION.sForm--news.section&attributes(attributes)
+		.container
+			+e.box.bg-wrap
+				+pic('dark-bg.png', 'bg', 0).picture-bg
+				+e.IMG.image(loading="lazy" src="img/svg/sFormNews.svg" alt="")
+				.row
+					.col-lg-7.col-xl
+						+b.section-title
+							h2=data.title
+							p=data.descr
+					.col-lg-5.col-xl-auto
+						+form-wrap()
+							+input('Ваша элетронная почта', 'email')
+							+e.BUTTON.btn(type="submit") подписаться
+							+e.policy
+								+e.p-txt
+									| Мы безопасно храним данные и никому их не передаём, вот
+									|
+									a(href="#") условия.
