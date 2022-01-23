@@ -66,3 +66,26 @@ mixin sVacancyResult(data)
 							span Дата размещения вакансии: 15&nbsp;июня 2021
 						button Откликнуться
 	// end sVacancyResult
+
+mixin sVacancyResult2(data)
+	// start sVacancyResult
+	+b.sVacancyResult.section#sVacancyResult&attributes(attributes)
+		.container
+			.row
+				.col-12
+					.dropdown 
+						+e.BUTTON.btn.dropdown__btn Все вакансии
+							+icon('chevron-down')
+						.dropdown-menu.dropdown__content
+							a.dropdown-item(href="#") Административный персонал
+							a.dropdown-item(href="#") Бухгалтерия, управленческий учёт и пр
+							a.dropdown-item(href="#") Высший менеджмент
+							a.dropdown-item(href="#") Закупки
+					+form-wrap()
+						+input('Поиск', 'text')
+						button
+							+icon('zoom')
+			//- .row
+			//- 	.col
+			//- 		+icon('attention')
+	// end sVacancyResult
