@@ -32,14 +32,14 @@ mixin sTermsOfSale(data)
 		.container
 			+e.regulations
 				mixin dropdown(c, h)
-					+b.dropdown
+					+b.dropdown&attributes(attributes)
 						+e.btn 
 							h2!= h
 								span!=c
 							+icon('drop-arrow')
 						+e.content
 							block
-				+dropdown(`1.`, `Общие положения`)
+				+dropdown(`1.`, `Общие положения`).active
 					ul
 						li
 							span 1.1.
