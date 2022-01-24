@@ -158,6 +158,11 @@
 			width: calc(var(--imgWidth) / 2);
 			height: calc(var(--imgWidth) / 2);
 		}
+		.icon {
+			@include a-cent;
+			font-size: calc(var(--imgWidth) / 2);
+			color: #3D3D3D;
+		}
 	}
 	&__title {
 		line-height: calc(26 / 16);

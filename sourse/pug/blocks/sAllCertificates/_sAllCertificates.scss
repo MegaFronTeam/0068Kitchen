@@ -1,12 +1,10 @@
 // start .sAllCertificates
 .sAllCertificates {
-		// --sPT: ;
-		// --sPB: ;
-		--sTPB: #{rem(110)};
+		--sPT: 0 ;
+		--sPB: #{rem(122)};
+		--sTPB: 0 ;
 	position: relative;
-	&__black{
-		background: $gray-990;
-		height: 280px;
+	&__line{
 		width: 100%;
 		position: absolute;
 		z-index: -5;
@@ -23,19 +21,76 @@
 .certificateEl{
 	&__w{
 		width: fit-content;
+		margin: 0 auto;
+	}
+	img{
+		margin: 0 auto;
+		display: block;
 	}
 	&__t{
 		text-align: center;
 		color: #6d6d6d;
 		margin-top: 30px;
+		font-size: rem(26);
+		p{
+			max-width: 430px;
+			margin: 0 auto;
+		}
 	}
 }
 
-.col:nth-child(4){
-	.certificateEl{
-		&__w{
-			margin: 0 auto;
-			display: block;
+.section-title__col{
+	&:nth-child(1), &:nth-child(2){
+		margin: rem(110) 0 rem(130);
+	}
+}
+
+.section-title{
+	&__btn{
+		max-width: 310px;
+		margin: rem(70) auto 0;
+		p{
+			margin: 0;
+		}
+		.catalog-btn{
+			width: 100%;
+			justify-content: center;
+			padding: 17px 0;
+			font-size: 16px;
+		}
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.section-title__col{
+		&:nth-child(1), &:nth-child(2){
+			margin-top: rem(70);
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.section-title__col{
+		&:not(:last-of-type){
+			margin: 0 0 rem(110)
+		}
+		&:first-of-type{
+			margin-top: rem(70);
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.section-title__col{
+		&:nth-child(1), &:nth-child(2){
+			margin-top: rem(50);
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.section-title__col{
+		&:nth-child(1), &:nth-child(2){
+			margin-top: rem(30);
 		}
 	}
 }

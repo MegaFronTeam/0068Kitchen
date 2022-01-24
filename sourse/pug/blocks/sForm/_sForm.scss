@@ -43,7 +43,7 @@
 
 	&__box {
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 		color: $white;
 
 		padding: rem(30) rem(30) rem(45);
@@ -231,6 +231,68 @@
 
 			&__policy {
 				text-align: left;
+			}
+		}
+	}
+	&--news {
+		.sForm__box {
+			overflow: hidden;
+			@include media-breakpoint-up(sm) {
+				padding: rem(45) rem(45) rem(55);
+			}
+			@include media-breakpoint-up(lg) {
+				padding: rem(55) rem(45) rem(50);
+			}
+			@include media-breakpoint-up(xl) {
+				padding: rem(55);
+			}
+			@include media-breakpoint-up(xxl) {
+				padding: rem(45) rem(55) rem(45) rem(80);
+			}
+		}
+		.sForm__image {
+			@include a-cent1;
+			position: absolute;
+			width: rem(237);
+			height: rem(213);
+			opacity: 0.2;
+			// transform: translate3d(-50%,-50%,0) rotate(-30deg);
+			transform: translate3d(0, -50%, 0) rotate(-30deg);
+			z-index: -1;
+			@include media-breakpoint-up(sm) {
+			}
+			@include media-breakpoint-up(lg) {
+				transform: rotate(-30deg);
+				top: auto;
+				bottom: -31.66%;
+				left: 32%;
+			}
+		}
+		.section-title {
+			max-width: rem(490);
+		}
+		.form-wrap {
+			@include media-breakpoint-up(xl) {
+				width: rem(456);
+			}
+			&__input-wrap {
+				margin-bottom: rem(30);
+				@include media-breakpoint-up(lg) {
+					max-width: rem(410);
+					margin-bottom: rem(32);
+				}
+			}
+			&__btn {
+				margin-bottom: rem(30);
+				@include media-breakpoint-up(lg) {
+					max-width: rem(410);
+					margin-bottom: rem(32);
+				}
+			}
+			&__policy {
+				@include media-breakpoint-up(lg) {
+					min-height: unset;
+				}
 			}
 		}
 	}
