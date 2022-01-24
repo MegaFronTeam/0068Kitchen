@@ -8,11 +8,10 @@ mixin sAllCertificates(data)
 				.row
 					mixin certificateEl(i,t)
 						+e.col.col-lg-6
-							+b.certificateEl
-								+e.w
-									+pic(`certificateEl-${i}.jpg`,'')
-									+e.t 
-										p= t
+							+b.certificateEl(data-fancybox='sert' href=`img/@2x/certificateEl-${i}.jpg`) 
+								+e.img-wrap
+									+pic(`certificateEl-${i}.jpg`,'', 0)
+								+e.t= t
 					+certificateEl(`1`,'Сертификат официального дилера Kuppersbusch')
 					+certificateEl(`2`,'Сертификат официального дилера Brandt')
 					+certificateEl(`3`,'Сертификат официального дилера Kuppersbusch')
@@ -20,6 +19,5 @@ mixin sAllCertificates(data)
 				.row 
 					.col 
 						+e.btn
-							+b.catalog-btn(type="button")
-								p показать еще
+							+b.catalog-btn(type="button")  показать еще
 	// end sAllCertificates

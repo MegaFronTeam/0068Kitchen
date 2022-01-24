@@ -19,22 +19,38 @@
 } // end.sAllCertificates
 
 .certificateEl{
+	text-align: center;
+	display: block;
+	outline: none;
+	text-decoration: none !important;
+	&:hover{
+		--sh: 0 0 0;
+	}
 	&__w{
 		width: fit-content;
 		margin: 0 auto;
 	}
+	&__img-wrap{
+		display: inline-block;
+		height: rem(382);
+		margin-bottom: rem(26);
+		@include mt;
+		filter: drop-shadow( var(--sh, 8px 8px 35px) rgba(0, 0, 0, 0.15));
+	}
 	img{
 		margin: 0 auto;
+		height: 100%;
+
 		display: block;
 	}
-	&__t{
-		text-align: center;
+	&__t{ 
 		color: #6d6d6d;
-		margin-top: 30px;
+		// margin-top: 30px;
 		font-size: rem(26);
+		display: block;
+		max-width: 430px;
+		margin: 0 auto ;
 		p{
-			max-width: 430px;
-			margin: 0 auto;
 		}
 	}
 }
