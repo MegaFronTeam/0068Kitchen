@@ -4,9 +4,26 @@
 	--sPB: #{rem(332)};
 	// --sTPB: ;
 	position: relative;
-	.picture-bg{
+	.offer-under{
 		img{
 			width: 100%;
+		}
+	}
+	.offer-i{
+		img{
+			width: fit-content;
+			margin-left: auto;
+			right: 0;
+		}
+		&::before{
+			content: '';
+			background: linear-gradient(90deg, #1A1A1A 0%, rgba(0, 0, 0, 0) 48.53%);
+			width: 100%;
+			max-width: 1225px;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			z-index: 1;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
@@ -19,9 +36,10 @@
 } // end.sCertificatesHead
 
 .sCertificatesHead__offer{
+	color: $white;
 	h1{
 		color: $white;
 		@include rfs(59px);
 	}
-	color: $white;
+	
 }
