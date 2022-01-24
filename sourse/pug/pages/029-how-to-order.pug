@@ -17,6 +17,8 @@ extends layout/main.pug
 include ../blocks/sGuarantee/_sGuarantee.pug
 include ../blocks/sHowToOrderHead/_sHowToOrderHead.pug
 include ../blocks/sStepsToOrder/_sStepsToOrder.pug
+include ../blocks/sWayToContact/_sWayToContact.pug
+include ../blocks/sForm/_sForm.pug
 
 block variables
 	- let  mainPage= null 
@@ -37,6 +39,8 @@ block pagecontent
 			h2!= title
 	+sHowToOrderHead()
 	+sStepsToOrder()
+	+sWayToContact()
+	+sForm()
 	//- +sTermsOfSale()
 	//- +sServiceCenterHead()
 	//- +sServicesList()

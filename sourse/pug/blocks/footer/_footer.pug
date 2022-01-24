@@ -10,7 +10,9 @@ mixin footer()
               +e.tells
                 +e.tell(href="tel:+78007758272") +7 (800) 775-82-72
                 +e.tell(href="tel:+74957758272") +7 (495) 775-82-72
-              +e.callback-btn.link-modal-js(href="#modal-call") Заказать звонок
+              +e.btn-wrap
+                +e.callback-btn.link-modal-js(href="#modal-call") Заказать звонок
+                +e.registartion-btn(href="#") регистрация
               +e.mail-cont
                 +e.mail(href="mailto:shop@kitchenmania.ru") shop@kitchenmania.ru
             .col-sm-auto.col-lg-12
@@ -44,10 +46,10 @@ mixin footer()
             li: a(href='#') Крупная бытовая техника
             li: a(href='#') Мелкая кухонная техника
             li: a(href='#') Сантехника для кухни
-          +e.creator-logo(href="#")
-            +e.cr-img
-              img(laoding="lazy" src='img/svg/creator-logo.svg' alt="")
-            +e.cr-txt Разработка сайта
+          //- +e.creator-logo(href="#")
+          //-   +e.cr-img
+          //-     img(laoding="lazy" src='img/svg/creator-logo.svg' alt="")
+          //-   +e.cr-txt Разработка сайта
       +e.bot
         +e.all-right © 2020 Китченмания — официальный интернет-магазин бытовой техники. Все права защищены.
         +e.polcy-link(href='#') Политика конфиденциальности
