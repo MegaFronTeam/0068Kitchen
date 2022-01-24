@@ -253,9 +253,12 @@
 		.sForm__image {
 			@include a-cent1;
 			position: absolute;
+			width: rem(237);
+			height: rem(213);
 			opacity: 0.2;
 			// transform: translate3d(-50%,-50%,0) rotate(-30deg);
 			transform: translate3d(0, -50%, 0) rotate(-30deg);
+			z-index: -1;
 			@include media-breakpoint-up(sm) {
 			}
 			@include media-breakpoint-up(lg) {
