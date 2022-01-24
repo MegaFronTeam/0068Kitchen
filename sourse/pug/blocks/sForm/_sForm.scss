@@ -259,8 +259,8 @@
 			// transform: translate3d(-50%,-50%,0) rotate(-30deg);
 			transform: translate3d(0, -50%, 0) rotate(-30deg);
 			z-index: -1;
-			@include media-breakpoint-up(sm) {
-			}
+			// @include media-breakpoint-up(sm) {
+			// }
 			@include media-breakpoint-up(lg) {
 				transform: rotate(-30deg);
 				top: auto;
