@@ -172,6 +172,10 @@
 			line-height: 145%;
 			margin-bottom: rem(5);
 			font-weight: 600;
+			padding-right: rem(35);
+			@include media-breakpoint-up(lg) {
+				padding-right: rem(30);
+			}
 		}
 		p {
 			margin-bottom: 0;
@@ -225,6 +229,30 @@
 		font-size: rem(14);
 		line-height: calc(22 / 14);
 		color: #858585;
+	}
+
+	&__btn-like {
+		@include mt(0.2s);
+		position: absolute;
+		width: rem(24);
+		height: rem(24);
+		right: rem(30);
+		top: rem(30);
+		border: none !important;
+		outline: none !important;
+		color: #353535;
+		.icon {
+			@include a-cent1;
+			font-size: rem(24);
+		}
+		&.active,
+		&:hover {
+			color: $primary;
+			.icon {
+				fill: currentColor;
+				stroke: currentColor;
+			}
+		}
 	}
 
 	@include media-breakpoint-up(xl) {

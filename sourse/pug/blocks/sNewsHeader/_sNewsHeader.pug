@@ -7,7 +7,7 @@ mixin sNewsHeader(data)
 				mixin sNewsHeaderItem(i, h)
 					+e.item(href="#").bg-wrap
 						+pic(`sNewsHeader-${i}.png`, 'bg', 0)
-						+e.caption
+						+e.DIV.caption
 							h3!= h
 								+icon('chevron-right-lg')
 							+e.date 21.12.2021
