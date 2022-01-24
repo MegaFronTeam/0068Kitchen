@@ -9,7 +9,7 @@ mixin sStepsToOrder(data)
 					+e.content
 						h2 На сайте
 			.row
-				.col-lg-6.col-xl-8
+				.col-lg-8
 					+e.list
 						+icon('arrow-clockwise')
 						+e.item
@@ -28,6 +28,6 @@ mixin sStepsToOrder(data)
 							h3 Оформление заказа
 							p Нажмите &laquo;Оформить заказ&raquo;. Проверьте Личные данные (если вы&nbsp;зарегистрированы и&nbsp;авторизованы на&nbsp;сайте, то&nbsp;данные заполнятся автоматически), корректность номера телефона и&nbsp;e-mail. Выберите способ доставки и&nbsp;форму оплаты.
 							span 3
-				.col-lg-6.col-xl-4.bg-wrap
+				+e.img-col.col-lg-4.bg-wrap
 					+pic('sStepsToOrder-bg.jpg', 'bg', 0).picture-bg
 	// end sStepsToOrder

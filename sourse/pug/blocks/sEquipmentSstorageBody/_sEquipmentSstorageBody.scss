@@ -39,7 +39,7 @@
 		padding: rem(50) rem(50) rem(48.400) rem(100);
 		margin-bottom: rem(13);
 		@include media-breakpoint-down(md) {
-			padding: rem(50) rem(50) rem(0) rem(50);
+			padding: rem(50) rem(15) rem(0) rem(15);
 		}
 		h4 {
 			// margin-bottom: rem(30);
@@ -54,6 +54,9 @@
 				color: $orange;
 				font-weight: 600;
 				font-size: rem(144);
+				@include media-breakpoint-down(md) {
+					font-size: rem(100);
+				}
 			}
 			&:last-of-type {
 				font-size: rem(20);

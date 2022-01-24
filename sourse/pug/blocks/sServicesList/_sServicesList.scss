@@ -72,6 +72,9 @@
 		@include rfs(18px);
 		margin-bottom: rem(10);
 	}
+	a {
+		text-decoration: none;
+	}
 	&__number-wrap {
 		display: flex;
 		flex-direction: column;

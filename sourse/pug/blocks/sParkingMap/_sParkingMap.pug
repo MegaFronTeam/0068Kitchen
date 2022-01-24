@@ -7,9 +7,9 @@ mixin sParkingMap(data)
 			<script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 			script.
 				const map = document.querySelector('#map');
-
-				ymaps.ready(init);
-
+				document.addEventListener('DOMContentLoaded', function(event) {
+					ymaps.ready(init);
+				});
 				function init () {
 					//- var center = [55.75322550427434,37.65589449999999];
 					var center = [55.803299806784906,37.59322146673064];

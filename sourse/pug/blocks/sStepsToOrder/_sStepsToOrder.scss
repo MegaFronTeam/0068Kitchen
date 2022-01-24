@@ -73,6 +73,9 @@
 		justify-content: space-around;
 		gap: rem(30);
 		margin-bottom: 0;
+		@include media-breakpoint-only(lg) {
+			gap: rem(23);
+		}
 		.icon {
 			display: none;
 			@include a-cent;
@@ -95,6 +98,12 @@
 		padding-right: rem(40);
 		padding-left: rem(40);
 		position: relative;
+		@include media-breakpoint-only(lg) {
+			max-width: rem(293);
+		}
+		@include media-breakpoint-down(lg) {
+			max-width: rem(330);
+		}
 		&:first-of-type {
 			background-color: #ACB9C0;
 			padding-bottom: rem(103);
@@ -147,6 +156,17 @@
 			font-weight: 600;
 			color: rgba($body-color, 0.2);
 			line-height: 0.92em;
+		}
+	}
+	&__img-col {
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(30);
+			picture {
+				@include block(720, 360);
+				img {
+					position: absolute;
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

@@ -30,6 +30,12 @@
 		@include media-breakpoint-down(lg) {
 			flex-direction: column;
 		}
+		.icon {
+			@include mt;
+			&:hover {
+				transform: rotate(180deg);
+			}
+		} 
 	}
 	&__text {
 		max-width: rem(565);

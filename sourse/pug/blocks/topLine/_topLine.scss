@@ -69,6 +69,15 @@
 			.topLine__workTime-content {
 				display: block;
 			}
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				top: 70%;
+			}
 		}
 	}
 	&__workTime-content {

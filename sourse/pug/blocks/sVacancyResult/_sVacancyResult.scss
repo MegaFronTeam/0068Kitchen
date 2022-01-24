@@ -78,7 +78,7 @@
 	.form-wrap {
 		position: relative;
 		max-width: rem(455);
-		margin-bottom: rem(30);
+		margin-bottom: rem(50);
 		width: 100%;
 		display: inline-block;
 		input {
@@ -90,7 +90,7 @@
 		button {
 			position: absolute;
 			top: 50%;
-			right: 30px;
+			right: 22px;
 			transform: translateY(-50%);
 			background-color: transparent;
 			border: none;
@@ -106,6 +106,7 @@
 		}
 	}
 	&__vacany-card {
+		max-width: rem(1013);
 		padding: rem(28.5) rem(29) rem(44) rem(33);
 		border: 1px solid #E7E7E7;
 		h5 {

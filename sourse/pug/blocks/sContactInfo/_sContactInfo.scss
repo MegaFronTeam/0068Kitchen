@@ -13,7 +13,7 @@
 	&__bg {
 		@include media-breakpoint-up(lg) {
 			margin-left: calc(-50vw - -50% - var(--asideW)*-1/2);
-			height: 500px;
+			height: 100%;
 		}
 		@include media-breakpoint-down(lg) {
 			margin-bottom: rem(30);
@@ -23,6 +23,8 @@
 		}
 		img {
 			background-color: $body-color;
+			object-fit: cover;
+    	height: 100%;
 		}
 	}
 	&__item {
