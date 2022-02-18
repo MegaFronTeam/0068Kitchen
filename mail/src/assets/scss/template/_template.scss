@@ -211,12 +211,7 @@ div.container{
   table{
     width: 100%;
     text-align: left;
-    td{
-      padding-top: 40px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid #E2E2E2;
-      vertical-align: middle;
-    }
+   
     .img-wrap{
       padding-right: 30px;
       width: 150px;
@@ -225,6 +220,14 @@ div.container{
       text-align: center;
       color: #3F3F3F;
       font-size: 18px;
+    }
+  }
+  .border-bottom{
+    td{
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #E2E2E2;
+      vertical-align: middle;
     }
   }
   .border-none{
@@ -335,4 +338,5 @@ hr{
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
 }
