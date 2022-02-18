@@ -141,6 +141,15 @@ div.container{
     background-color: #F6F6F6;
     padding: 15px 30px;
     box-sizing: border-box;
+
+    th.columns{
+      vertical-align: middle;
+      padding: 0;
+      padding-bottom: 0; 
+    }
+    h5{
+      margin: 0;
+    }
   }
   &__body--info{
     padding: 30px 50px;
@@ -152,16 +161,39 @@ div.container{
     max-width: 404px;
     display: flex;
     border-bottom: 1px solid #E2E2E2;
-    padding-bottom: 25px;
+    // padding-bottom: 25px;
+   
+    
+    // margin-left: 40px;
+  }
+  &__body{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    .block-info__item{
+      max-width: 50%;
+      padding-left: 47px;
+      margin-bottom: 25px;
+      img{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
   }
 }
-.block-info__head-item{
+.block-info__item{
   flex-grow: 1;
   text-align: left;
+  position: relative;
 }
-.block-info__head-title{
+.block-info__title{
   color: #9C9C9C;
   font-size: 14px;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+.text-right{
+  text-align: right;
 }
