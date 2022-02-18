@@ -98,6 +98,7 @@ table.button.google table td {
 
 .mail-body{
   background-image: url(https://megafronteam.github.io/0068Kitchen/public/img/@2x/sAbout-bg.png);
+  
   background-repeat: no-repeat;
   background-size: 100% 200px;
   min-height: 200px;
@@ -139,7 +140,15 @@ div.container{
   margin-bottom: 50px;
   &__head{
     background-color: #F6F6F6;
-    padding: 15px 30px;
+    padding: 0 30px;
+    .button{
+      margin-left: auto;
+      margin-bottom: 0;
+    }
+    &--prod{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     box-sizing: border-box;
 
     th.columns{
@@ -196,4 +205,128 @@ div.container{
 
 .text-right{
   text-align: right;
+}
+.table-block__body{
+  padding-bottom: 30px;
+  table{
+    width: 100%;
+    text-align: left;
+    td{
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #E2E2E2;
+      vertical-align: middle;
+    }
+    .img-wrap{
+      padding-right: 30px;
+      width: 150px;
+    }
+    .prod-count{
+      text-align: center;
+      color: #3F3F3F;
+      font-size: 18px;
+    }
+  }
+  .border-none{
+    td{
+      border: none;
+      padding-left: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    &:first-child{
+      td{
+        padding-top: 20px;
+      }
+    }
+    &:last-child{
+      td{
+        padding-top: 20px;
+      }
+    }
+  }
+  .text-secondary{
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+.prod-img{
+  display: block;
+  width: 120px;
+  text-align: center;
+  display: block;
+  img{
+    max-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.prod-title{
+  font-size: 18px;
+  width: 250px;
+  color: #131313 !important;
+  display: block;
+  margin-bottom: 10px;
+}
+.prod-price{
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  padding-right: 30px;
+}
+
+.text-secondary{
+  color: #858585;
+
+}
+h5.strong{
+    font-weight: 700 !important;
+}
+
+.footer{
+  background-image: url(https://megafronteam.github.io/0068Kitchen/public/img/@2x/sAbout-bg.png);
+  // block-size: ;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  h4{
+    a{
+      color: #fff !important;
+    }
+  }
+  ul{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  li{
+    margin-bottom: 16px;
+    a{
+      color: #BABABA;
+      font-size: 18px;
+    }
+  }
+}
+hr{
+  background: #3C3C3C;
+  margin-bottom: 20px;
+}
+
+.footer__title{
+  font-size: 17px;
+  margin-bottom: 25px;
+  color: #717171 !important;
+  text-align: left;
+  display: block;
+}
+.footer__mail{
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.btn{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: #FF8651;
 }
