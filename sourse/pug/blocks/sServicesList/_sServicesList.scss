@@ -27,7 +27,16 @@
 		}
 		&--indent {
 			picture {
-				padding-right: 0;
+				@include media-breakpoint-up(xl) {
+					padding-right: rem(13);
+				}
+			}
+		}
+		&--indent-2 {
+			picture {
+				@include media-breakpoint-up(xl) {
+					padding-right: rem(35);
+				}
 			}
 		}
 	}
