@@ -271,14 +271,14 @@ function eventHandler() {
 
 
   function setFixedNav() {
-    let header = document.querySelector('header');
-    if (!header) return;
+    // let header = document.querySelector('header');
+    // if (!header) return;
 
-    if (window.scrollY > (header.offsetHeight || 205)) {
-      header.classList.add('fixed');
-    } else {
-      header.classList.remove('fixed');
-    }
+    // if (window.scrollY > (header.offsetHeight || 205)) {
+    //   header.classList.add('fixed');
+    // } else {
+    //   header.classList.remove('fixed');
+    // }
   } //
 
 
@@ -335,17 +335,12 @@ function eventHandler() {
   let brandsNext = document.querySelector('.brands--js .swiper-next');
   let brandsSlider = new Swiper('.breands-slider-js', {
     slidesPerView: 'auto',
-    breakpoints: {
-      0: {
-        spaceBetween: 25
-      },
-      768: {
-        spaceBetween: 25
-      },
-      1200: {
-        spaceBetween: 50
-      }
-    },
+    // spaceBetween: 25,
+    // breakpoints: {
+    //   1200: {
+    //     spaceBetween: 50
+    //   }
+    // },
     loop: true,
     navigation: {
       nextEl: brandsNext,
@@ -1075,6 +1070,9 @@ function eventHandler() {
     stickTo: $('.sArtical__content-col'),
     top: 120,
     bottomEnd: 50
+  });
+  $('.top-nav').hcSticky({
+    stickTo: $('body'),
   });
 
   $('.dropdown__btn').click(function () {
