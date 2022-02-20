@@ -253,7 +253,13 @@
 }
 
 .brands{
-
+	.swiper-slide{
+		@include media-breakpoint-up(xl){
+			
+			margin-right: 45px;
+		}
+		margin-right: 25px;
+	}
 	background: $gray-900;
 	padding: 3px 0 rem(15);
 	@include media-breakpoint-up(xl){
@@ -277,11 +283,11 @@
 	&__slider-wrap{
 		width: 100%;
 		.swiper-container{
-			overflow: visible!important;
-			@include media-breakpoint-up(md){
-				overflow: hidden!important;
-				padding-left: 20px;
-				margin-left: -20px;
+			@include media-breakpoint-down(md){
+				overflow: visible ;
+				// overflow: hidden!important;
+				// padding-left: 20px;
+				// margin-left: -20px;
 			}
 		}
 		.swiper-wrapper{
