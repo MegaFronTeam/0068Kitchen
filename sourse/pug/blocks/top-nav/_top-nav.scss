@@ -1,5 +1,11 @@
 .top-nav {
 	padding: rem(15) 0;
+	&.sticky{
+		// --top-sp:0;
+		.catalog-dd{
+			top: 100%;
+		}
+	}
 	@include media-breakpoint-up(xxl){
 		padding: rem(25) 0 rem(27);
 	}

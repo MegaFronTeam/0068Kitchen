@@ -42,6 +42,7 @@
 .catalog-dd {
 	border-top: 1px solid $gray-800;
 	@include mt();
+	// transition: transform .3s;
 	transform-origin: top center;
 
 	transform: scaleY(0);
@@ -54,12 +55,14 @@
 	display: block;
 	background: $gray-900;
 
-	top: 100%;
 	left: 0;
 	width: 100%;
-
+	
 	height: calc(100vh - var(--header-real-height));
+	top: calc(100% +  var(--top-s));
+	--top-s: #{rem(45px)};
 	@include media-breakpoint-up(xl) {
+		--top-s: #{rem(57px)};
 		height: auto;
 		max-height: calc(100vh - var(--header-real-height));
 	}
