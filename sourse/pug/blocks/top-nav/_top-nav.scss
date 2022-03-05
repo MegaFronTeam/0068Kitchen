@@ -260,11 +260,11 @@
 
 .brands{
 	.swiper-slide{
-		@include media-breakpoint-up(xl){
-			
-			margin-right: 45px;
+		@include media-breakpoint-up(xl){	
+			// margin-right: 50px;
 		}
-		margin-right: 25px;
+	 
+		// margin-right: 25px;
 	}
 	background: $gray-900;
 	padding: 3px 0 rem(15);
@@ -274,7 +274,7 @@
 
 	&__container{
 		@include media-breakpoint-up(xxl){
-			padding-left: rem(60);
+			// padding-left: rem(60);
 		}
 	}
 	&__row{
@@ -287,8 +287,9 @@
 		}
 	}
 	&__slider-wrap{
-		width: 100%;
 		.swiper-container{
+			width: 100%;
+			
 			@include media-breakpoint-down(md){
 				overflow: visible ;
 				// overflow: hidden!important;
@@ -296,17 +297,26 @@
 				// margin-left: -20px;
 			}
 		}
+		
 		.swiper-wrapper{
-
+			width: 100%;
+			
 		}
 		.swiper-slide{
 			height: auto;
-			//width: auto;
 			width: auto;
+			// width: auto;
 		}
 	}
+	.swiper-container:not(.swiper-container-initialized) &__link{
+		@include media-breakpoint-up(xl){
+		margin-right: 50px;
+		}
+		margin-right: 25px;
+	}
 	&__link{
-		display: block;
+		// display: block;
+		display: inline-block;
 		text-decoration: none;
 		font-size: rem(17);
 		line-height: calc(27/17);

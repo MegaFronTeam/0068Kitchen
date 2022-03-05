@@ -391,13 +391,9 @@ function eventHandler() {
   let brandsNext = document.querySelector('.brands--js .swiper-next');
   let brandsSlider = new Swiper('.breands-slider-js', {
     slidesPerView: 'auto',
+    spaceBetween: 25,
     breakpoints: {
-      0: {
-        spaceBetween: 25
-      },
-      768: {
-        spaceBetween: 25
-      },
+     
       1200: {
         spaceBetween: 50
       }

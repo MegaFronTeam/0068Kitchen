@@ -1,10 +1,57 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 let div = document.createElement('div');
 div.style.overflowY = 'scroll';
@@ -169,8 +216,6 @@ const JSCCommon = {
     }
   },
 
-
-
   heightwindow() {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
@@ -219,6 +264,7 @@ const JSCCommon = {
     let currentYear = document.querySelector(el);
     if (currentYear) currentYear.innerText = now.getFullYear();
   },
+
   imgToSVG() {
     $('img.img-svg-js').each(function () {
       var $img = $(this);
@@ -243,9 +289,19 @@ const JSCCommon = {
         $img.replaceWith($svg);
       }, 'xml');
     }); //
-
   },
-  
+
+  makeDDGroup(ArrSelectors) {
+      $(ArrSelectors).each(function () {
+          let ChildHeads = $(this).find('.dd-head-js:not(.disabled)');
+          $(ChildHeads).unbind('click');
+          $(ChildHeads).click(function () {
+              $(this).parent().toggleClass('active').find('.dd-content-js').first().slideToggle(function () {
+                  $(this).toggleClass('active');
+              });
+          });
+      });
+  },
 
 };
 const $ = jQuery;
@@ -255,12 +311,12 @@ function eventHandler() {
   JSCCommon.modalCall();
   JSCCommon.tabscostume('tabs');
   JSCCommon.mobileMenu();
-  JSCCommon.inputMask();
-  // JSCCommon.sendForm();
+  JSCCommon.inputMask(); // JSCCommon.sendForm();
+
   JSCCommon.heightwindow();
   JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
-  JSCCommon.imgToSVG();
 
+  JSCCommon.imgToSVG();
   var x = window.location.host;
   let screenName;
   screenName = document.body.dataset.bg;
@@ -270,33 +326,33 @@ function eventHandler() {
   } //
 
 
-  function setFixedNav() {
-    // let header = document.querySelector('header');
-    // if (!header) return;
-
-    // if (window.scrollY > (header.offsetHeight || 205)) {
-    //   header.classList.add('fixed');
-    // } else {
-    //   header.classList.remove('fixed');
-    // }
-  } //
-
-
-  function whenResize() {
-    setFixedNav();
-  }
-
-  window.addEventListener('scroll', () => {
-    setFixedNav();
-  }, {
-    passive: true
-  });
-  window.addEventListener('resize', () => {
-    whenResize();
-  }, {
-    passive: true
-  });
-  whenResize();
+  // function setFixedNav() {
+  //   let header = document.querySelector('header');
+  //   if (!header) return;
+  //
+  //   if (window.scrollY > (header.offsetHeight || 205)) {
+  //     header.classList.add('fixed');
+  //   } else {
+  //     header.classList.remove('fixed');
+  //   }
+  // } //
+  //
+  //
+  // function whenResize() {
+  //   setFixedNav();
+  // }
+  //
+  // window.addEventListener('scroll', () => {
+  //   setFixedNav();
+  // }, {
+  //   passive: true
+  // });
+  // window.addEventListener('resize', () => {
+  //   whenResize();
+  // }, {
+  //   passive: true
+  // });
+  // whenResize();
   let defaultSl = {
     spaceBetween: 0,
     lazy: {
@@ -335,12 +391,13 @@ function eventHandler() {
   let brandsNext = document.querySelector('.brands--js .swiper-next');
   let brandsSlider = new Swiper('.breands-slider-js', {
     slidesPerView: 'auto',
-    // spaceBetween: 25,
-    // breakpoints: {
-    //   1200: {
-    //     spaceBetween: 50
-    //   }
-    // },
+    spaceBetween: 25,
+    breakpoints: {
+     
+      1200: {
+        spaceBetween: 50
+      }
+    },
     loop: true,
     navigation: {
       nextEl: brandsNext,
@@ -353,7 +410,6 @@ function eventHandler() {
     }
   }); //
 
-  
   let paymentSlider = new Swiper('.payment-slider-js', {
     spaceBetween: 25,
     slidesPerView: 'auto',
@@ -365,28 +421,9 @@ function eventHandler() {
     }
   }); //
 
-  function makeDDGroup(ArrSelectors) {
-    $(ArrSelectors).each(function(){
-      
-      let ChildHeads = $(this).find('.dd-head-js:not(.disabled)');
-      $(ChildHeads).click(function () {
-        let clickedHead = this; 
-        $(this).parent().siblings().removeClass('active')
-        .find('.dd-content-js').slideUp(function () {
-            $(this).removeClass('active');
-          }); 
-          setTimeout(() => {
-            $(this).parent().toggleClass('active')
-            .find('.dd-content-js').slideToggle(function () {
-              $(this).toggleClass('active');
-            });
-            
-          }, 100);
-        });
-      })
-  }
 
-  makeDDGroup(['.payment-dd-items-js', '.delivery-dd-items-js', '.footer-dd-items-js', '.prod-card-dd-items-js' //'.sidebar-dd-items-js',
+
+  JSCCommon.makeDDGroup(['.payment-dd-items-js', '.delivery-dd-items-js', '.footer-dd-items-js', '.prod-card-dd-items-js' //'.sidebar-dd-items-js',
   ]); //free
 
   $('.free-dd-head-js').click(function () {
@@ -632,10 +669,10 @@ function eventHandler() {
     var $inputTo = _this.find(".input_to");
 
     var instance,
-      from,
-      to,
-      min = $range.data('min'),
-      max = $range.data('max');
+        from,
+        to,
+        min = $range.data('min'),
+        max = $range.data('max');
     $range.ionRangeSlider({
       skin: "round",
       type: "double",
@@ -894,22 +931,19 @@ function eventHandler() {
   //   }
   // });
 
-  if (document.querySelector('.tags-slider-js')) {
-    
-    try {
-      new ScrollBooster({
-        viewport: document.querySelector('.tags-slider-js'),
-        content: document.querySelector('.tag-wrapper'),
-        scrollMode: 'native',
-        // scrollMode: 'transform', // use CSS 'transform' property
-        direction: 'horizontal',
-        // allow only horizontal scrolling
-        emulateScroll: true // scroll on wheel events
-        
-      });
-    } catch (_unused) {//lalala
-    } //.sTime-slider-js
-  }
+  try {
+    new ScrollBooster({
+      viewport: document.querySelector('.tags-slider-js'),
+      content: document.querySelector('.tag-wrapper'),
+      scrollMode: 'native',
+      // scrollMode: 'transform', // use CSS 'transform' property
+      direction: 'horizontal',
+      // allow only horizontal scrolling
+      emulateScroll: true // scroll on wheel events
+
+    });
+  } catch (_unused) {//lalala
+  } //.sTime-slider-js
 
 
   let sTimeSlider = new Swiper('.sTime-slider-js', {
@@ -1026,7 +1060,6 @@ function eventHandler() {
     });
   } //-
 
-
   /*let tippyElems = document.querySelectorAll('.hint-col-js');
   let tippySettings = {
     theme: 'light',
@@ -1039,10 +1072,10 @@ function eventHandler() {
     }
   };
   let tippyInstance;
-
-  if (tippyElems.length > 0) {
+    if (tippyElems.length > 0) {
     tippyInstance = tippy(tippyElems, tippySettings);
   }*/
+
 
   $('.cart-btn-js').click(function () {
     event.preventDefault();
@@ -1074,15 +1107,19 @@ function eventHandler() {
     top: 120,
     bottomEnd: 50
   });
+
   $('.top-nav').hcSticky({
     stickTo: $('body'),
   });
 
+
   $('.dropdown__btn').click(function () {
     $(this).parent().toggleClass( "active" );
     $(this).siblings('.dropdown__content').slideToggle();
-	});
-};
+  });
+}
+
+;
 
 if (document.readyState !== 'loading') {
   eventHandler();
