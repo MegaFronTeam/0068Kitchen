@@ -43,3 +43,5 @@
 37. <https://megafronteam.github.io/0068Kitchen/public/029-how-to-order.html>
 38. <https://megafronteam.github.io/0068Kitchen/public/030-news.html>
 39. <https://megafronteam.github.io/0068Kitchen/public/031-certificates.html>
+40. //////////// may 2022
+41. <https://megafronteam.github.io/0068Kitchen/public/016-order-1.html>
