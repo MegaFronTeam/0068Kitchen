@@ -1204,3 +1204,76 @@ iframe {
 				color: #fff;
 			}
 		}
+
+
+
+		.pay-variant-val2{
+
+			max-width: 555px;
+		}
+
+		.pay-group{
+			background: #F3F3F3;
+			margin-bottom: rem(10);
+			.icon{
+				font-size: 24px;
+				&-1{
+					font-size: 16px;
+				}
+				margin-right: rem(20);
+				color: var(--color, #{$primary});
+			}
+			&__head,
+			&__body{
+				@include media-breakpoint-up(sm){
+					padding: rem(26) rem(26);
+				}
+				padding: rem(16) rem(16);
+			}
+			&__head{
+				@include mt;
+				cursor: pointer;
+			}
+			&__body{
+				display: var(--d, none);
+			}
+			&.active .pay-group__head,
+			 .pay-group__head:hover{
+					background-color: $primary;
+					--color: #fff;
+					color: #fff;
+			}
+			&.active{
+				--d: block;
+				--color: #fff;
+			}
+		}
+
+		.pay-radio{
+			display: flex;
+			margin-bottom: rem(10);
+			align-items: center;
+			cursor: pointer;
+			img{
+				margin-right: 15px;
+				flex: 0 0 auto;
+			}
+			input{
+				width: 20px;
+				height: 20px;
+				margin-right: 15px;
+				appearance: none;
+				-webkit-print-color-adjust: exact; 
+				print-color-adjust: exact;
+				border-radius: 50%;
+				background: #FFFFFF;
+				border: 1px solid #C9C9C9;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 66%;
+
+				&:checked{
+					background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='4' fill='#{#5E5E5E}'/></svg>");
+				}
+			}
+		}

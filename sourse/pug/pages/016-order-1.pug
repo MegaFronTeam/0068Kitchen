@@ -225,6 +225,42 @@ block pagecontent
 														|  и 
 														a(href='/about/politika-konfidentsialnosti/' target='_blank') конфиденциальности
 														| .
+														
+										.oformlenie-accordeon-block.js_sale_order_tabs_tab.js_sale_order_tabs_tab__step3
+											h2.oformlenie-accordeon-title.active(onclick='CShopSaleOrder.goToTab(3); return false;') 3. Способ оплаты  - второй вариант
+											.oformlenie-accordeon-content.active
+												+b.pay-variant-val2
+													mixin gr(i="pay-1",t="Оплата картой онлайн")
+														+b.pay-group&attributes(attributes)
+															+e.head
+																+icon(i)
+																= t
+															+e.body
+																+b.LABEL.pay-radio
+																	input(type="radio" name="pay-var-2")
+																	+e.SPAN.img-wrap
+																		img(src="img/bank-icon2.png", alt="")
+																	+e.SPAN.title Покупай со Сбером (Кредит)
+																+b.LABEL.pay-radio
+																	input(type="radio" name="pay-var-2")
+																	+e.SPAN.img-wrap
+																		img(src="img/bank-icon2.png", alt="")
+																	+e.SPAN.title Покупай со Сбером (Кредит)
+
+													+gr
+													+gr("pay-2",'Расрочка/Кредит').active
+
+
+												.d-flex.oformlenie-end.align-items-center
+													button.oformlenie-btn.js-submit-order(type='submit')
+														| оформить заказ
+													p.oformlenie-politika
+														| Нажимая кнопку "Оформить заказ" я соглашаюсь с 
+														a(href='/about/polozhenie-o-personalnykh-dannykh/' target='_blank') Положением о персональных данных
+														|  и 
+														a(href='/about/politika-konfidentsialnosti/' target='_blank') конфиденциальности
+														| .
+
 							.cart-right.cart-right-oform
 								.cart-right-fixed
 									.cart-right-prod
