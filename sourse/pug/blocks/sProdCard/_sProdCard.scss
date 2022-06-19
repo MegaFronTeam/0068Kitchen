@@ -418,10 +418,10 @@
 		&__tabs-btn {
 			span {
 				position: absolute;
-				color: $primary;
 				font-size: rem(16);
 				right: 0;
 				top: 0;
+				color: $headings-color;
 			}
 		}
 	}
@@ -429,6 +429,13 @@
 	&__{}
 }
 
+.dark-page {
+	.pc-tabs__tabs-btn {
+		span {
+			color: $primary;
+		}
+	}
+}
 //
 .tags-row{
 	--bs-gutter-y: #{rem(16)};

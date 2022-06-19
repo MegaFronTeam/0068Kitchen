@@ -708,11 +708,12 @@
 			}
 		}
 		&__btn {
-			background-color: $primary;
-			color: $white;
-			&:hover {
-				color: #000;
-			}
+			@extend .btn-primary;
+			// background-color: $primary;
+			// color: $white;
+			// &:hover {
+			// 	color: #000;
+			// }
 		}
 		&__showMore {
 			border-color: #fff;
@@ -742,12 +743,13 @@
 		margin-left: rem(13);
 	}
 	&__btn {
+		@extend .btn-dark;
 		display: block;
 		max-width: rem(193);
 		text-transform: uppercase;
 		margin-bottom: rem(54);
-		background-color: #212121;
-		color: $white;
+		// background-color: #212121;
+		// color: $white;
 		&:hover {
 			color: #FF8651;
 		}
