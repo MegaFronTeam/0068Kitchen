@@ -705,6 +705,9 @@
 				color: #000;
 			}
 		}
+		&__showMore {
+			border-color: #fff;
+		}
 	}
 
 	
@@ -744,6 +747,7 @@
 		padding: rem(20);
 		max-width: rem(1047);
 		background-color: $gray-125;
+		margin-bottom: rem(20);
 		@include media-breakpoint-up(sm) {
 			padding: rem(40) rem(86) rem(27) rem(66);
 		}
@@ -846,6 +850,15 @@
 			font-size: rem(14);
 			color: $gray-550;
 			margin-right: rem(8);
+		}
+	}
+	&__showMore {
+		width: 100%;
+		max-width: rem(1047);
+		border: 1px solid $gray-115;
+		color: #FF8651;
+		&:hover {
+			border-color: #000;
 		}
 	}
 }
