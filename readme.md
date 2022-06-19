@@ -6,7 +6,6 @@
 4. <https://megafronteam.github.io/0068Kitchen/public/03-contacts.html>
 5. <https://megafronteam.github.io/0068Kitchen/public/04-delivery-1.html>
 6. <https://megafronteam.github.io/0068Kitchen/public/04-delivery-2.html>
-7. <https://megafronteam.github.io/0068Kitchen/public/05-prod-card.html>
 8. <https://megafronteam.github.io/0068Kitchen/public/06-actions.html>
 9. <https://megafronteam.github.io/0068Kitchen/public/07-credit.html>
 10. <https://megafronteam.github.io/0068Kitchen/public/08-exchange.html>
@@ -15,7 +14,6 @@
 13. <https://megafronteam.github.io/0068Kitchen/public/011-article.html>
 14. <https://megafronteam.github.io/0068Kitchen/public/012-map.html>
 15. <https://megafronteam.github.io/0068Kitchen/public/013-vacancy.html>
-16. <https://megafronteam.github.io/0068Kitchen/public/014-prod-card.html>
 17. <https://megafronteam.github.io/0068Kitchen/public/014-prod-card-2.html>
 18. <https://megafronteam.github.io/0068Kitchen/public/015-filtr.html>
 19. <https://megafronteam.github.io/0068Kitchen/public/015-filtr-2.html>
@@ -45,3 +43,6 @@
 39. <https://megafronteam.github.io/0068Kitchen/public/031-certificates.html>
 40. //////////// may 2022
 41. <https://megafronteam.github.io/0068Kitchen/public/016-order-1.html>
+42. //////////// 19.06.2022
+43. <https://megafronteam.github.io/0068Kitchen/public/05-prod-card.html>
+44. <https://megafronteam.github.io/0068Kitchen/public/014-prod-card.html>

@@ -162,7 +162,7 @@ mixin sProdCardTabs(fBtnTxt='Характеристики')
 					+middleContentTableItem('Установка')
 						+middleContentTableRow('Размеры выреза, см:','28x49')
 			+sProdCardTabsContent('Отзывы', 2)
-				| 2
+				+reviews()
 			+sProdCardTabsContent('Доставка и оплата', 3)
 				| 3
 
@@ -233,3 +233,66 @@ mixin sProdCardSlide(imgNum)
 mixin sProdCardThumb(imgNum)
 	.swiper-slide
 		img(loading="lazy" src=`img/@2x/sProdCard-slide-${imgNum}.png` alt="")
+
+
+mixin reviews()
+	+b.reviews
+		h3 Отзывы о Стиральная машина Miele WWV 980 WPS WhiteEdition 
+		+e.stars
+			+icon('star').active
+			+icon('star').active
+			+icon('star').active
+			+icon('star').active
+			+icon('star')
+			+e.how-much 9 отзывов
+		+e.btn(href="#").btn оставить отзыв
+		+reviewsItem()
+
+mixin reviewsItem()
+	+e.item
+		+e.row.row
+			+e.col.col-lg-auto
+				+e.head
+					h4 Максим
+					p 27. 12. 2020
+				+e.rate
+					p Оценка
+					+e.stars
+						+icon('star').active
+						+icon('star').active
+						+icon('star').active
+						+icon('star').active
+						+icon('star')
+				+e.features
+					+e.text
+						p Шум
+						p 4
+					+e.line(style="--rate: 4")
+				+e.features
+					+e.text
+						p Качество стирки
+						p 3
+					+e.line(style="--rate: 3")
+				+e.features
+					+e.text
+						p Внешний вид
+						p 5
+					+e.line(style="--rate: 5")
+			.col-lg
+				+e.text-wrap
+					+e.text-item
+						h5 Достоинства
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					+e.text-item
+						h5 Недостатки
+						p Vitae eget rhoncus eget nec semper feugiat sagittis aliquam. Habitant mattis aliquet id elementum eu sit nulla scelerisque quis. 
+					+e.text-item
+						h5 Общее впечатление
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae eget rhoncus eget nec semper feugiat sagittis aliquam. Habitant mattis aliquet id elementum eu sit nulla scelerisque quis. 
+				+e.grade
+					+e.button.BUTTON
+						+icon('like')
+						| 20
+					+e.button.BUTTON
+						+icon('disLike')
+						| 1
