@@ -107,7 +107,9 @@ mixin sProdCardTabs(fBtnTxt='Характеристики')
 					.swiper-slide
 						+e.tabs-btn.tabs__btn.active=fBtnTxt
 					.swiper-slide
-						+e.tabs-btn.tabs__btn Отзывы
+						+e.tabs-btn.tabs__btn 
+							| Отзывы
+							span 9
 					.swiper-slide
 						+e.tabs-btn.tabs__btn Доставка и оплата
 		.tabs__wrap.prod-card-dd-items-js
@@ -245,7 +247,7 @@ mixin reviews()
 			+icon('star').active
 			+icon('star')
 			+e.how-much 9 отзывов
-		+e.btn(href="#").btn оставить отзыв
+		+e.btn(href="#modal-reviews").btn.link-modal-js оставить отзыв
 		+reviewsItem()
 		+reviewsItem()
 		+e.showMore(href="#").btn.btn-outline-white Показать еще

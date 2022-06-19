@@ -415,6 +415,15 @@
 			line-height: calc(27/18);
 			color: $headings-color;
 		}
+		&__tabs-btn {
+			span {
+				position: absolute;
+				color: $primary;
+				font-size: rem(16);
+				right: 0;
+				top: 0;
+			}
+		}
 	}
 	&__{}
 	&__{}

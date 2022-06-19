@@ -90,6 +90,37 @@ mixin modal()
 				.col-12
 					+e.btn(type="submit") Сохранить данные
 
+	+b.modal-reviews.bg-wrap(id="modal-reviews" style="display: none")
+		+pic('modalbg.jpg', 'bg', 0).picture-bg
+		.h1 Оставить отзыв
+		+e.stars
+			p Оценка
+			+icon('star').active
+			+icon('star').active
+			+icon('star').active
+			+icon('star').active
+			+icon('star')
+		+form-wrap
+			+e.row.row
+				.col-12
+					+input('опишите достоинства', 'textarea', 'Достоинства')
+				.col-12
+					+input('опишите Недостатки', 'textarea', 'Недостатки')
+				+e.col.col-12
+					+input('ваше общее впечатление', 'textarea', 'Общее впечатление')
+				.col-12
+					+input('ваше имя', 'text')
+				.col-12
+					+input('ваш Телефон', 'tel')
+				.col-12
+					+input('Ваша электронная почта', 'email')
+				.col-lg-auto
+					+e.btn.btn.btn-primary(type="submit") отправить
+				+e.col-text.col-lg
+					+e.text
+						+icon('padlock')
+						| Мы безопасно храним данные и никому их не передаём, вот условия.
+
 	// end modals
 
 mixin modCityAllLetter(letter)

@@ -446,6 +446,7 @@
 			line-height: calc(44/36);
 
 			font-size: rem(20);
+			// position: relative;
 			@include media-breakpoint-up(lg){
 				font-size: rem(24);
 			}
@@ -461,6 +462,14 @@
 			&.active{
 				pointer-events: none;
 				color: $primary;
+			}
+
+			span {
+				position: absolute;
+				color: $primary;
+				font-size: rem(16);
+				right: 0;
+				top: 0;
 			}
 		}
 		//
