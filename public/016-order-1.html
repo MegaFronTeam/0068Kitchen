@@ -1490,21 +1490,19 @@
 			<div class="h1">Оставить отзыв</div>
 			<div class="modal-reviews__stars">
 				<p>Оценка</p>
-				<svg class="icon icon-star  active">
-					<use xlink:href="img/svg/sprite.svg#star"></use>
-				</svg>
-				<svg class="icon icon-star  active">
-					<use xlink:href="img/svg/sprite.svg#star"></use>
-				</svg>
-				<svg class="icon icon-star  active">
-					<use xlink:href="img/svg/sprite.svg#star"></use>
-				</svg>
-				<svg class="icon icon-star  active">
-					<use xlink:href="img/svg/sprite.svg#star"></use>
-				</svg>
-				<svg class="icon icon-star ">
-					<use xlink:href="img/svg/sprite.svg#star"></use>
-				</svg>
+				<div class="rating__group">
+					<input class="rating__input" id="mood-1" type="radio" name="mood" value="1"/>
+					<label class="rating__star" for="mood-1" aria-label="Ужасно"></label>
+					<input class="rating__input" id="mood-2" type="radio" name="mood" value="2"/>
+					<label class="rating__star" for="mood-2" aria-label="Сносно"></label>
+					<input class="rating__input" id="mood-3" type="radio" name="mood" value="3" checked=""/>
+					<label class="rating__star" for="mood-3" aria-label="Нормально"></label>
+					<input class="rating__input" id="mood-4" type="radio" name="mood" value="4"/>
+					<label class="rating__star" for="mood-4" aria-label="Хорошо"></label>
+					<input class="rating__input" id="mood-5" type="radio" name="mood" value="5"/>
+					<label class="rating__star" for="mood-5" aria-label="Отлично"></label>
+					<div class="rating__focus"></div>
+				</div>
 			</div>
 			<div class="form-wrap">
 				<form>
