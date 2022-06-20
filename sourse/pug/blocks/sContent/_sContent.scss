@@ -1,7 +1,39 @@
 
 	// start .sContent
 	.sContent {
-		 
+		h2{
+			line-height: 1.31;
+			margin-bottom: rem(20);
+		}
+		p{
+			line-height: calc(22/16);
+		}
+		ul{
+			list-style: none;
+			margin: 0 0 rem(16);
+
+			li{
+				line-height: calc(22/16);
+				display: block; 
+				position: relative;
+				margin-bottom: rem(15);
+				padding-left: rem(28); 
+				&::before{
+					content: '';
+					background: linear-gradient(0deg, #ADADAD, #ADADAD);
+					border-radius: 20px;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					position: absolute;
+					left: 0;
+					top: rem(8);
+				}
+			}
+		} 
+
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
