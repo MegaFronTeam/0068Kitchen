@@ -186,18 +186,9 @@
 .custom-chb{
 	display: flex!important;
 	align-items: center;
+	text-decoration: none !important;
 
-	input:checked +.circle{
-		&:after{
-			opacity: 1;
-		}
-	}
-	input:checked +.square{
-		background-color: $primary;
-		&:after{
-			opacity: 1;
-		}
-	}
+
 
 	.circle{
 		flex-shrink: 0;
@@ -233,6 +224,8 @@
 
 		border: 1px solid $orange;
 		padding: rem(4);
+		position: relative;
+		top: rem(-2);
 
 		display: flex;
 		align-items: center;
@@ -260,6 +253,20 @@
 		line-height: 1.35;
 		color: $black;
 
+	}
+
+	&.active  .circle,
+	input:checked ~.circle{
+		&:after{
+			opacity: 1;
+		}
+	}
+	&.active  .square,
+	input:checked ~ .square{
+		background-color: $primary;
+		&:after{
+			opacity: 1;
+		}
 	}
 }
 //

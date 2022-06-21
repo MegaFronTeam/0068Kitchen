@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<link href="css/custom.css" rel="stylesheet"/>
 	</head>
 	<body class="new-page" data-bg="019.png">
 		<div class="main-wrapper">
@@ -4965,10 +4966,7 @@
 											</div>
 										</div>
 										<div class="swiper-scrollbar"></div>
-										<div class="sCompare__difference">
-											<label class="custom-chb">
-												<input class="invisible" type="checkbox" name="uniq" checked="checked"/><span class="square"></span><span class="txt">Показывать только различия</span>
-											</label>
+										<div class="sCompare__difference"><a class="custom-chb active" href="#"><span class="square"></span><span class="txt">Показывать только различия</span></a>
 										</div>
 									</div>
 								</div>
@@ -5456,6 +5454,85 @@
 						<div class="col-12">
 							<button class="form-wrap__btn" type="submit">Сохранить данные
 							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-reviews bg-wrap" id="modal-reviews" style="display: none">
+			<!-- picture-->
+			<picture class="picture-bg"> 
+				<source type="image/webp" srcset="img/@2x/webp/modalbg.webp"/><img class="object-fit-js" src="img/@2x/modalbg.jpg" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
+			<div class="h1">Оставить отзыв</div>
+			<div class="modal-reviews__stars">
+				<p>Оценка</p>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star ">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__row row">
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Достоинства</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите достоинства"></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Недостатки</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите Недостатки"></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="form-wrap__col col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Общее впечатление</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="ваше общее впечатление"></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="ваше имя"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="ваш Телефон"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваша электронная почта"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">отправить
+							</button>
+						</div>
+						<div class="form-wrap__col-text col-lg">
+							<div class="form-wrap__text">
+								<svg class="icon icon-padlock ">
+									<use xlink:href="img/svg/sprite.svg#padlock"></use>
+								</svg>Мы безопасно храним данные и никому их не передаём, вот условия.
+							</div>
 						</div>
 					</div>
 				</form>
