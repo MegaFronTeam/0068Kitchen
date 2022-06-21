@@ -333,6 +333,7 @@
 
 			padding: rem(16) rem(20);
 			font-size: rem(20);
+			height: 100%;
 
 			line-height: 1.2;
 			color: $white;
@@ -416,12 +417,22 @@
 			color: $headings-color;
 		}
 		&__tabs-btn {
+			display: flex;
+			align-items: center;
 			span {
-				position: absolute;
+				// position: absolute;
 				font-size: rem(16);
-				right: 0;
-				top: 0;
+				// right: 0;
+				// top: 0;
 				color: $headings-color;
+				background-color: #FFD2BF;
+				min-width: 28px;
+				min-height: 28px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-left: rem(9);
+				border-radius: 58px;
 			}
 		}
 	}
@@ -432,7 +443,8 @@
 .dark-page {
 	.pc-tabs__tabs-btn {
 		span {
-			color: $primary;
+			background-color: #FF5F19;
+			color: $white;
 		}
 	}
 }

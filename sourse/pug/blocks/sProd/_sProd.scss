@@ -464,12 +464,23 @@
 				color: $primary;
 			}
 
+			display: flex;
+			align-items: center;
+			height: 100%;
 			span {
-				position: absolute;
-				color: $primary;
+				// position: absolute;
 				font-size: rem(16);
-				right: 0;
-				top: 0;
+				// right: 0;
+				// top: 0;
+				color: $headings-color;
+				background-color: #FFD2BF;
+				min-width: 28px;
+				min-height: 28px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-left: rem(9);
+				border-radius: 58px;
 			}
 		}
 		//
