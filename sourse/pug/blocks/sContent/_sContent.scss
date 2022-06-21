@@ -51,6 +51,7 @@
 			font-size: rem(16);
 			color: #3F3F3F;
 			font-weight: 400;
+			border: none;
 			border-bottom: 1px solid #E2E2E2;
 		}
 
@@ -71,6 +72,10 @@
 		}
 		table{
 			min-width: 1200px;
+			border: none;
+			p{
+				margin-bottom: 0;
+			}
 		}
 
 	@include media-breakpoint-up(xl) {}
