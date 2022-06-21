@@ -46,3 +46,4 @@
 42. //////////// 19.06.2022
 43. <https://megafronteam.github.io/0068Kitchen/public/05-prod-card.html>
 44. <https://megafronteam.github.io/0068Kitchen/public/014-prod-card.html>
+44. <https://megafronteam.github.io/0068Kitchen/public/032-content.html>
