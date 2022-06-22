@@ -47,3 +47,5 @@
 43. <https://megafronteam.github.io/0068Kitchen/public/05-prod-card.html>
 44. <https://megafronteam.github.io/0068Kitchen/public/014-prod-card.html>
 44. <https://megafronteam.github.io/0068Kitchen/public/032-content.html>
+45. <https://megafronteam.github.io/0068Kitchen/public/04-delivery-1.html>
+46. <https://megafronteam.github.io/0068Kitchen/public/04-delivery-1-1.html>

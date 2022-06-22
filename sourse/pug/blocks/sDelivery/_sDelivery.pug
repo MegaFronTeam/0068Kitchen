@@ -5,9 +5,33 @@ mixin sDelivery(data)
 			.tabs
 				+e.caption-row.tabs__caption.row
 					.col-auto
-						+e.tabs-btn.tabs__btn.active Способы доставки
+						+e.tabs-btn.tabs__btn Способы доставки
 					.col-auto
-						+e.tabs-btn.tabs__btn Способы оплаты
+						+e.tabs-btn.tabs__btn.active Способы оплаты
+				.tabs__wrap
+					.tabs__content
+						if block
+							block
+						else
+							+delivery()
+					.tabs__content.active
+						+payment()
+	// end sDelivery
+
+mixin sDelivery2(data)
+	// start sDelivery
+	+b.sDelivery.section#sDelivery&attributes(attributes)
+		.container
+			.tabs
+				+e.caption-row.tabs__caption.row
+					.col-auto
+						+e.tabs-btn.tabs__btn.active
+							img.img-svg-js(src="img/svg/icon-sber.svg", alt="")
+							| Способы доставки
+					.col-auto
+						+e.tabs-btn.tabs__btn 
+							img.img-svg-js(src="img/tin2.png", alt="")
+							| Оплата долями Тинькофф
 				.tabs__wrap
 					.tabs__content.active
 						if block
@@ -17,6 +41,7 @@ mixin sDelivery(data)
 					.tabs__content
 						+payment()
 	// end sDelivery
+
 
 mixin delivery()
 	+b.delivery
@@ -74,10 +99,49 @@ mixin payment()
 		+e.row.row
 			.col-md
 				+e.dd-items.payment-dd-items-js
-					+paymentDDItem(1, 'Оплата картой', 'active')
-					+paymentDDItem(2, 'Оплата при получении')
-					+paymentDDItem(3, 'Безналичный расчет')
-			+paymentSliderCol()
+					+paymentDDItem(2, 'Оплата при получении', 'active')
+						ul
+							li 
+								strong Наличными
+								br
+								| оплата производится при получении заказа в месте доставки или в шоуруме #[strong KitchenMania]
+							li 
+								strong Картой курьеру
+								br
+								| оплата производится пластиковой картой при получении заказа в месте доставки или в шоуруме #[strong KitchenMania]
+
+					+paymentDDItem(1, 'Оплаты онлайн', 'active')
+						ul
+							li 
+								strong Картой онлайн
+							li 
+								strong 
+									img(src="img/spb.png", alt="")
+									| СПБ
+						+b.alert-block.row
+							.col-auto
+								+e.circle
+									img(src="img/svg/icon-attention.svg", alt="")
+							.col
+								+e.text Ссылка на оплату высылается только после согласования деталей заказа и подтверждения наличия товаров
+
+					+paymentDDItem(4, 'Предоплата', 'active')
+						ul
+							li Картой онлайн
+							li Картой или наличными в нашем шоуруме  #[strong KitchenMania]
+					+paymentDDItem(5, 'Оплата частями', 'active')
+						ul
+							li 
+								img(src="img/svg/sber.png", alt="")
+								| Плати частями от Сбер
+							li 
+								img(src="img/svg/tin.png", alt="")
+								| Оплата долями Тинькофф
+							a(href="#") Подробнее об услуге 
+					+paymentDDItem(6, 'Оплата по счету в банке', 'active')
+						p Счет на оплату выставляется после согласования деталей заказа с менеджером.
+						p Оплата доступна как для физических лиц, так и для юридических лиц.
+			//- +paymentSliderCol()
 		+e.form-cont
 			+sFormAlt({
 				title: 'Есть вопросы по поводу оплаты?',
@@ -105,13 +169,12 @@ mixin paymentDDItem(imgNum, title, activeClasses='')
 			+e.h-row.row.align-items-center
 				.col-auto
 					+e.h-icon
-						img.img-svg-js(loading="lazy" src=`img/svg/payment-item-${imgNum}.svg` alt="")
+						img.img-svg-js(  src=`img/svg/payment-item-${imgNum}.svg` alt="")
 				.col
 					+e.title=title
 				.col-auto
 					+e.chevron
 						+icon('chevron-down')
 		+e.content.dd-content-js(class=activeClasses)
-			p Банковская карта VISA, MasterCard, МИР. Возможно оплатить заказ онлайн, при получении заказа при доставке или в шоу-руме.
-			p Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК. Соединение с платежным шлюзом и передача информации осуществляется в защищенном режиме с использованием протокола шифрования SSL. В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa или MasterCard SecureCode для проведения платежа также может потребоваться ввод специального пароля.
-			p Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введенная информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платежных систем МИР, Visa Int. и MasterCard Europe Sprl. Возврат переведенных средств, производится на Ваш банковский счет в течение 5—30 рабочих дней (срок зависит от Банка, который выдал Вашу банковскую карту).
+			+b.pay-variant-content
+				block

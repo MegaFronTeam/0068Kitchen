@@ -1277,3 +1277,26 @@ iframe {
 				}
 			}
 		}
+
+
+		.alert-block{
+			position: relative;
+			margin-bottom: 1rem;
+			&__circle{
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				width: rem(70);
+				height: rem(70);
+				background: #EEEEEE;
+			}
+			&__text{
+				display: inline-flex;
+				align-items: center;
+				background: #EEEEEE;
+				padding: rem(15px) rem(40px);
+				min-height: rem(70);
+			}
+		}
