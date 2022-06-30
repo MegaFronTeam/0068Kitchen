@@ -424,7 +424,7 @@ function eventHandler() {
 
 
 
-  JSCCommon.makeDDGroup(['.payment-dd-items-js', '.delivery-dd-items-js', '.footer-dd-items-js', '.prod-card-dd-items-js' //'.sidebar-dd-items-js',
+  JSCCommon.makeDDGroup(['.payment-dd-items-js', '.delivery-dd-items-js', '.footer-dd-items-js', '.prod-card-dd-items-js', '.sFAQ-dd-items-js' //'.sidebar-dd-items-js',
   ]); //free
 
   $('.free-dd-head-js').click(function () {

@@ -49,3 +49,7 @@
 44. <https://megafronteam.github.io/0068Kitchen/public/032-content.html>
 45. <https://megafronteam.github.io/0068Kitchen/public/04-delivery-1.html>
 46. <https://megafronteam.github.io/0068Kitchen/public/04-delivery-1-1.html>
+47. ////// 30.03.2022
+48. <https://megafronteam.github.io/0068Kitchen/public/033-instalments-in-sber.html>
+48. <https://megafronteam.github.io/0068Kitchen/public/034-instalments-in-tinkoff.html>
+48. <https://megafronteam.github.io/0068Kitchen/public/036-installment-plan-by-tinkoff.html>

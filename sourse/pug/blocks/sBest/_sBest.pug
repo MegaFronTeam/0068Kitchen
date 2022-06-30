@@ -1,8 +1,7 @@
 mixin sBest(data)
 	// start sBest
 	+b.SECTION.sBest.section#sBest&attributes(attributes)
-		+e.bg
-			img(loading="lazy" src="img/@2x/sAbout-bg.png" alt="")
+		+img("img/@2x/sAbout-bg.png", 'bg').picture-bg
 		.container
 			+b.section-title.text-center
 				h2

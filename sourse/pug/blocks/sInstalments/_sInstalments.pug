@@ -1,0 +1,50 @@
+mixin sInstalments(data)
+	// start sInstalments
+	+b.SECTION.sInstalments.section#sInstalments&attributes(attributes)
+		+img("img/@2x/sCertificates-head-1.jpg", 'bg').picture-bg
+		+e.container.container
+			+e.row.row
+				.col-md-6.col-lg-5
+					+e.content
+						h1 Делите оплату на 4 части
+						ul
+							li оформление за 30 секунд
+							li никаких процентов и переплат
+							li только в магазинах наших партнёров
+						p ЗВУЧИТ ЗАМАНЧИВО, НЕ ТАК ЛИ?
+				.col-md-6.col-lg-7
+					+e.img-wrap
+						img(src="img/@2x/phone.png")
+	// end sInstalments
+
+mixin sInstalments2(data)
+	// start sInstalments
+	+b.SECTION.sInstalments--tinkoff.section#sInstalments&attributes(attributes)
+		+img("img/@2x/sCertificates-head-1.jpg", 'bg').picture-bg
+		+e.container.container
+			+e.row.row
+				.col-md-6.col-lg-4
+					+e.content
+						h1 Платите<br>#[+img('img/svg/title-icon.svg')]&nbsp;долями
+						+e.text А покупками пользуйтесь сразу. Без процентов и переплат.
+						+e.btn(href="#").btn.btn-primary перейти к покупкам
+				.col-md-6.col-lg-8
+					+e.img-wrap-center
+						img(src="img/@2x/sInstalments-img-2.png")
+	// end sInstalments
+
+mixin sInstalments3(data)
+	// start sInstalments
+	+b.SECTION.sInstalments--tinkoff.section#sInstalments&attributes(attributes)
+		+img("img/@2x/sCertificates-head-1.jpg", 'bg').picture-bg
+		+e.container.container
+			+e.row.row
+				.col-md-6.col-lg-5.col-xl-4
+					+e.content
+						h1 Информация о рассрочке и кредите
+						+e.bank-name tinkoff
+						+e.btn(href="#").btn.btn-primary перейти к покупкам
+				.col-md-6.col-lg-7.col-xl-8
+					+e.img-wrap-center
+						img(src="img/@2x/bg-tinkoff-logo.png").tinkoff-logo
+	// end sInstalments
