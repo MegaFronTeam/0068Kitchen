@@ -52,4 +52,5 @@
 47. ////// 30.03.2022
 48. <https://megafronteam.github.io/0068Kitchen/public/033-instalments-in-sber.html>
 48. <https://megafronteam.github.io/0068Kitchen/public/034-instalments-in-tinkoff.html>
+48. <https://megafronteam.github.io/0068Kitchen/public/035-installment-plan-by-sber.html>
 48. <https://megafronteam.github.io/0068Kitchen/public/036-installment-plan-by-tinkoff.html>

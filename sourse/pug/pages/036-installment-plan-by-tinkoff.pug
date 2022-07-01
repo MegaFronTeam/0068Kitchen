@@ -15,6 +15,7 @@ include ../blocks/sInstalments/_sInstalments.pug
 include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sNewPaymentMethod/_sNewPaymentMethod.pug
 include ../blocks/sHowToPay/_sHowToPay.pug
+include ../blocks/sPaymetMethods/_sPaymetMethods.pug
 
 block variables
 	- let  mainPage= null 
@@ -32,8 +33,9 @@ block pagecontent
 	+sInstalments3
 	+sHowToPay2
 	+sNewPaymentMethod('Требования к заемщику', 'Обратите внимание!', 'sCertificates-head-1.jpg').sNewPaymentMethod--2
-		+sNewPaymentMethodItem('parts', 'Возраст от 18 лет')
+		+sNewPaymentMethodItem('card', 'Возраст от 18 лет')
 		+sNewPaymentMethodItem('passport', 'Гражданство&nbsp;РФ, наличие постоянной регистрации (штампа в&nbsp;паспорте)')
 		+sNewPaymentMethodItem('briefcase', 'Наличие постоянного места работы')
+	+sPaymetMethods
 	//- +sFAQ2
 	+footer()
