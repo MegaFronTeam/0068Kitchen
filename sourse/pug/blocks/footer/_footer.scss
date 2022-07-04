@@ -308,5 +308,66 @@
 			max-width: 100%;
 		}
 	}
-	&__{}
+	&__input-wrap{
+		// @extend .form-group;
+		position: relative;
+		margin-bottom: rem(24);
+		--sp-y: #{$input-padding-y};
+		--fz: #{$input-font-size};
+	}
+	&__btn{
+		
+	}
+	&__input{
+		// @extend .form-control;
+	//  outline: 0 !important;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	 resize: none;
+	 &::placeholder {
+	// 		color: rgba(#05141F, .5);
+			opacity: 0 !important	;
+	 }
+ }
+	&__btn{
+		cursor: pointer;
+	}
+	label{
+		width: 100%;
+		display: block;
+	}
+	&__input-title{
+		position: absolute;
+		// padding-left: $input-padding-x;
+		left: $input-padding-x;
+		top: var(--sp-y); 
+		font-size: var(--fz);
+		color: #A3A3A3; 
+		transform-origin: left ;
+		pointer-events: none;
+		font-weight: $input-font-weight;
+		@include mt;
+		max-width: calc(100% - #{$input-padding-x});
+	}
+	&__input	{
+		padding-top: calc(var(--sp-y) * 1.5);
+		padding-bottom: calc(var(--sp-y) * .5);
+		&:-webkit-autofill ,
+		&:focus, 
+		&:not(:placeholder-shown){
+			&:not(textarea) {
+				// box-shadow:  0px 3px 0px  $primary;
+			}
+		}
+		&:-webkit-autofill ,
+		&:focus, 
+		&:not(:placeholder-shown), 
+		&.form-select  {
+			& ~ .footer__input-title{
+			//  color: #846951;
+				transform: scale(.8) translateY(-70%) ; 
+			}
+		}
+	}
 }

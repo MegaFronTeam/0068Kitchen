@@ -6,7 +6,7 @@ mixin sHowToPay(data)
 			h2 Как оплатить «Долями»?
 			+e.row.row
 				mixin item(num, title, text)
-					+e.col.col-md-6.col-lg-3
+					+e.col.col-sm-6.col-lg-3
 						+e.item
 							+e.num!= num
 							h4!= title
@@ -27,7 +27,7 @@ mixin sHowToPay2(data)
 			h2 Несколько простых шагов
 			+e.row.row
 				mixin item(num, strong,...texts)
-					+e.col.col-md-6.col-lg-3
+					+e.col.col-sm-6.col-lg-3
 						+e.item--2
 							+e.num!= num
 							each text in texts
@@ -48,7 +48,7 @@ mixin sHowToPay3(data)
 			h2 Покупка в&nbsp;рассрочку с&nbsp;сервисом Покупай со&nbsp;Сбером
 			+e.row.row
 				mixin item(num, ...texts)
-					+e.col.col-md-6.col-lg-3
+					+e.col.col-sm-6.col-lg-3
 						+e.item--2
 							+e.num!= num
 							each text in texts

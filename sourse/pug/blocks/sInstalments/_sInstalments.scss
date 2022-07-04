@@ -1,7 +1,7 @@
 // start .sInstalments
 .sInstalments {
 	--sPT: #{rem(35)};
-	--sPB: #{rem(50)};
+	--sPB: #{rem(20)};
 	// --sTPB: ;
 	color: #fff;
 	position: relative;
@@ -59,8 +59,8 @@
     max-width: 806px;
     bottom: -123px;
 		img {
-			max-width: 100%;
-			max-height: 100%;
+			// max-width: 100%;
+			// max-height: 100%;
 		}
 	}
 	&__content {
@@ -116,6 +116,8 @@
 		@include media-breakpoint-down(md) {
 			text-align: center;
 			max-width: rem(245);
+			margin-left: auto;
+    	margin-right: auto;
 		}
 		@include media-breakpoint-up(md) {
 			position: absolute;
@@ -184,6 +186,7 @@
 			}
 			@include media-breakpoint-down(md) {
 				text-align: left;
+				max-width: none;
 			}
 		}
 	}

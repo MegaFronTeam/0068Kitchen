@@ -33,10 +33,10 @@
 	}
 	&__dd-item {
 		border-top: 1px solid $gray-115;
-		padding: rem(10) rem(13);
-		@include media-breakpoint-up(lg) {
-			padding: rem(22) rem(28);
-		}
+		// padding: rem(10) rem(13);
+		// @include media-breakpoint-up(lg) {
+		// 	padding: rem(22) rem(28);
+		// }
 		&.active {
 			.icon-chevron-down {
 				transform: rotate(180deg);
@@ -47,6 +47,10 @@
 	&__dd-content {
 		display: none;
 		padding-top: rem(18);
+		padding: 0 rem(13) rem(10) rem(13);
+		@include media-breakpoint-up(lg) {
+			padding: 0 rem(28) rem(22) rem(28);
+		}
 		ul {
 			list-style-type: none;
 			font-size: rem(18);
@@ -65,6 +69,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: rem(10) rem(13) rem(10) rem(13);
+		@include media-breakpoint-up(lg) {
+			padding: rem(22) rem(28) rem(22) rem(28);
+		}
 		p {
 			color: #000;
 			font-weight: 600;

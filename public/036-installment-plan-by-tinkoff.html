@@ -102,7 +102,7 @@
 					<div class="top-nav__mob-search mob-search-js d-xl-none">
 						<div class="top-nav__container top-nav__container--mob container">
 							<div class="search">
-								<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/>
+								<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/><span class="search__input-title"></span>
 								</div>
 								<!-- +e.input-wrap-->
 								<button class="search__s-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
@@ -152,7 +152,7 @@
 							</div>
 							<div class="col d-none d-xl-block">
 								<div class="search d-none d-xl-block">
-									<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/>
+									<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/><span class="search__input-title"></span>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="search__s-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
@@ -740,7 +740,7 @@
 					</div>
 					<h2>Несколько простых шагов</h2>
 					<div class="sHowToPay__row row">
-						<div class="sHowToPay__col col-md-6 col-lg-3">
+						<div class="sHowToPay__col col-sm-6 col-lg-3">
 							<div class="sHowToPay__item sHowToPay__item--2">
 								<div class="sHowToPay__num">1
 								</div>
@@ -748,7 +748,7 @@
 								<p>При оформлении заказа в&nbsp;корзине укажите способ оплаты &laquo;Кредит&raquo; или &laquo;Рассрочка&raquo;</p>
 							</div>
 						</div>
-						<div class="sHowToPay__col col-md-6 col-lg-3">
+						<div class="sHowToPay__col col-sm-6 col-lg-3">
 							<div class="sHowToPay__item sHowToPay__item--2">
 								<div class="sHowToPay__num">2
 								</div>
@@ -756,7 +756,7 @@
 								<p><strong>Вашу заявку рассмотрят в&nbsp;течение 20&ndash;30&nbsp;минут.</strong></p>
 							</div>
 						</div>
-						<div class="sHowToPay__col col-md-6 col-lg-3">
+						<div class="sHowToPay__col col-sm-6 col-lg-3">
 							<div class="sHowToPay__item sHowToPay__item--2">
 								<div class="sHowToPay__num">3
 								</div>
@@ -900,7 +900,9 @@
 									<div class="footer__white">Узнавайте о новинках, акциях и выгодных предложениях первыми
 									</div>
 									<form class="footer__mail-form">
-										<div class="footer__input-wrap form-group"><input class="footer__input form-control" name="email" type="email" placeholder="Электронная почта"/>
+										<div class="footer__input-wrap form-group">
+											<label><input class="footer__input form-control" name="email" type="email" placeholder="Электронная почта"/><span class="footer__input-title">Электронная почта</span>
+											</label>
 										</div>
 										<!-- +e.input-wrap-->
 										<button class="footer__btn" type="submit">
@@ -986,7 +988,7 @@
 							<p>Оставьте номер телефона, и мы позвоним вам в ближайшее время</p>
 						</div>
 						<div class="form-wrap__inputs">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/><span class="form-wrap__input-title"></span>
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn form-wrap__btn--dark" type="submit">Перезвоните мне
@@ -1008,7 +1010,7 @@
 							<h2>Вход/Регистрация</h2>
 						</div>
 						<div class="form-wrap__inputs">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/><span class="form-wrap__input-title"></span>
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn form-wrap__btn--primary" type="submit">Получить код в SMS
@@ -1026,10 +1028,14 @@
 						<p>Мы перезвоним и уточним детали заказа</p>
 					</div>
 					<div class="form-wrap__box">
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/><span class="form-wrap__input-title">Имя</span>
+							</label>
 						</div>
 						<!-- +e.input-wrap-->
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+							</label>
 						</div>
 						<!-- +e.input-wrap-->
 					</div>
@@ -1070,7 +1076,9 @@
 				<form>
 					<h2 class="form-wrap__title">Выберите свой город
 					</h2>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввести название города"/>
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввести название города"/><span class="form-wrap__input-title">Ввести название города</span>
+						</label>
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__city form-wrap__city--popular mc-popular-js active">
@@ -1330,17 +1338,23 @@
 					</label>
 					<div class="form-wrap__inp-row row">
 						<div class="col-sm-12">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Улица"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Улица"/><span class="form-wrap__input-title">Улица</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-sm-6">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Дом, корпус"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Дом, корпус"/><span class="form-wrap__input-title">Дом, корпус</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-sm-6">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Квартира"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Квартира"/><span class="form-wrap__input-title">Квартира</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
@@ -1380,37 +1394,43 @@
 					<div class="form-wrap__row row">
 						<div class="col-12">
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Достоинства</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите достоинства"></textarea>
+								<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите достоинства"></textarea><span class="form-wrap__input-title">Достоинства</span>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-12">
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Недостатки</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите Недостатки"></textarea>
+								<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите Недостатки"></textarea><span class="form-wrap__input-title">Недостатки</span>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="form-wrap__col col-12">
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Общее впечатление</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="ваше общее впечатление"></textarea>
+								<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="ваше общее впечатление"></textarea><span class="form-wrap__input-title">Общее впечатление</span>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-12">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="ваше имя"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="ваше имя"/><span class="form-wrap__input-title">ваше имя</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-12">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="ваш Телефон"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="ваш Телефон"/><span class="form-wrap__input-title">ваш Телефон</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-12">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваша электронная почта"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваша электронная почта"/><span class="form-wrap__input-title">Ваша электронная почта</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
