@@ -32,7 +32,7 @@
 	&__input-title{
 		position: absolute;
 		// padding-left: $input-padding-x;
-		left: $input-padding-x;
+		left: rem(23.398);
 		top: var(--sp-y); 
 		font-size: var(--fz);
 		color: #A3A3A3; 

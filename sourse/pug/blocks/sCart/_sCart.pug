@@ -53,7 +53,11 @@ mixin sCart(data)
 										img(loading="lazy" src=`img/svg/sCart-cross.svg` alt="")
 					+e.col--right.col-lg
 						+e.promo
-							+e.INPUT.p-input.form-control(placeholder="Промокод" type="text")
+							//- +e.INPUT.p-input.form-control(placeholder="Промокод" type="text")
+							+b.form-wrap
+								+e.LABEL.input-wrap
+									+e.INPUT.input.form-control(type="text" value="Моя дача")
+									+e.SPAN.input-title Промокод
 							+e.p-btn(type="button")
 								+icon('arrow-r')
 						+e.chars-bl

@@ -283,6 +283,7 @@
 	//@include mt();
 	width: 100%;
 	position: relative;
+	background-color: #fff;
 
 	min-height: 100%;
 	@include media-breakpoint-up(md){
@@ -513,7 +514,7 @@
 		&__input{
 			border-width: 1px;
 			color: $black;
-			padding: rem(19) rem(30);
+			padding: rem(19) rem(22);
 
 			font-size: rem(18);
 			line-height: calc(26/18);

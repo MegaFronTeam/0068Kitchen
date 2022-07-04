@@ -9,7 +9,7 @@ mixin modal()
 					h2 Заказать обратный звонок
 					p Оставьте номер телефона, и мы позвоним вам в ближайшее время
 				+e.inputs
-					+input('', 'tel')
+					+input('Телефон', 'tel')
 					+e.btn--dark(type="submit") Перезвоните мне
 				+e.policy
 					| Нажимая кнопку "Отправить" я соглашаюсь с
@@ -22,7 +22,7 @@ mixin modal()
 				+e.title
 					h2 Вход/Регистрация
 				+e.inputs
-					+input('', 'tel')
+					+input('Телефон', 'tel')
 					+e.btn--primary(type="submit") Получить код в SMS
 	+b.modal-callback.modal-win.text-center(id="modal-callback" style="display: none")
 		+form-wrap
@@ -77,9 +77,9 @@ mixin modal()
 	//-
 	+b.modal-address(id="modal-address" style="display: none")
 		+form-wrap
-			+e.LABEL.name-label
+			+e.LABEL.name-label.form-wrap__input-wrap
+				+e.INPUT.name-inp.form-control.form-wrap__input(type="text" value="Моя дача")
 				+e.SPAN.input-title Название
-				+e.INPUT.name-inp.form-control(type="text" value="Моя дача")
 			+e.inp-row.row
 				.col-sm-12
 					+input('Улица', 'text')
@@ -119,13 +119,13 @@ mixin modal()
 				.col-12
 					+input('опишите Недостатки', 'textarea', 'Недостатки')
 				+e.col.col-12
-					+input('ваше общее впечатление', 'textarea', 'Общее впечатление')
+					+input('Ваше Общее впечатление', 'textarea', 'Общее впечатление')
 				.col-12
-					+input('ваше имя', 'text')
+					+input('Ваше Имя', 'text')
 				.col-12
-					+input('ваш Телефон', 'tel')
+					+input('Ваш Телефон', 'tel')
 				.col-12
-					+input('Ваша электронная почта', 'email')
+					+input('Ваша Электронная почта', 'email')
 				.col-lg-auto
 					+e.btn.btn.btn-primary(type="submit") отправить
 				+e.col-text.col-lg
