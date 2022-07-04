@@ -10,8 +10,10 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<link href="css/custom.css" rel="stylesheet"/>
 	</head>
 	<body class="new-page" data-bg="015.png">
 		<div class="main-wrapper">
@@ -100,7 +102,7 @@
 					<div class="top-nav__mob-search mob-search-js d-xl-none">
 						<div class="top-nav__container top-nav__container--mob container">
 							<div class="search">
-								<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/>
+								<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/><span class="search__input-title"></span>
 								</div>
 								<!-- +e.input-wrap-->
 								<button class="search__s-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
@@ -150,7 +152,7 @@
 							</div>
 							<div class="col d-none d-xl-block">
 								<div class="search d-none d-xl-block">
-									<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/>
+									<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder=""/><span class="search__input-title"></span>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="search__s-btn" type="button"><img loading="lazy" src="img/svg/zoom.svg" alt=""/>
@@ -2002,7 +2004,9 @@
 									<div class="footer__white">Узнавайте о новинках, акциях и выгодных предложениях первыми
 									</div>
 									<form class="footer__mail-form">
-										<div class="footer__input-wrap form-group"><input class="footer__input form-control" name="email" type="email" placeholder="Электронная почта"/>
+										<div class="footer__input-wrap form-group">
+											<label><input class="footer__input form-control" name="email" type="email" placeholder="Электронная почта"/><span class="footer__input-title">Электронная почта</span>
+											</label>
 										</div>
 										<!-- +e.input-wrap-->
 										<button class="footer__btn" type="submit">
@@ -2088,7 +2092,7 @@
 							<p>Оставьте номер телефона, и мы позвоним вам в ближайшее время</p>
 						</div>
 						<div class="form-wrap__inputs">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/><span class="form-wrap__input-title"></span>
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn form-wrap__btn--dark" type="submit">Перезвоните мне
@@ -2110,7 +2114,7 @@
 							<h2>Вход/Регистрация</h2>
 						</div>
 						<div class="form-wrap__inputs">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/><span class="form-wrap__input-title"></span>
 							</div>
 							<!-- +e.input-wrap-->
 							<button class="form-wrap__btn form-wrap__btn--primary" type="submit">Получить код в SMS
@@ -2128,10 +2132,14 @@
 						<p>Мы перезвоним и уточним детали заказа</p>
 					</div>
 					<div class="form-wrap__box">
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/><span class="form-wrap__input-title">Имя</span>
+							</label>
 						</div>
 						<!-- +e.input-wrap-->
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+							</label>
 						</div>
 						<!-- +e.input-wrap-->
 					</div>
@@ -2172,7 +2180,9 @@
 				<form>
 					<h2 class="form-wrap__title">Выберите свой город
 					</h2>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввести название города"/>
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввести название города"/><span class="form-wrap__input-title">Ввести название города</span>
+						</label>
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__city form-wrap__city--popular mc-popular-js active">
@@ -2432,23 +2442,112 @@
 					</label>
 					<div class="form-wrap__inp-row row">
 						<div class="col-sm-12">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Улица"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Улица"/><span class="form-wrap__input-title">Улица</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-sm-6">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Дом, корпус"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Дом, корпус"/><span class="form-wrap__input-title">Дом, корпус</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-sm-6">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Квартира"/>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Квартира"/><span class="form-wrap__input-title">Квартира</span>
+								</label>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="col-12">
 							<button class="form-wrap__btn" type="submit">Сохранить данные
 							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-reviews bg-wrap" id="modal-reviews" style="display: none">
+			<!-- picture-->
+			<picture class="picture-bg"> 
+				<source type="image/webp" srcset="img/@2x/webp/modalbg.webp"/><img class="object-fit-js" src="img/@2x/modalbg.jpg" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
+			<div class="h1">Оставить отзыв</div>
+			<div class="modal-reviews__stars">
+				<p>Оценка</p>
+				<div class="rating__group">
+					<input class="rating__input" id="mood-1" type="radio" name="mood" value="1"/>
+					<label class="rating__star" for="mood-1" aria-label="Ужасно"></label>
+					<input class="rating__input" id="mood-2" type="radio" name="mood" value="2"/>
+					<label class="rating__star" for="mood-2" aria-label="Сносно"></label>
+					<input class="rating__input" id="mood-3" type="radio" name="mood" value="3" checked=""/>
+					<label class="rating__star" for="mood-3" aria-label="Нормально"></label>
+					<input class="rating__input" id="mood-4" type="radio" name="mood" value="4"/>
+					<label class="rating__star" for="mood-4" aria-label="Хорошо"></label>
+					<input class="rating__input" id="mood-5" type="radio" name="mood" value="5"/>
+					<label class="rating__star" for="mood-5" aria-label="Отлично"></label>
+					<div class="rating__focus"></div>
+				</div>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__row row">
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите достоинства"></textarea><span class="form-wrap__input-title">Достоинства</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="опишите Недостатки"></textarea><span class="form-wrap__input-title">Недостатки</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="form-wrap__col col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="ваше общее впечатление"></textarea><span class="form-wrap__input-title">Общее впечатление</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="ваше имя"/><span class="form-wrap__input-title">ваше имя</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="ваш Телефон"/><span class="form-wrap__input-title">ваш Телефон</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваша электронная почта"/><span class="form-wrap__input-title">Ваша электронная почта</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">отправить
+							</button>
+						</div>
+						<div class="form-wrap__col-text col-lg">
+							<div class="form-wrap__text">
+								<svg class="icon icon-padlock ">
+									<use xlink:href="img/svg/sprite.svg#padlock"></use>
+								</svg>Мы безопасно храним данные и никому их не передаём, вот условия.
+							</div>
 						</div>
 					</div>
 				</form>

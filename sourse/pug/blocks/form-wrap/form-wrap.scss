@@ -2,7 +2,8 @@
 	&__input-wrap{
 		// @extend .form-group;
 		position: relative;
-		margin-bottom: rem(24);
+		// margin-bottom: rem(24);
+		margin-bottom: 0;
 		--sp-y: #{$input-padding-y};
 		--fz: #{$input-font-size};
 	}
