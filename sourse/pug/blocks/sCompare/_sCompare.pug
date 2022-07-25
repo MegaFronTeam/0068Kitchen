@@ -44,7 +44,7 @@ mixin sCompare(data)
 							+e.c-item.c-item-js Регулируемая скорость отжима (об/мин)
 					+e.col--slider.col
 						+e.main-slider
-							.swiper-container.sCompare-main-slider-js
+							.swiper.sCompare-main-slider-js
 								.swiper-wrapper
 									-for(var i=1; i <= 7; i++)
 										+sCompareMainSlide({})
@@ -58,7 +58,7 @@ mixin sCompare(data)
 mixin sCompareMainSlide(data)
 	+e.main-slide.swiper-slide
 		+e.sub-slider
-			.swiper-container.sCompare-sub-slider-js
+			.swiper.sCompare-sub-slider-js
 				.swiper-wrapper
 					+sCompareSubSlide({
 						likeBtnClasses: '',

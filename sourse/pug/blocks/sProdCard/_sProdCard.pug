@@ -19,14 +19,14 @@ mixin sProdCard(data)
 				+e.t-row.row
 					+e.slider-col.col-xl-auto
 						+e.slider-wrap
-							.swiper-container.sProdCard-slider-js
+							.swiper.sProdCard-slider-js
 								.swiper-wrapper
 									+sProdCardSlide(1)
 									+sProdCardSlide(2)
 									+sProdCardSlide(3)
 									+sProdCardSlide(4)
 						+e.thumb-wrap
-							.swiper-container.sProdCard-thumb-js
+							.swiper.sProdCard-thumb-js
 								.swiper-wrapper
 									+sProdCardThumb(1)
 									+sProdCardThumb(2)
@@ -102,7 +102,7 @@ mixin middleContent()
 mixin sProdCardTabs(fBtnTxt='Характеристики')
 	+b.pc-tabs.tabs
 		+e.caption-slider.d-none.d-sm-block
-			.swiper-container.pc-tabs-slider-js
+			.swiper.pc-tabs-slider-js
 				.swiper-wrapper
 					.swiper-slide
 						+e.tabs-btn.tabs__btn.active=fBtnTxt

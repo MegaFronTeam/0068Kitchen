@@ -10,7 +10,7 @@ mixin sNew(data)
 				.col-md-auto.col-xl-3.text-xl-end.pe-xl-1
 					+e.all-link(href='#') Смотреть все
 			+e.slider-wrap
-				.swiper-container.sNew-slider-js
+				.swiper.sNew-slider-js
 					.swiper-wrapper
 						.swiper-slide
 							+sNewProdItem(undefined, undefined, 4)
@@ -52,7 +52,7 @@ mixin sNew(data)
 mixin sNewProdItem(addClasses='', imgMod='', imgAmount=1)
 	+b.prod-item--alt(class=addClasses)
 		+e.a-slider
-			.swiper-container.sNewProdItem-slider-js
+			.swiper.sNewProdItem-slider-js
 				.swiper-wrapper
 					-for(var i = 1; i <= imgAmount; i++)
 						+sNewProdItemSlide(i)

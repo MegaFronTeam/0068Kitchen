@@ -28,7 +28,7 @@ mixin sFamiliar(data)
 						+e.arrow-col.col-auto.col-xl-12
 							+arrow2()
 			+e.slider-wrap
-				.swiper-container.sFamiliar-slider-js
+				.swiper.sFamiliar-slider-js
 					.swiper-wrapper
 						-for(var i =0; i < 4; i++)
 							+sFamiliarSlide(1, 1)
@@ -43,7 +43,7 @@ mixin sFamiliarSlide(imgNum, imgAmount=1)
 				.col-xxl-auto
 					//-here
 					+e.a-slider--commnon
-						.swiper-container.sNewProdItem-slider-js
+						.swiper.sNewProdItem-slider-js
 							.swiper-wrapper
 								-for (var i = 1; i <= imgAmount; i++)
 									+sNewProdItemSlide(i)

@@ -139,7 +139,7 @@ mixin sCatalogCard(data)
 		+b.prod-item--card
 			- var imgAmount = data.imgAmount || 1;
 			+e.a-slider
-				.swiper-container.sNewProdItem-slider-js
+				.swiper.sNewProdItem-slider-js
 					.swiper-wrapper
 						-for (var i = 1; i <= imgAmount; i++)
 							+sNewProdItemSlide(i)
@@ -181,7 +181,7 @@ mixin sCatalogCardLong(data)
 						.col-sm-auto
 							if data.imgAmount && data.imgAmount > 1
 								+e.a-slider
-									.swiper-container.sNewProdItem-slider-js
+									.swiper.sNewProdItem-slider-js
 										.swiper-wrapper
 											-for (var i = 1; i <= data.imgAmount; i++)
 												+sNewProdItemSlide(i)
