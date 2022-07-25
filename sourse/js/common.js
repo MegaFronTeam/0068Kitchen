@@ -102,7 +102,7 @@ const JSCCommon = {
     });
 
     $(".modal-close-js").click(function () {
-      fancybox.close();
+      Fancybox.close();
     }); // fancybox.defaults.backFocus = false;
 
     const linkModal = document.querySelectorAll(link);
