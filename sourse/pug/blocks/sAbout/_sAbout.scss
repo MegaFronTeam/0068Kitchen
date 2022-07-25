@@ -64,7 +64,13 @@
 
 		margin-bottom: rem(40);
 		@include media-breakpoint-up(xl){
-			margin-bottom: rem(79);
+			margin-bottom: rem(25);
+		}
+		.swiper {
+			padding-bottom: rem(54);
+		}
+		.swiper-pagination {
+			bottom: 0;
 		}
 	}
 	.swiper-prev,
