@@ -6,6 +6,7 @@
 	left: 0;
 	width: 100%;
 
+	background: $gray-900;
 	&.has-pe {
 		padding-right: var(--spacing-end, 0);
 	}

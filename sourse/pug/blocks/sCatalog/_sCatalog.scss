@@ -916,7 +916,7 @@
 			height: rem(160);
 		}
 
-		.swiper-container{}
+		.swiper{}
 		.swiper-wrapper{}
 		.swiper-pagination{
 			@include mt();
@@ -1217,7 +1217,7 @@
 }
 //
 .tags-slider-wrap{
-	.swiper-container{
+	.swiper{
 		overflow: visible!important;
 	}
 	.swiper-wrapper{

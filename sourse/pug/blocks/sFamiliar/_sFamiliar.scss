@@ -49,7 +49,7 @@
     .sFamiliar__slider-wrap {
       @include media-breakpoint-up(xl) {
         // clip-path: polygon(33.33% 50%, 33.33% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
-        & > .swiper-container > .swiper-wrapper > .swiper-slide-active {
+        & > .swiper > .swiper-wrapper > .swiper-slide-active {
           opacity: 0;
         }
       }
@@ -157,7 +157,7 @@
     color: $body-color;
 
 
-    & > .swiper-container {
+    & > .swiper {
       @include media-breakpoint-down(md) {
         overflow: visible !important;
       }
@@ -396,7 +396,7 @@
     .swiper-slide-active{
       z-index: 4;
     }
-		.swiper-container{
+		.swiper{
       padding-top: rem(20);
     }
 		.swiper-wrapper{}
@@ -416,6 +416,7 @@
 			//background-color: red;
 			left: 0;
 			top: 0;
+      bottom: auto;
 			width: 100%;
 
 			display: flex;

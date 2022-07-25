@@ -19,7 +19,7 @@
 
 	&__slider-wrap{
 		position: relative;
-		.swiper-container{
+		.swiper{
 			@include media-breakpoint-down(md){
 				overflow: visible!important;
 			}

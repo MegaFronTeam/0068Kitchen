@@ -106,7 +106,7 @@
 		border: 1px solid $gray-280;
 		border-bottom: none;
 
-		.swiper-container{}
+		.swiper{}
 		.swiper-wrapper{}
 		.swiper-slide{
 			width: 100%;
@@ -133,7 +133,7 @@
 
 	//
 	&__thumb-wrap{
-		.swiper-container{}
+		.swiper{}
 		.swiper-wrapper{}
 		.swiper-slide{
 			cursor: pointer;
@@ -318,7 +318,7 @@
 				padding-bottom: rem(47);
 			}
 
-			.swiper-container{
+			.swiper{
 				overflow: visible!important;
 			}
 

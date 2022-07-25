@@ -217,7 +217,7 @@
 	//-
 	&__main-slider{
 		position: relative;
-		& > .swiper-container{
+		& > .swiper{
 			& > .swiper-wrapper{
 				@include media-breakpoint-down(sm){
 					transform: none!important;

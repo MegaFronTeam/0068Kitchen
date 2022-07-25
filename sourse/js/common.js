@@ -465,29 +465,29 @@ function eventHandler() {
     loop: true
   }); //
 
-  let sFamiliarPrev = document.querySelector('.sFamiliar--js .swiper-prev');
-  let sFamiliarNext = document.querySelector('.sFamiliar--js .swiper-next');
-  let sFamiliarSlider = new Swiper('.sFamiliar-slider-js', {
-    // Optional parameters
-    //loop: true,//break all
-    slidesPerColumnFill: 'row',
+  let famSlider = document.querySelectorAll(".sFamiliar--js");
+
+  for (const slider of famSlider) {
+    
+  
+  let sFamiliarPrev = slider.querySelector(' .swiper-prev');
+  let sFamiliarNext = slider.querySelector(' .swiper-next');
+
+  let sFamiliarSlider = new Swiper(slider.querySelector('.sFamiliar-slider-js'), { 
+
     spaceBetween: 0,
+    grid: {
+      rows: 2,
+      fill: 'row'
+    },
     breakpoints: {
-      1: {
-        slidesPerView: 1,
-        slidesPerColumn: 1
-      },
       575: {
-        slidesPerColumn: 1,
-        slidesPerView: 1
+        slidesPerView: 2,
       },
       768: {
-        slidesPerView: 2,
-        slidesPerColumn: 2
       },
       1200: {
         slidesPerView: 3,
-        slidesPerColumn: 2
       }
     },
     // Navigation arrows
@@ -497,10 +497,11 @@ function eventHandler() {
     },
     //pagination
     pagination: {
-      el: $(this).find('.action-slider-puging'),
+      el: slider.querySelector('.action-slider-puging'),
       clickable: true
     }
-  }); //
+  }); // 
+}
 
   let captionSlider = new Swiper('.pc-tabs-slider-js', {
     slidesPerView: 'auto',
@@ -931,20 +932,20 @@ function eventHandler() {
   //     draggable: true,
   //   }
   // });
-
-  try {
-    new ScrollBooster({
-      viewport: document.querySelector('.tags-slider-js'),
-      content: document.querySelector('.tag-wrapper'),
-      scrollMode: 'native',
-      // scrollMode: 'transform', // use CSS 'transform' property
-      direction: 'horizontal',
-      // allow only horizontal scrolling
-      emulateScroll: true // scroll on wheel events
-
-    });
-  } catch (_unused) {//lalala
-  } //.sTime-slider-js
+  let tag 
+    try {
+      new ScrollBooster({
+        viewport: document.querySelector('.tags-slider-js'),
+        content: document.querySelector('.tag-wrapper'),
+        scrollMode: 'native',
+        // scrollMode: 'transform', // use CSS 'transform' property
+        direction: 'horizontal',
+        // allow only horizontal scrolling
+        emulateScroll: true // scroll on wheel events
+        
+      });
+    } catch (_unused) {//lalala
+    } //.sTime-slider-js 
 
 
   let sTimeSlider = new Swiper('.sTime-slider-js', {
@@ -1026,6 +1027,7 @@ function eventHandler() {
     let slider = new Swiper(sliderCont, {
       slidesPerView: 1,
       effect: 'fade',
+      watchOverflow: true,
       fadeEffect: {
         crossFade: true
       },

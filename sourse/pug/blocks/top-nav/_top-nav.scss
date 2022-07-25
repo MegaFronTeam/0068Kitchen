@@ -287,7 +287,7 @@
 		}
 	}
 	&__slider-wrap{
-		.swiper-container{
+		.swiper{
 			width: 100%;
 			
 			@include media-breakpoint-down(md){
@@ -308,7 +308,7 @@
 			// width: auto;
 		}
 	}
-	.swiper-container:not(.swiper-container-initialized) &__link{
+	.swiper:not(.swiper-initialized) &__link{
 		@include media-breakpoint-up(xl){
 		margin-right: 50px;
 		}

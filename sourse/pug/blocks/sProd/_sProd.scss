@@ -425,7 +425,7 @@
 				padding-bottom: rem(47);
 			}
 
-			.swiper-container{
+			.swiper{
 				overflow: visible!important;
 			}
 			.swiper-slide{
@@ -644,7 +644,7 @@
 	&__slider-wrap{
 		position: relative;
 		overflow: hidden;
-		.swiper-container{
+		.swiper{
 			overflow: visible!important;
 		}
 		.swiper-wrapper{}
