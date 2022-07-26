@@ -229,6 +229,9 @@
 	.form-wrap__input-wrap{
 		label{
 				width: var(--inp-w);
+				@include media-breakpoint-down(sm) {
+					width: 100%;
+				}
 		}
 	}
 	.form-wrap{
@@ -269,6 +272,9 @@
 				margin-bottom: 0;
 				padding-right: rem(20);
 				width: var(--title-w);
+			}
+			@include media-breakpoint-only(lg) {
+				--fz: #{rem(16)};
 			}
 		}
 		&__input{
