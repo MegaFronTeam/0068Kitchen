@@ -226,6 +226,11 @@
 			margin-bottom: rem(43);
 		}
 	}
+	.form-wrap__input-wrap{
+		label{
+				width: var(--inp-w);
+		}
+	}
 	.form-wrap{
 		padding-bottom: rem(33);
 
@@ -235,11 +240,14 @@
 			--title-w: #{rem(210)};
 			--inp-w: #{rem(380)};
 		}
-
+		
 		&__inputs{
 			margin-bottom: rem(37);
 		}
 		&__input-wrap{
+			--sp-y: #{rem(19)};
+			--fz: #{rem(18)};
+			--up-t: -85%;
 			label{
 				@include media-breakpoint-up(lg){
 					display: flex;
@@ -254,6 +262,7 @@
 		}
 		&__input-title{
 			display: block;
+			left: #{rem(30)};
 
 			margin-bottom: rem(5);
 			@include media-breakpoint-up(lg){
@@ -271,7 +280,7 @@
 			}
 			padding: rem(19) rem(60) rem(19) rem(30);
 
-			font-size: rem(18);
+			font-size: var(--fz);
 			line-height: calc(26/18);
 
 			&[type="date"]{
