@@ -102,4 +102,5 @@ $output-bourbon-deprecation-warnings: false;
 @import "base";
 @import '../pug/blocks/**/*.scss';
 @import "media"; // Всегда в конце
+@import 'custom.scss';
 

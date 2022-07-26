@@ -11,7 +11,7 @@ mixin sCatalog(data)
 					+b.section-title
 						if !data.logo
 							h1!=data.title
-						else 
+						else
 							.col
 								h1!=data.title
 
@@ -21,13 +21,13 @@ mixin sCatalog(data)
 						.tags-slider-js
 							.tag-wrapper
 								+e.tags-row.row.sTags-row-js
-									-for(let i = 0; i < 4; i ++) 
-										+sCatalogTag('Стиральные машины из Германии') 
-										+sCatalogTag('Стиральные машины шириной 55 см') 
-										+sCatalogTag('Узкие стиральные машины') 
-										+sCatalogTag('Стиральные машины под раковину') 
+									-for(let i = 0; i < 4; i ++)
+										+sCatalogTag('Стиральные машины из Германии')
+										+sCatalogTag('Стиральные машины шириной 55 см')
+										+sCatalogTag('Узкие стиральные машины')
+										+sCatalogTag('Стиральные машины под раковину')
 										+sCatalogTag('Угловые стиральные машины')
-									.col-auto.d-none.d-md-block 
+									.col-auto.d-none.d-md-block
 										+e.btn--toggle.sTags-btn-js
 											span Показать еще
 											span Скрыть
@@ -119,7 +119,7 @@ mixin sCatalog(data)
 							.tags-slider-js
 								.tag-wrapper
 									+e.tags-row.row.sTags-row-js
-										-for(let i = 0; i < 4; i ++)  
+										-for(let i = 0; i < 4; i ++)
 											+sCatalogTagOrange('Стиральные машины Miele')
 											+sCatalogTagOrange('Стиральные машины Bosch')
 											+sCatalogTagOrange('Стиральные машины Gorenje')
@@ -127,7 +127,7 @@ mixin sCatalog(data)
 											+sCatalogTagOrange('Стиральные машины Miele')
 											+sCatalogTagOrange('Стиральные машины Bosch')
 											+sCatalogTagOrange('Стиральные машины Gorenje')
-										.col-auto.d-none.d-md-block 
+										.col-auto.d-none.d-md-block
 											+e.btn--orange-toggle.sTags-btn-js
 												span Показать еще
 												span Скрыть

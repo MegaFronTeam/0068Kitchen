@@ -218,6 +218,7 @@
 	}
 	&__input{
 		background-color: $gray-910!important;
+		border-color: $gray-910!important;
 		color: $white!important;
 		font-weight: 500;
 		box-shadow: none!important;
@@ -260,10 +261,10 @@
 
 .brands{
 	.swiper-slide{
-		@include media-breakpoint-up(xl){	
+		@include media-breakpoint-up(xl){
 			// margin-right: 50px;
 		}
-	 
+
 		// margin-right: 25px;
 	}
 	background: $gray-900;
@@ -289,7 +290,7 @@
 	&__slider-wrap{
 		.swiper{
 			width: 100%;
-			
+
 			@include media-breakpoint-down(md){
 				overflow: visible ;
 				// overflow: hidden!important;
@@ -297,10 +298,10 @@
 				// margin-left: -20px;
 			}
 		}
-		
+
 		.swiper-wrapper{
 			width: 100%;
-			
+
 		}
 		.swiper-slide{
 			height: auto;

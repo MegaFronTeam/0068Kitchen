@@ -1,5 +1,5 @@
 .fancybox__content{
-	//padding: 0;
+	padding: 0;
 	background: none;
 }
 .modal-win {
@@ -7,10 +7,14 @@
 	position: relative;
 	max-width: rem(500);
 	background-color: #fff;
+	@include media-breakpoint-up(sm){
+
+		padding: 40px 40px;
+	}
+	padding: 40px 15px;
 
 	.modal-content {
 		// max-width: 485px;
-		// padding-right: 40px 15px;
 	}
 
 	.mfp-close {

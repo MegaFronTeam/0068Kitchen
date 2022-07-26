@@ -343,7 +343,8 @@
 			}
 
 			&:not(.active){
-				background-color: $gray-280!important;
+				--bs-btn-bg: #{$gray-280};
+				--bs-btn-border-color: #{$gray-280};
 				color: $body-color!important;
 				&:hover{
 					background-color: $primary!important;

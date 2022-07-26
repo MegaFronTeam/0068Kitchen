@@ -26,9 +26,10 @@
 		padding: rem(6) rem(20);
 		font-size: rem(20);
 		line-height: calc(44/20);
-		
+
 
 		&:not(.active){
+			border-color: $gray-280;
 			background: $gray-280!important;
 			box-shadow: none!important;
 
@@ -250,11 +251,11 @@
 		svg{
 			@include mt();
 			[stroke="#9B9B9B"],
-			[stroke="#FF8651"] { 
+			[stroke="#FF8651"] {
 				stroke: var(--h-col, #{$gray-530})!important;
 			}
 			[fill="#9B9B9B"],
-			[fill="#FF8651"] {  
+			[fill="#FF8651"] {
 				fill: var(--h-col, #{$gray-530})!important;
 			}
 		}
@@ -382,7 +383,7 @@
 
 		li{
 			line-height: calc(22/16);
-			display: block; 
+			display: block;
 			position: relative;
 			margin-bottom: rem(15);
 			padding-left: rem(28);
@@ -394,7 +395,7 @@
 			strong{
 
 				font-weight: 500;
-			} 
+			}
 			&::before{
 				content: '';
 				background:#EEEEEE;
@@ -407,7 +408,7 @@
 				top: rem(8);
 			}
 		}
-	} 
+	}
 }
 
 .parts-block{
@@ -445,7 +446,7 @@
 			background: #EEEEEE;
 			@include a-cent1(y);
 			height: 1px;
-			right: -24px; 
+			right: -24px;
 			width: 11px;
 			height: 11px;
 			border-radius: 50%;
@@ -484,7 +485,7 @@
 		width: 1px;
 		top: calc(100% + 1px);
 	}
-	
+
 	&__count{
 		position: relative;
 		@include media-breakpoint-up(md) {
@@ -499,7 +500,7 @@
 		align-items: center;
 		font-weight: 900;
 		font-size: 32px;
-		
+
 		svg{
 			position: absolute;
 			width: 100%;

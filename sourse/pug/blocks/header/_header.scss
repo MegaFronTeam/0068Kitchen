@@ -5,8 +5,8 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-
 	background: $gray-900;
+
 	&.has-pe {
 		padding-right: var(--spacing-end, 0);
 	}
@@ -58,7 +58,7 @@
 
 	left: 0;
 	width: 100%;
-	
+
 	height: calc(100vh - var(--header-real-height));
 	top: calc(100% +  var(--top-s));
 	--top-s: #{rem(45px)};
